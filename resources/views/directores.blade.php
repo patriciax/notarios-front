@@ -1,4 +1,6 @@
-<?php require('partials/header.php'); ?>
+@extends("layouts.main")
+
+@section("content")
 <main class="bg-light" data-barba="container" data-barba-namespace="director-section">
 
   <section class="main-director">
@@ -306,11 +308,11 @@
     <!---- <div class="main-director_item">
       <div class="main-director-names">
         <p data-aos="fade-up" data-aos-duration="1000">FELIPE CORTES
-  
+
 
         </p>
         <p data-aos="fade-up" data-aos-duration="1500">ALEJANDRO CARREÑO
-      
+
 
         </p>
         <p data-aos="fade-up" data-aos-duration="2000">ESTEBAN URIBE
@@ -327,5 +329,13 @@
 
 
 
-  <?php require('partials/footer.php'); ?>
 </main>
+@push("scripts")
+
+@endpush
+
+
+
+
+
+@endsection

@@ -39,7 +39,7 @@ function myscripts() {
     $(".main-director-names").toggleClass("opacity");
   });
 
- 
+
 
   $(".main-panel p").click(function () {
     $(this).toggleClass("active");

@@ -1,9 +1,11 @@
-<?php require('partials/header.php'); ?>
+@extends("layouts.main")
+
+@section("content")
 <main class="bg-light" data-barba="container" data-barba-namespace="private-section">
-  
+
   <section class="main-private">
     <div class="form">
-  
+
       <div class="content-form">
       <h3>FOLDER</h3>
         <div class="mb-2">
@@ -18,11 +20,11 @@
         <button class="btn">Submit</button>
       </div>
 
-    
+
     </div>
   </section>
 
 
 
-  <?php require('partials/footer.php'); ?>
+
 </main>

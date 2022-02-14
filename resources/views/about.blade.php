@@ -1,5 +1,7 @@
 
-<?php require('partials/header.php'); ?>
+@extends("layouts.main")
+
+@section("content")
 <main class="bg-light" data-barba="container" data-barba-namespace="about-section">
 
 <section>
@@ -30,7 +32,7 @@
                         </div>
 
                     </div>
-            
+
                 </figure>
         </div>
     </figure>
@@ -40,5 +42,5 @@
         display: none;
     }
 </style>
-<?php require('partials/footer.php'); ?>
+
 </main>

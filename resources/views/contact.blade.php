@@ -1,5 +1,6 @@
+@extends("layouts.main")
 
-<?php require('partials/header.php'); ?>
+@section("content")
 <main class="bg-light" data-barba="container" data-barba-namespace="contact-section">
 
 <section class="contact">
@@ -157,5 +158,5 @@
   }
 </style>
 
-<?php require('partials/footer.php'); ?>
+
 </main>
