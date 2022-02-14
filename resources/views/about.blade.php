@@ -4,8 +4,9 @@
 @section("content")
 <main class="bg-light" data-barba="container" data-barba-namespace="about-section">
 
-<section>
-    <figure class="card-flip fancy-hover">
+<section data-aos="fade"
+     data-aos-duration="3000">
+    <figure class="card-flip fancy-hover" >
         <div class="card-flip__flipper">
             <!-- FRONT SIDE -->
             <figure class="card-flip__content card-flip__content--front">
@@ -44,3 +45,12 @@
 </style>
 
 </main>
+@push("scripts")
+
+@endpush
+
+
+
+
+
+@endsection

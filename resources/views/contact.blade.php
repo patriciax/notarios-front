@@ -4,7 +4,8 @@
 <main class="bg-light" data-barba="container" data-barba-namespace="contact-section">
 
 <section class="contact">
-  <div class="contact-item">
+  <div class="contact-item" data-aos="fade-up"
+     data-aos-duration="1000">
     <p class="title-contact">JUAN P. BERNAL</p>
     <div class="slider-text">
       <div class="slide-track">
@@ -50,7 +51,8 @@
     </div>
   </div>
 
-  <div class="contact-item">
+  <div class="contact-item" data-aos="fade-up"
+     data-aos-duration="2000">
     <p class="title-contact">EDWIN CORTÉS</p>
     <div class="slider-text">
       <div class="slide-track">
@@ -96,7 +98,8 @@
     </div>
   </div>
 
-  <div class="contact-item">
+  <div class="contact-item" data-aos="fade-up"
+     data-aos-duration="3000">
     <p class="title-contact">FRANCY LOREM</p>
     <div class="slider-text">
       <div class="slide-track">
@@ -160,3 +163,12 @@
 
 
 </main>
+@push("scripts")
+
+@endpush
+
+
+
+
+
+@endsection

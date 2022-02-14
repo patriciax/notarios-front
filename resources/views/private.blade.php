@@ -28,3 +28,12 @@
 
 
 </main>
+@push("scripts")
+
+@endpush
+
+
+
+
+
+@endsection

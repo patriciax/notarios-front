@@ -22,7 +22,8 @@
 
     <div class="main-home">
         <header>
-          <div class="main-logo">
+          <div class="main-logo" data-aos="fade"
+     data-aos-duration="3000">
             <img src="assets/img/logo.png" alt="" />
           </div>
 
@@ -34,7 +35,8 @@
             <span class="menu-toggler-line"></span>
           </label>
 
-          <aside class="sidebar">
+          <aside class="sidebar" data-aos="fade-left"
+     data-aos-duration="3000">
             <ul class="menu">
               <li><a class="menu-link" href="/">Home</a></li>
               <li><a class="menu-link" href="directores">DIRECTORES</a></li>
@@ -56,7 +58,7 @@
     </div>
 <footer>
   <div>
-    <p>
+    <p >
       NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ,
       COLOMBIA
     </p>
