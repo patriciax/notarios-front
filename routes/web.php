@@ -31,4 +31,8 @@ Route::get('/private', function () {
 Route::get('/services', function () {
     return view('services');
 });
+Route::get('/films', function () {
+    return view('films');
+});
+
 

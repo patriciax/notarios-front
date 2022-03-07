@@ -745,6 +745,7 @@ display: none;}
     font-weight: 100;
     text-transform: uppercase;
 }
+/*
 .contact {
     padding-left: 1rem;
     padding-top: 2rem;
@@ -803,7 +804,7 @@ display: none;}
 }
 .contact-item:nth-child(3) .datos {
     transform: translate(10px, 4.5rem);
-}
+}*/
 .main-private {
     display: flex;
     justify-content: center;
@@ -829,6 +830,7 @@ display: none;}
     font-weight: 100;
     font-family: "VanderKeur-light";
     text-transform: uppercase;
+    font-size: 16px;
 }
 .form input {
     background: transparent;
@@ -846,14 +848,15 @@ display: none;}
 }
 .content-form h3 {
     color: #f2eadf;
-    font-size: 2rem;
+    font-size: 39px;
     font-family: "DrukText";
+    margin-bottom: 2rem;
 }
 .mb-2 {
     margin-bottom: 2rem;
 }
 .ml-27 {
-    margin-left: 2.7rem !important;
+    margin-left: 5rem !important;
 }
 .btn {
     background: #f2eadf;
@@ -871,7 +874,8 @@ display: none;}
     font-family: "VanderKeur-light";
     color: #f2eadf;
     right: 50px;
-    top: -27px;
+    top: -53px;
+    font-size: 14px;
 }
 .pswp--zoom-allowed .pswp__img {
     object-fit: cover;
@@ -1330,7 +1334,158 @@ figure img {
 .panel figure img {
     max-width: 100%;
 }
+.pswp__ui--idle .pswp__top-bar {
+    opacity: 1!important;
+    background: transparent!important;
+}
+.pswp__counter,.pswp--zoom-allowed .pswp__button--zoom, .pswp--supports-fs .pswp__button--fs,.pswp__button--share{
+    display: none!important;
+}
+.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption{
+    background: transparent!important;
+}
+.slider-films{
+    max-width: 67rem;
+   /* transform: translate(16rem, 3rem);*/
+}
+.slider-films_item{
+    padding: 1rem;
+    cursor: pointer;
+    transition: .6s;
+}
+.slider-films_item:hover{
+    transform: translateY(-10px);
+}
+.slider-films .slick-slide img {
 
+    height: 460px;
+}
+.slider-films .slick-next {
+    right: -16px;
+    margin-right: auto;
+    filter: invert(1);
+}
+.slider-films .slick-prev{
+    display: none!important;
+}
+  .section-films{
+    opacity: 0;
+    height: 0;
+display: none;
+}
+.active-films{
+    opacity: 1;
+    height: 100vh;
+    display: block;
+}
+
+/***************/
+.film-grid{
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 872px; */
+    padding-left: 18rem;
+    padding-right: 4rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.film-grid_item:nth-child(1){
+    width: 40%;
+    overflow-y: scroll;
+}
+.film-grid_item:nth-child(2){
+    width: 60%;
+    padding-left: 0.8rem;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #fff !important;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #9e9e9e;
+  }
+  .active-films .film-grid {
+    display: flex;
+}
+.active-films main{
+    opacity: 0;
+    height: 0;
+}
+.film-grid_item .title-film{
+    font-family: "DrukText";
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.film-grid_item p{
+    font-family: "VanderKeur-light";
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: .5px;
+}
+.end{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 2rem;
+}
+.slider-films [type="button"] {
+    position: absolute;
+}
+.btn_more{
+    font-family: "VanderKeur-light";
+    font-size: 11px;
+    cursor: pointer;
+}
+.arrow{
+    transition: .8s;
+    cursor: pointer;
+    top: -99%;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    right: 0;
+
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOC4wNiAzNi4xMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmM2ViZTE7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJDYXBhXzIiIGRhdGEtbmFtZT0iQ2FwYSAyIj48ZyBpZD0iQ2FwYV8xLTIiIGRhdGEtbmFtZT0iQ2FwYSAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMCAwIDAgMS4wNiAxNyAxOC4wNiAwIDM1LjA2IDAgMzYuMTIgMTguMDYgMTguMDYgMCAwIi8+PC9nPjwvZz48L3N2Zz4=);
+    height: 40px;
+    filter: invert(1);
+    transform: rotate(-90deg);
+    background-repeat: no-repeat;
+}
+.arrow a{
+    color: transparent;
+}
+.arrow a:hover{
+    color: transparent;
+}
+.hidden-film{
+    transition: .6s;
+
+}
+.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    padding: 0 5rem;
+    margin-top: 3rem;
+}
+.contacto-item{
+width: 50%;
+}
+.contacto p, .contacto a{
+    font-family: "DrukText";
+    font-size: 22px;
+    color:#000;
+    line-height: .5;
+}
 /*******mediasquery **********/
 @media only screen and (max-width: 600px) {
     /***********************menu******************/

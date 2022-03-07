@@ -7,9 +7,9 @@
     <div class="form">
 
       <div class="content-form">
-      <h3>FOLDER</h3>
+      <h3>PRIVATE</h3>
         <div class="mb-2">
-          <label for="">Usuario:</label>
+          <label for="">User:</label>
           <input class="ml-27" type="text" autocomplete="off">
         </div>
 

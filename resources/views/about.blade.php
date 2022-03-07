@@ -42,6 +42,16 @@
     .main-logo {
         display: none;
     }
+    footer .copy {
+display: none;
+    }
+    footer{
+        position: fixed;
+    right: 0;
+    }
+    main {
+    padding-top: 6rem;
+}
 </style>
 
 </main>
