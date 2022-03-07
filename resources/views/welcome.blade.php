@@ -1,7 +1,8 @@
 @extends("layouts.main")
 
 @section("content")
-<main class="bg-light" data-barba="container" data-barba-namespace="home-section">
+<!---<main class="bg-light" data-barba="container" data-barba-namespace="home-section">-->
+    <main class="bg-light">
 <div class="main-video" data-aos="fade-up"
      data-aos-duration="1500">
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" viewBox="0 0 1366 768" xml:space="preserve">
