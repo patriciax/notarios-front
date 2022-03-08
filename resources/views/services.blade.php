@@ -5,20 +5,11 @@
 <main class="bg-light">
     <!-- Tab-->
     <div class="tabs">
-
         <input type="radio" id="tab1" name="tab-control" checked>
         <input type="radio" id="tab2" name="tab-control">
-        <!----  <input type="radio" id="tab3" name="tab-control">
-        <input type="radio" id="tab4" name="tab-control">--->
         <ul>
             <li title="Features"><label for="tab1" role="button"><span>Features</span></label></li>
             <li title="Delivery Contents"><label for="tab2" role="button"><span>Delivery Contents</span></label></li>
-            <!----<li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
-                        <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
-                    </svg><br><span>Shipping</span></label></li>
-            <li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
-                        <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
-                    </svg><br><span>Returns</span></label></li>---->
         </ul>
 
         <div class="sliders">
@@ -26,7 +17,7 @@
         </div>
         <div class="content">
             <section>
-                <div class="container-gallery">
+                <div class="container-gallery" style="    gap: 9rem;">
 
                     <div class="tabs-gallery">
                         <span class="tab-link current" data-tab="tab-1"> <span>1.</span> CITIES </span>
@@ -37,9 +28,8 @@
                         <span class="tab-link" data-tab="tab-5"><span>5.</span>DBEACHES</span>
                         <span class="tab-link" data-tab="tab-6"><span>6.</span>RIVERS</span>
                         <span class="tab-link" data-tab="tab-7"><span>7.</span>LAKES</span>
-                        <span class="tab-link" data-tab="tab-8"><span>7.</span>AMAZON</span>
+                        <span class="tab-link" data-tab="tab-8"><span>8.</span>AMAZON</span>
                     </div>
-
                     <div class="content ">
                         <div id="tab-1" class="tab-content current">
 
@@ -155,27 +145,21 @@
                             <div class="counter">1/</div>
                         </div>
                     </div>
-
                 </div>
-
             </section>
             <section>
                 <div class="container-gallery">
-
-                    <div class="tabs-gallery">
-                        <span class="tab-link current" data-tab="tab-1"> <span>1.</span> MARTIN KOHLER
+                    <div class="tabs-gallery2">
+                        <span class="tab-link current2" data-tab="tabname-1"> <span>1.</span> MARTIN KOHLER
                         </span>
-                        <span class="tab-link" data-tab="tab-2"><span>2.</span>ALBERTO OVIEDO</span>
-                        <span class="tab-link" data-tab="tab-3"><span>3.</span>MAURICIO CANDELAS</span>
-
-                        <span class="tab-link" data-tab="tab-4"><span>4.</span>MATEO MEDINA</span>
-                        <span class="tab-link" data-tab="tab-5"><span>5.</span>eUGENIO MAZZINGHI</span>
-                        <span class="tab-link" data-tab="tab-6"><span>6.</span>MAURICIO CIFUENTES</span>
-
+                        <span class="tab-link" data-tab="tabname-2"><span>2.</span>ALBERTO OVIEDO</span>
+                        <span class="tab-link" data-tab="tabname-3"><span>3.</span>MAURICIO CANDELAS</span>
+                        <span class="tab-link" data-tab="tabname-4"><span>4.</span>MATEO MEDINA</span>
+                        <span class="tab-link" data-tab="tabname-5"><span>5.</span>eUGENIO MAZZINGHI</span>
+                        <span class="tab-link" data-tab="tabname-6"><span>6.</span>MAURICIO CIFUENTES</span>
                     </div>
-
                     <div class="content ">
-                        <div id="tab-1" class="tab-content current">
+                        <div id="tabname-1" class="tab-content2 current2">
 
 
                             <div class="name-gallery">
@@ -212,7 +196,7 @@
                             </div>
                             <div class="counter">1/</div>
                         </div>
-                        <div id="tab-2" class="tab-content">
+                        <div id="tabname-2" class="tab-content2">
 
 
                             <div class="name-gallery">
@@ -255,7 +239,7 @@
                             </div>
                             <div class="counter">1/</div>
                         </div>
-                        <div id="tab-3" class="tab-content">
+                        <div id="tabname-3" class="tab-content2">
                             <div class="name-gallery">
                                 <p>MAURICIO CANDELA</p>
                             </div>
@@ -290,14 +274,9 @@
                             <div class="counter">1/</div>
                         </div>
                     </div>
-
                 </div>
-
         </div>
     </div>
-
-
-
 
 
 </main>

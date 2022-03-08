@@ -170,6 +170,16 @@ $(".tabs-gallery span").click(function () {
     $("#" + tab_id).addClass("current");
 });
 
+$(".tabs-gallery2 span").click(function () {
+    var tab_id = $(this).attr("data-tab");
+
+    $(".tabs-gallery2 span").removeClass("current2");
+    $(".tab-content2").removeClass("current2");
+
+    $(this).addClass("current2");
+    $("#" + tab_id).addClass("current2");
+});
+
 var seccion = $(".tab-content");
 var cantidadSecciones = seccion.lenght;
 var doc = $("body");

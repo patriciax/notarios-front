@@ -39,9 +39,7 @@
     </figure>
 </section>
 <style>
-    .main-logo {
-        display: none;
-    }
+
     footer .copy {
 display: none;
     }

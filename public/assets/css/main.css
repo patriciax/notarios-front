@@ -1249,7 +1249,7 @@ display: none;}
 
 /**********************************/
 
-.tabs-gallery{
+.tabs-gallery, .tabs-gallery2{
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -1268,13 +1268,36 @@ display: none;}
     font-size: 1.5rem;
     line-height: 1;
 }
-
+.tabs-gallery2 span{
+    background: none;
+    color: #000;
+    display: inline-block;
+    padding: 0px 27px;
+    cursor: pointer;
+    font-family: 'DrukText';
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+}
 .tabs-gallery .current{
     background: transparent;
     color: #222;
 }
+.tabs-gallery2 .current2{
+    background: transparent;
+    color: #222;
+}
 
-.tab-content{
+.tab-content {
+    display: none;
+    background: transparent;
+
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+.tab-content2{
     display: none;
     background: transparent;
 
@@ -1300,14 +1323,19 @@ figure img {
     text-align: center;
     position: relative;
 }
-
+.tab-content2.current2{
+    display: inherit;
+        display: block;
+    text-align: center;
+    position: relative;
+}
 .container-gallery{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
     justify-items: center;
     align-items: center;
-    gap: 10rem;
+
 }
 .p-10{
     padding-top: 10rem;

@@ -64,6 +64,14 @@
         </div>
       </div>-->
 
+
+      <img src="assets/img/banner.png" alt="" />
+    <img src="assets/img/carpeta_con_sombra.svg" alt="">
+
+
+
+
+
       </main>
 
 @push("scripts")
