@@ -29,15 +29,19 @@
   </svg>
 
   <div class="slider">
+    {{--@foreach(App\Models\HomeProject::all() as $project)
     <div>
-      <img src="assets/img/test.png" alt="" />
+
+      <video autoplay="true" loop="true" playsinline="true" muted class="embed-responsive-item" style="width:300px;">
+        <source src="https://res.cloudinary.com/hwf9zvvj8/video/upload/v1614210119/Home_Video_p1v8on.mp4" type="video/mp4">
+      </video>
       <div class="titles-slider">
-        <p>BON YURT
-          HERSHEY’S “AMOR”</p>
-        <span>DIR. ESTEBAN URIBE
+        <p>{{ $project->title }}</p>
+        <span>{{ $project->director }}
         </span>
       </div>
     </div>
+    @endforeach--}}
     <div>
       <img src="assets/img/test.png" alt="" />
     </div>
