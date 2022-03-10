@@ -1,7 +1,7 @@
 @extends("layouts.main")
 
 @section("content")
-<main class="bg-light" data-barba="container" data-barba-namespace="private-section">
+<main class="bg-dark" data-barba="container" data-barba-namespace="private-section">
 
   <section class="main-private">
     <div class="form">

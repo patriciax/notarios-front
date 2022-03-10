@@ -286,9 +286,10 @@
     .menu li:nth-child(5),
     .menu li:nth-child(6),
     .menu li:nth-child(7),
-    .menu li:nth-child(5) {
+    .menu li:nth-child(5), footer .copy,.main-logo img {
         display: none;
     }
+
 </style>
 @push("scripts")
 

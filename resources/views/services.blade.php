@@ -8,8 +8,8 @@
         <input type="radio" id="tab1" name="tab-control" checked>
         <input type="radio" id="tab2" name="tab-control">
         <ul>
-            <li title="Features"><label for="tab1" role="button"><span>Features</span></label></li>
-            <li title="Delivery Contents"><label for="tab2" role="button"><span>Delivery Contents</span></label></li>
+            <li title="Features"><label for="tab1" role="button"><span>LOCATIONS </span></label></li>
+            <li title="Delivery Contents"><label for="tab2" role="button"><span>PHOTOGRAPHY</span></label></li>
         </ul>
 
         <div class="sliders">
@@ -17,7 +17,7 @@
         </div>
         <div class="content">
             <section>
-                <div class="container-gallery" style="    gap: 9rem;">
+                <div class="container-gallery" >
 
                     <div class="tabs-gallery">
                         <span class="tab-link current" data-tab="tab-1"> <span>1.</span> CITIES </span>
