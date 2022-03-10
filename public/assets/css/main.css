@@ -154,6 +154,21 @@ h1 {
     background-repeat: no-repeat;
     overflow: hidden;
 }
+.bg-light_folder {
+    background-image: url(../img/carpeta1.png);
+
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: absolute;
+    top: -23%;
+    background-size: contain;
+    height: 100vh;
+    z-index: 1;
+}
+
 .slider-video {
     max-width: 690px;
     overflow: hidden;
@@ -216,7 +231,7 @@ h1 {
     width: 15px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOC4wNiAzNi4xMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmM2ViZTE7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJDYXBhXzIiIGRhdGEtbmFtZT0iQ2FwYSAyIj48ZyBpZD0iQ2FwYV8xLTIiIGRhdGEtbmFtZT0iQ2FwYSAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTguMDYgMzYuMTIgMTguMDYgMzUuMDYgMS4wNiAxOC4wNiAxOC4wNiAxLjA2IDE4LjA2IDAgMCAxOC4wNiAxOC4wNiAzNi4xMiIvPjwvZz48L2c+PC9zdmc+);
 }
-
+/*
 @keyframes motion-blur {
     0% {
         filter: url(#blur0);
@@ -248,7 +263,7 @@ h1 {
 .do-transition {
     animation: motion-blur 0.1s linear forwards,
         motion-blur 0.4s linear reverse forwards 0.1s;
-}
+}*/
 .main-logo {
     position: absolute;
     z-index: 1;
@@ -261,9 +276,18 @@ h1 {
     height: 100%;
 }
 .main-video {
-    display: flex;
+
     justify-content: center;
     padding-top: 3rem;
+
+    position: relative;
+  /*  max-width: 600px;*/
+    overflow: hidden;
+}
+.bg-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main {
     padding-top: 3rem;
@@ -383,7 +407,7 @@ img {
     display: none;
 }
 .panel {
-    position: absolute;
+   /* position: absolute;*/
     left: 0;
     width: calc(65% - 4.05vw);
     top: 0;
