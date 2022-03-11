@@ -7,21 +7,22 @@
         <div class="bg-light_folder"></div>
         <div class="slider">
             <!---------ITEM------->
+            @foreach(App\Models\HomeProject::all() as $home)
             <div>
                 <video muted autoplay loop>
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-backstage-of-filming-13241-large.mp4" type="video/mp4">
-                    <source src="mov_bbb.ogg" type="video/ogg">
+                    <source src="{{ $home->video }}" type="video/mp4">
+                    <source src="{{ $home->video }}" type="video/ogg">
                     Your browser does not support HTML video.
                 </video>
                 <div class="titles-slider">
-                    <p>BON YURT
-                        HERSHEY’S “AMOR”</p>
-                    <span>DIR. ESTEBAN URIBE
+                    <p>{{ $home->title }}</p>
+                    <span>DIR. {{ $home->director }}
                     </span>
                 </div>
             </div>
+            @endforeach
             <!---------ITEM------->
-            <div>
+            {{--<div>
                 <img src="assets/img/banner.png" alt="" />
                 <div class="titles-slider">
                     <p>BON YURT
@@ -44,7 +45,7 @@
                     <span>DIR. ESTEBAN URIBE
                     </span>
                 </div>
-            </div>
+            </div>--}}
         </div>
     </div>
 

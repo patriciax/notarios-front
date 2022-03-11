@@ -8,20 +8,23 @@
         <div class="main-director_item ">
 
             <!------------------panel 1--------------------------->
+            @foreach(App\Models\Director::all() as $director)
             <div class="main-panel">
-                <p class="main-director-names">FELIPE CORTES </p>
+                <p class="main-director-names">{{ strtoupper($director->name) }}</p>
 
                 <div class="panel">
                     <div class="main-galeria scroll">
-                    <figure class="galeria_img">
+                        @foreach(App\Models\DirectorContent::where("director_id", $director->id)->get() as $content)
+                        <figure class="galeria_img">
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <a href="assets/img/portafolio2.jpg" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
+                            <a href="{{ $content->image }}" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
                                 <!-- Thumbnail -->
-                                <img src="assets/img/portafolio1.jpg" alt="">
+                                <img src="{{ $content->image }}" alt="">
                             </a>
                         </figure>
+                        @endforeach
 
-                        <figure class="galeria_img">
+                        {{--<figure class="galeria_img">
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <a href="assets/img/portafolio2.jpg" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
                                 <!-- Thumbnail -->
@@ -35,38 +38,16 @@
                                 <!-- Thumbnail -->
                                 <img src="assets/img/portafolio1.jpg" alt="">
                             </a>
-                        </figure>
+                        </figure>--}}
 
                     </div>
                     <div class="main-info  ">
 
                         <div class="info scroll">
                             <div class="name-info">
-                                <h3>FELIPE CORTES</h3>
+                                <h3>{{ strtoupper($director->name) }}</h3>
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the
-                                1500s, when an unknown printer took a galley of type
-                                and scrambled it to make a type specimen book. It
-                                has survived not only five centuries, but also the
-                                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of Letraset sheets containing Lorem
-                                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                                versions of Lorem Ipsum.
-
-
-
-                            </p>
-                            <hr>
-                            <p> Contrary to popular belief, Lorem Ipsum is
-                                not simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC, making it
-                                over 2000 years old. Richard McClintock, a Latin
-                                professor at Hampden-Sydney College in Virginia,
-                                looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going
-                                through the cites of the word in and orem ipsum
-                                dolor sit amet..", comes from a line in section
-                                1.10.32</p>
+                            {!! $director->description !!}
                             <div class="logo-info">
                                 <img src="assets/img/logo.png" alt="">
                             </div>
@@ -77,8 +58,10 @@
                     </div>
                 </div>
             </div>
+
+            @endforeach
             <!------------------panel 1--------------------------->
-            <div class="main-panel">
+            {{--<div class="main-panel">
                 <p class="main-director-names">ALEJANDRO CARREÑO </p>
 
                 <div class="panel">
@@ -248,15 +231,12 @@
 
 
 
-            </div>
+            </div>--}}
 
             <!---- <div class="main-director_item">
       <div class="main-director-names">
         <p data-aos="fade-up" data-aos-duration="1000">FELIPE CORTES
 
-
-        </p>
-        <p data-aos="fade-up" data-aos-duration="1500">ALEJANDRO CARREÑO
 
 
         </p>

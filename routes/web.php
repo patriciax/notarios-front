@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrivateFolderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,4 +36,8 @@ Route::get('/films', function () {
     return view('films');
 });
 
+Route::post('validate-user', [PrivateFolderController::class, 'validateUser']);
 
+Route::get('/private-folder', [PrivateFolderController::class, 'show']);
+
+Route::get('/private-project/{slug}', [PrivateFolderController::class, 'showProject']);
