@@ -2,14 +2,14 @@
 <footer>
   <div>
     <p>
-      NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ,
-      COLOMBIA
+    NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ, COLOMBIA / POWERED BY LA*LIBERTY
+
     </p>
   </div>
 
   <div>
     <a href="" target="_blank"> INSTAGRAM </a>
-    <a href="" target="_blank"> EMAIL</a>
+
   </div>
 </footer>
 

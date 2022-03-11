@@ -28,4 +28,11 @@ Route::get('/contact', function () {
 Route::get('/private', function () {
     return view('private');
 });
+Route::get('/services', function () {
+    return view('services');
+});
+Route::get('/films', function () {
+    return view('films');
+});
+
 

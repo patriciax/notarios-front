@@ -3,166 +3,59 @@
 @section("content")
 <main class="bg-light" data-barba="container" data-barba-namespace="contact-section">
 
-<section class="contact">
-  <div class="contact-item" data-aos="fade-up"
-     data-aos-duration="1000">
-    <p class="title-contact">JUAN P. BERNAL</p>
-    <div class="slider-text">
-      <div class="slide-track">
-        <div class="slide">
-          <p>director de recursos humanos</p>
+    <div class="contacto">
+        <div class="contacto-item">
+            <p> JUAN PABLO BERNAL</p>
+            <p>CO FUNDER / CEO</p>
+            <p><a href="tel:+57 321 4520060">+57 321 4520060</a></p>
+            <p><a href="mailto:JUANPABLO@LOSNOTARIOS.TV">JUANPABLO@LOSNOTARIOS.TV</a></p>
         </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
+        <div class="contacto-item">
+            <p> JUAN PABLO BERNAL</p>
+            <p>CO FUNDER / CEO</p>
+            <p><a href="tel:+57 321 4520060">+57 321 4520060</a></p>
+            <p><a href="mailto:JUANPABLO@LOSNOTARIOS.TV">JUANPABLO@LOSNOTARIOS.TV</a></p>
         </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
+        <div class="contacto-item">
+            <p> JUAN PABLO BERNAL</p>
+            <p>CO FUNDER / CEO</p>
+            <p><a href="tel:+57 321 4520060">+57 321 4520060</a></p>
+            <p><a href="mailto:JUANPABLO@LOSNOTARIOS.TV">JUANPABLO@LOSNOTARIOS.TV</a></p>
         </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
+        <div class="contacto-item">
+            <p> JUAN PABLO BERNAL</p>
+            <p>CO FUNDER / CEO</p>
+            <p><a href="tel:+57 321 4520060">+57 321 4520060</a></p>
+            <p><a href="mailto:JUANPABLO@LOSNOTARIOS.TV">JUANPABLO@LOSNOTARIOS.TV</a></p>
         </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
+        <div class="contacto-item">
+            <p> JUAN PABLO BERNAL</p>
+            <p>CO FUNDER / CEO</p>
+            <p><a href="tel:+57 321 4520060">+57 321 4520060</a></p>
+            <p><a href="mailto:JUANPABLO@LOSNOTARIOS.TV">JUANPABLO@LOSNOTARIOS.TV</a></p>
         </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
+        <div class="contacto-item">
+            <p> JUAN PABLO BERNAL</p>
+            <p>CO FUNDER / CEO</p>
+            <p><a href="tel:+57 321 4520060">+57 321 4520060</a></p>
+            <p><a href="mailto:JUANPABLO@LOSNOTARIOS.TV">JUANPABLO@LOSNOTARIOS.TV</a></p>
         </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-      </div>
     </div>
-    <div class="datos">
-      <a href="" target="_blank"> VIMEO</a>
-      <a href="" target="_blank">INSTAGRAM</a>
-      <a href="" target="_blank"> INFO@NOTARIOS.TV</a>
-      <a href="tel:  320.345.6683"> 320.345.6683</a>
-      <p> CRA. 21 #86-77, POLO
-        BOGOTÁ, COLOMBIA</p>
-    </div>
-  </div>
 
-  <div class="contact-item" data-aos="fade-up"
-     data-aos-duration="2000">
-    <p class="title-contact">EDWIN CORTÉS</p>
-    <div class="slider-text">
-      <div class="slide-track">
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-        <div class="slide">
-          <p>director de recursos humanos</p>
-        </div>
-      </div>
-    </div>
-    <div class="datos">
-      <a href="" target="_blank"> VIMEO</a>
-      <a href="" target="_blank">INSTAGRAM</a>
-      <a href="" target="_blank"> INFO@NOTARIOS.TV</a>
-      <a href="tel:  320.345.6683"> 320.345.6683</a>
-      <p> CRA. 21 #86-77, POLO
-        BOGOTÁ, COLOMBIA</p>
-    </div>
-  </div>
-
-  <div class="contact-item" data-aos="fade-up"
-     data-aos-duration="3000">
-    <p class="title-contact">FRANCY LOREM</p>
-    <div class="slider-text">
-      <div class="slide-track">
-        <div class="slide">
-          <p>Lorem ipsum</p>
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-        <div class="slide">
-        <p>Lorem ipsum</p>
-
-        </div>
-      </div>
-    </div>
-    <div class="datos">
-      <a href="" target="_blank"> VIMEO</a>
-      <a href="" target="_blank">INSTAGRAM</a>
-      <a href="" target="_blank"> INFO@NOTARIOS.TV</a>
-      <a href="tel:  320.345.6683"> 320.345.6683</a>
-      <p> CRA. 21 #86-77, POLO
-        BOGOTÁ, COLOMBIA</p>
-    </div>
-  </div>
-</section>
-
-<style>
-  .main-logo {
-    display: none;
-  }
-</style>
 
 
 </main>
+<style>
+
+    footer .copy {
+display: none;
+    }
+    footer{
+        position: fixed;
+    right: 0;
+    }
+</style>
+
 @push("scripts")
 
 @endpush
