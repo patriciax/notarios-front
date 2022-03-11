@@ -19,6 +19,7 @@
 <!----<body data-barba="wrapper">---->
 
 <body>
+@include("partials.loader")
     <!----<div class="load-container">
     <div class="loading-screen"></div>
   </div>--->

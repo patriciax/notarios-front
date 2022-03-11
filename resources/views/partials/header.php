@@ -13,13 +13,15 @@
 </head>
 
 <body data-barba="wrapper">
+
+
   <div class="load-container">
     <div class="loading-screen"></div>
   </div>
 
- 
+
     <div class="main-home">
-        <header>
+        <header >
           <div class="main-logo">
             <img src="assets/img/logo.png" alt="" />
           </div>

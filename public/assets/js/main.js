@@ -1,4 +1,9 @@
-function myscripts() {}
+
+  window.setTimeout(function () {
+    $(".elipse").fadeOut(100);
+
+  }, 2000)
+
 /***********loader*****/
 /*
 function delay(n) {
@@ -68,6 +73,8 @@ $(function () {
         ],
     });
 });*/
+
+$(document).ready(function () {
 
 $(".slider-services").slick({
     arrows: false,
@@ -226,4 +233,5 @@ $(".arrow").click(function () {
 $(".hidden-film").hide();
 $(".btn_more").click(function () {
     $(".hidden-film").show();
+});
 });
