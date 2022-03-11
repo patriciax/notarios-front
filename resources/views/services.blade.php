@@ -2,7 +2,7 @@
 
 @section("content")
 <!----<main class="bg-light" data-barba="container" data-barba-namespace="servicies-section">--->
-<main class="bg-light">
+<main class="bg-light no_height">
     <!-- Tab-->
     <div class="tabs">
         <input type="radio" id="tab1" name="tab-control" checked>
