@@ -1962,7 +1962,7 @@ a:hover {
         padding-right: 5rem;
     }
     .panel {
-        width: calc(60% - 4.05vw);
+      /*  width: calc(60% - 4.05vw);*/
     }
     .main-info .info {
         transform: translate(1rem, 0px);
