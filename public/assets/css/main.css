@@ -1950,8 +1950,8 @@ a:hover {
     }
     .main-director-names {
         font-size: 17px;
-
-        transform: translate(62.5%, 1163%) !important;
+/*
+        transform: translate(62.5%, 1163%) !important;*/
     }
     .name-info {
         transform: translateX(57.5%) translateY(-8.35vw) rotate(90deg);
