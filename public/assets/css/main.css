@@ -2173,10 +2173,7 @@ a:hover {
 }
 @media only screen and (device-width: 1440px) and (min-height: 649px) {
 
-    .bg-light {
 
-        background: red;
-    }
     .main-director-names {
         transform: translate(65.5%, 1414%) !important;
     }
