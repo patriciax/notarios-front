@@ -2054,4 +2054,8 @@ a:hover {
     .slider-films .slick-slide img {
         height: 423px;
     }
+    .slider .slick-slide {
+        padding: 0 100px;
+
+    }
 }
