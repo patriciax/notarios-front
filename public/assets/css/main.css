@@ -2024,10 +2024,7 @@ a:hover {
 }
 
 @media only screen and (device-width: 1280px) and (device-height: 800px) {
-    .bg-light {
 
-        background: red;
-    }
     .open {
         transform: translateX(390px) !important;
 
@@ -2041,5 +2038,20 @@ a:hover {
     .name-info {
         transform: translateX(41.9%) translateY(-5.35vw) rotate(90deg);
 
+    }
+    .main-director-names {
+
+        transform: translate(65.5%, 1900%) !important;
+    }
+    .txt-title {
+        transform: translate(65.5%, 31rem) !important;
+
+    }
+    .slider-films {
+        max-width: 61rem;
+
+    }
+    .slider-films .slick-slide img {
+        height: 423px;
     }
 }
