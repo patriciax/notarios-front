@@ -2007,7 +2007,7 @@ a:hover {
         left: 18%;
     }
 }
-
+/*
 @media (min-width: 1400px) {
     .bg-light_folder {
         background-size: 150%;
@@ -2031,7 +2031,7 @@ a:hover {
     .name-info {
         transform: translateX(27.8vw) translateY(-3.35vw) rotate(90deg);
     }
-}
+}*/
 @media (min-width: 992px) and (max-width: 1199px) {
 }
 
@@ -2083,10 +2083,7 @@ a:hover {
     }
 }
 @media only screen and (device-width: 1024px) and (min-height: 500px) {
-    .bg-light {
 
-        background: red;
-    }
     .main-director-names {
         font-size: 20px;
 
@@ -2171,6 +2168,7 @@ a:hover {
         top: -83%;
     }
 }
+
 @media only screen and (device-width: 1440px) and (min-height: 649px) {
 
 
@@ -2187,4 +2185,69 @@ a:hover {
     max-width: 484px;
     transform: translate(25rem, 0px);
 }
+}
+
+
+@media only screen and (width: 1440px) and (height: 900px) {
+    .main-director-names {
+        transform: translate(65.5%, 2320%) !important;
+    }
+    .txt-title {
+        transform: translate(65.5%, 2323%) !important;
+    }
+    .open {
+        transform: translateX(450px) !important;
+    }
+    .main-info .info {
+        max-width: 470px;
+        transform: translate(25.1rem, 0px);
+    }
+    .name-info {
+        transform: translateX(44.5%) translateY(-4.35vw) rotate(90deg);
+    }
+
+}
+@media only screen and (width: 1280px) and (height: 950px) {
+
+    .main-director-names {
+
+        transform: translate(65.5%, 2512%) !important;
+    }
+    .txt-title {
+        transform: translate(65.5%, 41rem) !important;
+
+    }
+    .open {
+        transform: translateX(393px) !important;
+
+    }
+    .name-info {
+        transform: translateX(38.5%) translateY(-5.35vw) rotate(90deg);
+
+    }
+    .main-director-names {
+        font-size: 23px;
+    }
+}
+@media only screen and (width: 1280px) and (height: 800px) {
+
+
+    .main-director-names {
+
+        transform: translate(65.5%, 2512%) !important;
+    }
+    .txt-title {
+        transform: translate(65.5%, 32rem) !important;
+    }
+    .open {
+        transform: translateX(393px) !important;
+
+    }
+    .name-info {
+        transform: translateX(45.9%) translateY(-5.35vw) rotate(90deg);
+    }
+    .main-director-names {
+        font-size: 23px;
+        transform: translate(65.5%, 1955%) !important;
+    }
 }
