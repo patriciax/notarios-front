@@ -1950,7 +1950,7 @@ a:hover {
     }
     .main-director-names {
         font-size: 17px;
-/*
+        /*
         transform: translate(62.5%, 1163%) !important;*/
     }
     .name-info {
@@ -1962,7 +1962,7 @@ a:hover {
         padding-right: 5rem;
     }
     .panel {
-      /*  width: calc(60% - 4.05vw);*/
+        /*  width: calc(60% - 4.05vw);*/
     }
     .main-info .info {
         transform: translate(1rem, 0px);
@@ -2018,8 +2018,28 @@ a:hover {
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-
 }
 
 @media (max-width: 1024px) {
+}
+
+@media only screen and (device-width: 1280px) and (device-height: 800px) {
+    .bg-light {
+
+        background: red;
+    }
+    .open {
+        transform: translateX(390px) !important;
+
+    }
+    .main-info .info {
+
+        max-width: 380px;
+        transform: translate(23rem, 0px);
+
+    }
+    .name-info {
+        transform: translateX(41.9%) translateY(-5.35vw) rotate(90deg);
+
+    }
 }
