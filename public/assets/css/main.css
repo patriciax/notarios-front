@@ -2077,6 +2077,10 @@ a:hover {
 
         top: -75%;
     }
+    .tabs-gallery2 span {
+
+        font-size: 1.2rem;
+    }
 }
 @media only screen and (device-width: 1024px) and (min-height: 500px) {
     .bg-light {
