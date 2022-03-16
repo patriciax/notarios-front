@@ -2171,3 +2171,23 @@ a:hover {
         top: -83%;
     }
 }
+@media only screen and (device-width: 1440px) and (min-height: 649px) {
+
+    .bg-light {
+
+        background: red;
+    }
+    .main-director-names {
+        transform: translate(65.5%, 1414%) !important;
+    }
+    .txt-title {
+        transform: translate(65.5%, 1440%) !important;
+    }
+    .open {
+        transform: translateX(455px) !important;
+    }
+    .main-info .info {
+    max-width: 484px;
+    transform: translate(25rem, 0px);
+}
+}
