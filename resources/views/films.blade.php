@@ -4,10 +4,12 @@
 
 <main class="bg-light end">
     <div class="slider-films">
-        <a href="#a" class="slider-films_item">
-            <img src="assets/img/films1.png" alt="">
-        </a>
-        <div id="film_slider-2" class="slider-films_item">
+        @foreach(App\Models\Film::all() as $film)
+            <a href="#a" class="slider-films_item" id="film_slider-{{ $film->id }}">
+                <img src="{{ $film->image }}" alt="">
+            </a>
+        @endforeach
+        <!--<div id="film_slider-2" class="slider-films_item">
             <img src="assets/img/films2.png" alt="">
         </div>
         <div class="slider-films_item">
@@ -18,45 +20,54 @@
         </div>
         <div id="film_slider-4" class="slider-films_item">
             <img src="assets/img/films1.png" alt="">
-        </div>
+        </div>-->
     </div>
 
 
 
 </main>
 
+@foreach(App\Models\Film::all() as $film)
 <section id="a"  class="section-films bg-light">
     <div class="arrow">
         <a href="#top">top</a>
     </div>
     <div class="film-grid">
         <div class="film-grid_item">
-            <h3 class="title-film">LA VIRGEN NEGRA
-                SHORT FILM</h3>
+            <h3 class="title-film">{{ $film->name }}</h3>
 
             <p>
-                GÉNERO: Ficción <br>
-                FORMATO: Cortometraje<br>
-                AÑO: 2018<br>
-                DURACIÓN: 18 mins
+                GÉNERO: {{ $film->genre }} <br>
+                FORMATO: {{ $film->format }}<br>
+                AÑO: {{ $film->year }}<br>
+                DURACIÓN: {{ $film->duration }}
 
 
                 <br>   <br>SINOPSIS<br><br>
 
-                Belisario espera, su mujer está muy enferma; él trabaja silenciosamente en sus ovejas hasta que llega un curandero. El curandero ha venido a salvar a la esposa de Belisario y le indica que debe traer un objeto enterrado en la nieve en lo alto de las montañas de los Andes, con el fin de usarlo en un ritual para recuperarla a ella. La suerte de la esposa depende enteramente de Belisario y las decisiones que ha tomado.
+                {!! $film->description !!}
             </p>
 
-            <span class="btn_more">/ SEE MORE</span>
+            <!--<span class="btn_more">/ SEE MORE</span>
             <br>
             <p class="hidden-film">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi debitis accusantium consectetur totam quam, necessitatibus perspiciatis libero molestias cumque fugit fuga, cupiditate quisquam magnam esse fugiat ipsa tempora tempore ipsam?
-            </p>
+            </p>-->
         </div>
         <div class="film-grid_item">
-            <img src="assets/img/fiilmtest.png" alt="">
+            @if($film->secondary_image_file_type == 'image')
+                <img src="{{ $film->secondary_image }}" alt="">
+            @else
+
+                <video class="w-100">
+                    <source src="{{ $film->secondary_image }}">
+                </video>
+
+            @endif
         </div>
     </div>
 </section>
+@endforeach
 <style>
     footer .copy {
 display: none;
