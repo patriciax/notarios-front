@@ -2,7 +2,7 @@
 
 @section("content")
 <!---<main class="bg-light" data-barba="container" data-barba-namespace="home-section">-->
-<main class="bg-light  bg-center">
+<main class="bg-light  bg-center home-main">
     <div class="main-video  ">
         <div class="bg-light_folder"></div>
         <div class="slider">

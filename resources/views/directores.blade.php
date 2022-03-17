@@ -269,6 +269,11 @@
     .menu li:nth-child(5), footer .copy,.main-logo img {
         display: none;
     }
+    @media only screen and (max-width: 600px) {
+        .main-logo img {
+        display: block;
+    }
+    }
 
 </style>
 @push("scripts")

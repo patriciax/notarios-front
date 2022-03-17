@@ -25,7 +25,7 @@
   </div>--->
 
 
-    <div class="main-home">
+    <div class="main-home no_height">
         <header>
             <div class="main-logo" data-aos="fade" data-aos-duration="3000">
                 <img src="assets/img/logo.png" alt="" />

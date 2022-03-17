@@ -1,7 +1,7 @@
 @extends("layouts.main")
 
 @section("content")
-<main class="bg-light" data-barba="container" data-barba-namespace="contact-section">
+<main class="bg-light no_height" data-barba="container" data-barba-namespace="contact-section">
 
     <div class="contacto">
         <div class="contacto-item">
@@ -62,6 +62,16 @@ display: none;
         position: fixed;
     right: 0;
     }
+    @media only screen and (max-width: 600px) {
+        footer .copy, .main-logo img {
+display: block;
+    }
+        footer {
+    position: inherit;
+
+}
+    }
+
 </style>
 
 @push("scripts")

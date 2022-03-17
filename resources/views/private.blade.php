@@ -25,13 +25,25 @@
       </div>
 
 
-    </div>
-  </section>
+
+            </div>
+
+
+        </div>
+    </section>
 
 
 
 
 </main>
+
+<style>
+    @media only screen and (max-width: 600px) {
+        body {
+            background: #a2a2a2;
+        }
+    }
+</style>
 @push("scripts")
 
 @endpush

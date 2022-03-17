@@ -2,7 +2,7 @@
 @extends("layouts.main")
 
 @section("content")
-<main class="bg-light" data-barba="container" data-barba-namespace="about-section">
+<main class="bg-light no_height" data-barba="container" data-barba-namespace="about-section">
 
 <section data-aos="fade"
      data-aos-duration="3000">
