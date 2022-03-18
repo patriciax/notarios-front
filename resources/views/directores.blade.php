@@ -10,7 +10,6 @@
             <!------------------panel 1--------------------------->
             @foreach(App\Models\Director::all() as $director)
             <div class="main-panel">
-                <p class="main-director-names">{{ strtoupper($director->name) }}</p>
 
                 <div class="panel">
                     <div class="main-galeria scroll">
@@ -57,6 +56,10 @@
                         </div>
                     </div>
                 </div>
+
+<p class="main-director-names">{{ strtoupper($director->name) }}</p>
+
+
             </div>
 
             @endforeach
@@ -274,7 +277,12 @@
         display: block;
     }
     }
-
+    main {
+    padding-top: 0rem;
+}
+.main-director {
+    margin-top: 0rem;
+}
 </style>
 @push("scripts")
 
