@@ -1472,6 +1472,7 @@ figure img {
 /***************/
 .film-grid_item video{
     width: 100%;
+    cursor: pointer;
 }
 .film-grid {
     display: flex;
