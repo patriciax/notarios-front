@@ -4,49 +4,59 @@
 <!---<main class="bg-light" data-barba="container" data-barba-namespace="home-section">-->
 <main class="bg-light  bg-center home-main">
     <div class="main-video  ">
-        <div class="bg-light_folder"></div>
-        <div class="slider">
+        {{-- <div class="bg-light_folder"></div>--}}
+        <div class="slider gallery">
             <!---------ITEM------->
             @foreach(App\Models\HomeProject::all() as $home)
             <div>
-                <video muted autoplay loop>
-                    <source src="{{ $home->video }}" type="video/mp4">
-                    <source src="{{ $home->video }}" type="video/ogg">
-                    Your browser does not support HTML video.
-                </video>
+                <div data-target="custom-popup" class="main-mask js-open-popup" onclick="playPause()">
+                    <video muted autoplay loop class="gallery">
+
+                        <source src="{{ $home->video }}" type="video/mp4">
+                        <source src="{{ $home->video }}" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
+                    <svg class="svg">
+                        <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+                            <path d="M1,0.128 H0.933 A0.015,0.023,0,0,1,0.918,0.105 V0.055 A0.015,0.023,0,0,0,0.902,0.032 H0.713 A0.015,0.023,0,0,0,0.697,0.055 V0.105 A0.015,0.023,0,0,1,0.682,0.128 H0.052 A0.015,0.023,0,0,0,0.036,0.152 V1 A0.015,0.023,0,0,0,0.052,1 H1 A0.015,0.023,0,0,0,1,1 V0.152 A0.015,0.023,0,0,0,1,0.128"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+
+
                 <div class="titles-slider">
-                    <p>{{ $home->title }}</p>
-                    <span>DIR. {{ $home->director }}
+                    <p>BON YURT
+                        HERSHEY’S “AMOR”</p>
+                    <span>DIR. ESTEBAN URIBE
                     </span>
                 </div>
+
             </div>
             @endforeach
-            <!---------ITEM------->
-            {{--<div>
-                <img src="assets/img/banner.png" alt="" />
-                <div class="titles-slider">
-                    <p>BON YURT
-                        HERSHEY’S “AMOR”</p>
-                    <span>DIR. ESTEBAN URIBE
-                    </span>
-                </div>
-            </div>
-            <!---------ITEM------->
 
-            <div>
-                <video muted autoplay loop>
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-depressed-and-tired-actor-in-front-of-the-mirror-24142-large.mp4" type="video/mp4">
-                    <source src="mov_bbb.ogg" type="video/ogg">
-                    Your browser does not support HTML video.
-                </video>
-                <div class="titles-slider">
-                    <p>BON YURT
-                        HERSHEY’S “AMOR”</p>
-                    <span>DIR. ESTEBAN URIBE
-                    </span>
-                </div>
-            </div>--}}
+
+
+
         </div>
+        {{---------------modals-----------------------}}
+
+        <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup">
+            <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
+
+                <div class="custom-popup__content">
+                @foreach(App\Models\HomeProject::all() as $home)
+                     <video autoplay loop class="test">
+
+                        <source src="{{ $home->video }}" type="video/mp4">
+                        <source src="{{ $home->video }}" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
 

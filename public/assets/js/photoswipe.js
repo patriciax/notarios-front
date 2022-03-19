@@ -8,7 +8,7 @@
   var container = [];
 
   // Loop over gallery items and push it to the array
-  $('#gallery').find('figure').each(function() {
+  $('.gallery').find('figure').each(function() {
     var $link = $(this).find('a'),
       item = {
         src: $link.attr('href'),
