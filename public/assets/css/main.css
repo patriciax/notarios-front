@@ -2111,10 +2111,10 @@ a:hover {
     }
 }
 /*tablet*/
-@media (max-width: 768px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .txt-title {
         /*     transform: translate(62.5%, 19rem) !important;*/
-        transform: translate(65.5%, 26rem) !important;
+    /*    transform: translate(65.5%, 26rem) !important;*/
     font-size: 10px;
     }
     .main-director-names {
