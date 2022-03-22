@@ -374,7 +374,7 @@ footer a:nth-child(1) {
     /* width: 50%;*/
 }
 .main-director-names {
-    font-size: 27px;
+    font-size: 24px;
     font-family: "DrukText";
     margin-top: 0;
     margin-bottom: 0;
@@ -2228,6 +2228,13 @@ a:hover {
     .tabs-gallery2 span {
         font-size: 1.2rem;
     }
+}
+@media only screen and (device-width: 1280px) and (device-height: 700px) {
+
+    .name-info {
+        transform: translateX(52.5%) translateY(-5.35vw) rotate(90deg);
+    }
+
 }
 @media only screen and (device-width: 1024px) and (min-height: 500px) {
     .main-director-names {
