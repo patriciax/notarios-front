@@ -23,23 +23,6 @@
                     </svg>
                 </div>
 
-                <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup">
-                    <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
-
-                        <div class="custom-popup__content">
-                        
-                            <video autoplay loop class="test">
-
-                                <source src="{{ $home->video }}" type="video/mp4">
-                                <source src="{{ $home->video }}" type="video/ogg">
-                                Your browser does not support HTML video.
-                            </video>
-                
-                        </div>
-
-                    </div>
-                </div>
-
 
                 <div class="titles-slider">
                     <p>BON YURT
@@ -57,7 +40,22 @@
         </div>
         {{---------------modals-----------------------}}
 
-        
+        <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup">
+            <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
+
+                <div class="custom-popup__content">
+                @foreach(App\Models\HomeProject::all() as $home)
+                     <video autoplay loop class="test">
+
+                        <source src="{{ $home->video }}" type="video/mp4">
+                        <source src="{{ $home->video }}" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
