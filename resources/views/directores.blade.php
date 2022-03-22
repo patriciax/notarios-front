@@ -53,6 +53,8 @@
                             </div>
                             {!! $director->description !!}
                             <div class="logo-info">
+                           <a href=""><img class="vimeo" src="http://imgfz.com/i/6nAzYHJ.png" alt=""></a>
+
                                 <img src="assets/img/logo.png" alt="">
                             </div>
                             <div class="footer-info">
