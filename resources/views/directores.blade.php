@@ -16,7 +16,14 @@
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <a href="{{ $content->image }}" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
                                 <!-- Thumbnail -->
-                                <img src="{{ $content->image }}" alt="">
+                                @if($content->type == 'image')
+                                    <img src="{{ $content->image }}" alt="">
+                                @else
+                                    <video class="w-100" controls>
+                                        <source src="{{ $content->image }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                @endif
                             </a>
                         </figure>
                         @endforeach
