@@ -488,6 +488,10 @@ img {
     object-fit: cover;
     width: 100%;
 }
+.galeria_img video{
+    object-fit: cover;
+    width: 100%;
+}
 .zoom_image {
     position: absolute;
     top: 0;

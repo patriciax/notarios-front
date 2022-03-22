@@ -6,13 +6,11 @@
     <section class="main-director">
         <p class="txt-title">DIRECTORS</p>
         <div class="main-director_item ">
-
             <!------------------panel 1--------------------------->
             @foreach(App\Models\Director::all() as $director)
             <div class="main-panel">
-
                 <div class="panel">
-                    <div class="main-galeria scroll">
+                    <div class="main-galeria scroll gallery">
                         @foreach(App\Models\DirectorContent::where("director_id", $director->id)->get() as $content)
                         <figure class="galeria_img">
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
@@ -56,19 +54,15 @@
                         </div>
                     </div>
                 </div>
-
-<p class="main-director-names">{{ strtoupper($director->name) }}</p>
-
-
+               <p class="main-director-names">{{ strtoupper($director->name) }}</p>
             </div>
 
             @endforeach
             <!------------------panel 1--------------------------->
             {{--<div class="main-panel">
                 <p class="main-director-names">ALEJANDRO CARREÑO </p>
-
                 <div class="panel">
-                    <div id="gallery" class="main-galeria scroll">
+                    <div id="gallery" class="main-galeria scroll gallery">
                         <figure class="galeria_img">
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <a href="assets/img/portafolio2.jpg" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
@@ -269,20 +263,25 @@
     .menu li:nth-child(5),
     .menu li:nth-child(6),
     .menu li:nth-child(7),
-    .menu li:nth-child(5), footer .copy,.main-logo img {
+    .menu li:nth-child(5),
+    footer .copy,
+    .main-logo img {
         display: none;
     }
+
     @media only screen and (max-width: 600px) {
         .main-logo img {
-        display: block;
+            display: block;
+        }
     }
-    }
+
     main {
-    padding-top: 0rem;
-}
-.main-director {
-    margin-top: 0rem;
-}
+        padding-top: 0rem;
+    }
+
+    .main-director {
+        margin-top: 0rem;
+    }
 </style>
 @push("scripts")
 
