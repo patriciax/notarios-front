@@ -10,7 +10,7 @@
             @foreach(App\Models\HomeProject::all() as $home)
             <div>
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" onclick="playPause()">
-                    <video muted autoplay loop class="gallery">
+                    <video muted autoplay loop  class="gallery">
 
                         <source src="{{ $home->video }}" type="video/mp4">
                         <source src="{{ $home->video }}" type="video/ogg">
@@ -44,14 +44,14 @@
             <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                 <div class="custom-popup__content">
-                
-                     <video autoplay loop class="test">
+
+                     <video autoplay loop controls class="test">
 
                         <source src="{{ $home->video }}" type="video/mp4">
                         <source src="{{ $home->video }}" type="video/ogg">
                         Your browser does not support HTML video.
                     </video>
-                   
+
                 </div>
 
             </div>
