@@ -1726,6 +1726,11 @@ a:hover {
 }
 /*******mediasquery **********/
 @media only screen and (max-width: 600px) {
+    .main-mask {
+        width: 89%;
+        height: 214px;
+
+    }
     figure img {
         max-width: 80%;
     }
