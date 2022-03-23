@@ -1,8 +1,8 @@
 @extends("layouts.main")
 
 @section("content")
-<main class="bg-light" data-barba="container" data-barba-namespace="contact-section">
-
+<main class=" bg-dark--private" data-barba="container" data-barba-namespace="contact-section">
+<div class="private-main">
     {{ $project->name }}
 
     @if($project->image_type == 'image')
@@ -18,7 +18,7 @@
     @endif
 
     @foreach(App\Models\ProjectSecondaryContent::where("project_id", $project->id)->get() as $content)
-
+    <div class="item-private">
         @if($content->type == 'image')
 
             <img src="{{ $content->image }}" alt="" class="w-100">
@@ -31,10 +31,10 @@
 
         @endif
 
-
+        </div>
     @endforeach
 
-
+    </div>
 
 </main>
 <style>
