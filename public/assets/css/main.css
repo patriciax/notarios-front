@@ -1916,9 +1916,11 @@ a:hover {
         transform: translateX(0px);
     }
     .main-panel:nth-child(1) .panel {
-        opacity: 0;
+        opacity: initial;
         z-index: 999;
         transform: translateX(0);
+        height: 0;
+        overflow: hidden;
     }
     .bg-light_folder {
         background-size: 200%;
@@ -2104,7 +2106,7 @@ a:hover {
     }
     .main-panel .panel-active {
         overflow: scroll;
-        height: 50vh;
+        height: 50vh!important;
         opacity: 1 !important;
     }
     .main-director {

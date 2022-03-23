@@ -19,7 +19,7 @@
 <!----<body data-barba="wrapper">---->
 
 <body>
-@include("partials.loader")
+    @include("partials.loader")
     <!----<div class="load-container">
     <div class="loading-screen"></div>
   </div>--->
@@ -28,7 +28,7 @@
     <div class="main-home no_height">
         <header>
             <div class="main-logo" data-aos="fade" data-aos-duration="3000">
-                <img src="assets/img/logo.png" alt="" />
+                <a href="/"> <img src="assets/img/logo.png" alt="" /></a>
             </div>
 
 
@@ -124,7 +124,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!---<script defer src="https://unpkg.com/@barba/core"></script>--->
- <!----   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>--->
+    <!----   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>--->
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="{{ url('assets/js/main.js') }}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
