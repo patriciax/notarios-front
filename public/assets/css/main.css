@@ -1729,12 +1729,12 @@ a:hover {
     .custom-popup__holder {
         width: 96%;
         height: auto;
-        padding: 0;
+        padding: 0!important;
       }
       .custom-popup__content {
 
-        padding: 0;
-        margin: 0;
+        padding: 0!important;
+        margin: 0!important;
     }
     .main-mask {
         width: 89%;
