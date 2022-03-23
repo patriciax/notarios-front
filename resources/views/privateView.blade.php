@@ -3,15 +3,14 @@
 @section("content")
 <main class=" bg-dark--private" data-barba="container" data-barba-namespace="contact-section">
     <div class="private-main">
-        <div class="item-private">
+
 
 
             @foreach($secondaryContent as $content)
-
             @php
             $model = App\Models\Project::where('id', $content->project_id)->first();
             @endphp
-
+            <div class="item-private">
             <a class="private-a" href="{{ url('/private-project/'.$model->slug) }}">{{ $model->name }}</a> <br>
             @if($model->image_type == 'image')
 
@@ -27,20 +26,17 @@
                 </figure>
 
             </div>
-
             @else
-
             <video class="w-100">
                 <source src="{{ $model->image }}">
             </video>
-
             @endif
 
-
+            </div>
             @endforeach
 
 
-        </div>
+
     </div>
 </main>
 <style>
