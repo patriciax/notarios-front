@@ -30,7 +30,7 @@
 
             @else
 
-            <video class="w-100">
+            <video class="w-100" controls>
                 <source src="{{ $model->image }}">
             </video>
 

@@ -11,7 +11,7 @@
 
     @else
 
-        <video class="w-100">
+        <video class="w-100" controls>
             <source src="{{ $project->image }}">
         </video>
 
@@ -19,13 +19,13 @@
 
     @foreach(App\Models\ProjectSecondaryContent::where("project_id", $project->id)->get() as $content)
 
-        @if($content->image_type == 'image')
+        @if($content->type == 'image')
 
             <img src="{{ $content->image }}" alt="" class="w-100">
 
         @else
 
-            <video class="w-100">
+            <video class="w-100" controls>
                 <source src="{{ $content->image }}">
             </video>
 
