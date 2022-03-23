@@ -3,7 +3,9 @@
 @section("content")
 <main class=" bg-dark--private" data-barba="container" data-barba-namespace="contact-section">
 <div class="private-main">
-    {{ $project->name }}
+  <h4 class="private-a">
+  {{ $project->name }}
+  </h4>
 
     @if($project->image_type == 'image')
 
@@ -46,6 +48,12 @@ display: none;
         position: fixed;
     right: 0;
     }
+    .private-a {
+
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
 </style>
 
 @push("scripts")
