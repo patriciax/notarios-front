@@ -1,14 +1,14 @@
 window.setTimeout(function () {
     $(".elipse").fadeOut(100);
 }, 2000);
-var myVideo = document.querySelector(".test");
+/*var myVideo = document.querySelector(".test");
 
 function playPause() {
     if (myVideo.paused)
       myVideo.play();
     else
       myVideo.pause();
-  }
+  }*/
 
 function customPopup() {
 
