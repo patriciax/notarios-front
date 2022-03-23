@@ -177,6 +177,32 @@ h1 {
     background-repeat: no-repeat;
     overflow: hidden;
 }
+  .bg-dark--private {
+    background-image: url(../img/fondo_gris.jpg);
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-bottom: 5rem;
+}
+.item-private{
+    width: 50%;
+}
+.private-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    padding-left: 17rem;
+    padding-right: 7rem;
+}
+.private-a{
+    font-family: "DrukText";
+    color: #000;
+}
 .slider-video {
     max-width: 690px;
     overflow: hidden;
