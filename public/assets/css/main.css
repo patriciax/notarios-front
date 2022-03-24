@@ -190,6 +190,16 @@ h1 {
 .item-private{
     width: 50%;
 }
+.item-private video{
+    width: 100%;
+}
+.item-private figure img, .item-private video {
+    max-width: 95%;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .private-main{
     display: flex;
     flex-wrap: wrap;
