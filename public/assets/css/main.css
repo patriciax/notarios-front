@@ -1496,7 +1496,7 @@ figure img {
     background: transparent !important;
 }
 .slider-films {
-    max-width: 67rem;
+    max-width: 66rem;
     /* transform: translate(16rem, 3rem);*/
 }
 .slider-films_item {
@@ -1508,9 +1508,9 @@ figure img {
     transform: translateY(-10px);
 }
 .slider-films .slick-slide img {
-    height: 580px;
-    width: 430px;
-    object-fit: cover;
+    height: 490px;
+    width: 100%;
+    object-fit: contain;
 }
 .slider-films .slick-next {
     right: -16px;
@@ -2313,9 +2313,6 @@ a:hover {
     }
     .txt-title {
         transform: translate(65.5%, 31rem) !important;
-    }
-    .slider-films {
-        max-width: 61rem;
     }
 
 
