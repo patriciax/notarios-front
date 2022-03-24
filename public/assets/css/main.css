@@ -154,7 +154,9 @@ h1 {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-.bg-light_folder {
+.bg-light_folder::before {
+    position: absolute;
+    content: "";
     background-image: url(../img/carpeta2.png);
     width: 100%;
     background-position: center;

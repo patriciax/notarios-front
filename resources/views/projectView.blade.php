@@ -56,7 +56,7 @@
             @elseif($content->type == 'pdf')
 
             <a href="{{ $content->image }}" target="_blank">
-                PDF
+                <img src="http://imgfz.com/i/jhamRXb.jpeg" alt="">
             </a>
 
         @endif
