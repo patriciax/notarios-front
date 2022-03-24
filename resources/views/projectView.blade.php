@@ -68,8 +68,8 @@
 
 </main>
 <style>
-    footer .copy,
-    .main-logo img {
+    footer .copy
+   {
         display: none;
     }
 
@@ -93,6 +93,9 @@
     .item-private {
         width: 49%;
     }
+    figure img {
+    max-width: 100%;
+}
 </style>
 
 @push("scripts")
