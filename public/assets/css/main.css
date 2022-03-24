@@ -1649,6 +1649,8 @@ a:hover {
     width: 50%;
     height: 450px;
     transition: .8s;
+    display: flex;
+    justify-content: center;
 }
 .video-mask:hover{
 
@@ -1789,7 +1791,7 @@ a:hover {
     }
     .main-mask {
         width: 89%;
-        height: 214px;
+        height: 180px;
 
     }
     figure img {
@@ -2162,8 +2164,13 @@ a:hover {
         height: 80vh;
 
     }
+    .main-video {
+
+        padding: 7rem 0;
+
+    }
     .home-main {
-        height: 80vh;
+        height: -webkit-fill-available;
     }
     .bg-light_folder {
         background-image: url(../img/bg_xs.png);
