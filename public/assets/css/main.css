@@ -257,7 +257,7 @@ h1 {
 }
 [type="button"] {
     position: fixed;
-    top: 50%;
+    top: 56%;
     z-index: 10;
     width: 70px;
     height: 70px;
@@ -1638,7 +1638,7 @@ a:hover {
 }
 .main-mask {
     width: 100%;
-    height: -webkit-fill-available;
+    height: 430px;
 
     background-size: cover;
     -webkit-clip-path: url(#my-clip-path);
@@ -1772,6 +1772,11 @@ a:hover {
 }
 /*******mediasquery **********/
 @media only screen and (max-width: 600px) {
+    .video-mask {
+        width: 100%;
+        height: auto;
+        transition: .8s;
+    }
     .custom-popup__holder {
         width: 96%;
         height: auto;
@@ -2264,6 +2269,11 @@ a:hover {
     }
 }*/
 @media (min-width: 992px) and (max-width: 1199px) {
+    .video-mask {
+        width: 100%;
+        height: 450px;
+        transition: .8s;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -2290,9 +2300,7 @@ a:hover {
         max-width: 61rem;
     }
 
-    .slider .slick-slide {
-        padding: 0 100px;
-    }
+
 
     .tabs-gallery2 span {
         font-size: 1.2rem;
