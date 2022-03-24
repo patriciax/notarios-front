@@ -2321,6 +2321,32 @@ a:hover {
         font-size: 1.2rem;
     }
 }
+@media only screen and (device-width: 1280px) and (device-height: 900px) {
+    .open {
+        transform: translateX(390px) !important;
+    }
+    .main-info .info {
+        max-width: 380px;
+        transform: translate(23rem, 0px);
+    }
+    .name-info {
+        transform: translateX(40.9%) translateY(-5.35vw) rotate(90deg);
+
+    }
+    .main-director-names {
+     /*   transform: translate(65.5%, 1900%) !important;*/
+    }
+    .txt-title {
+        transform: translate(65.5%, 31rem) !important;
+    }
+
+
+
+    .tabs-gallery2 span {
+        font-size: 1.2rem;
+    }
+}
+
 @media only screen and (device-width: 1280px) and (device-height: 700px) {
 
     .name-info {
