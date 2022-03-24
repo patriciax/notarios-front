@@ -47,13 +47,19 @@
                 </figure>
 
             </div>
-            @else
+            @elseif($content->type == 'image')
 
             <video class="w-100" controls>
                 <source src="{{ $content->image }}">
             </video>
 
-            @endif
+            @elseif($content->type == 'pdf')
+
+            <a href="{{ $content->image }}" target="_blank">
+                PDF
+            </a>
+
+        @endif
 
         </div>
         @endforeach
