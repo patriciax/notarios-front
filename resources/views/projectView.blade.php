@@ -19,11 +19,17 @@
             </figure>
 
         </div>
-        @else
+        @elseif($project->image_type == 'image')
 
         <video class="w-100" controls>
             <source src="{{ $project->image }}">
         </video>
+
+        @elseif($project->image_type == 'pdf')
+
+            <a href="{{ $project->image }}" target="_blank">
+                PDF
+            </a>
 
         @endif
 
