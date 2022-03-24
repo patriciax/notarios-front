@@ -59,7 +59,7 @@
                 <img src="{{ $film->secondary_image }}" alt="">
             @else
 
-                <video class="w-100 test" onclick="playPause()" poster="http://imgfz.com/i/ogBS2Es.png">
+                <video class="w-100 test" onclick="playPause()" >
                     <source src="{{ $film->secondary_image }}">
                 </video>
 
