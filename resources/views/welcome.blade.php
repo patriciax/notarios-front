@@ -25,9 +25,8 @@
 
 
                 <div class="titles-slider">
-                    <p>BON YURT
-                        HERSHEY’S “AMOR”</p>
-                    <span>DIR. ESTEBAN URIBE
+                    <p>{{ strtoupper($home->title) }}</p>
+                    <span>DIR. {{ strtoupper($home->director) }}
                     </span>
                 </div>
 
@@ -47,8 +46,8 @@
 
                      <video autoplay loop controls class="test">
 
-                        <source src="{{ $home->video }}" type="video/mp4">
-                        <source src="{{ $home->video }}" type="video/ogg">
+                        <source src="{{ $home->video_comercial }}" type="video/mp4">
+                        <source src="{{ $home->video_comercial }}" type="video/ogg">
                         Your browser does not support HTML video.
                     </video>
 
