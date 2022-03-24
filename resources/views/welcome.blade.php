@@ -11,6 +11,7 @@
             <div>
                 <div class="video-mask">
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" onclick="playPause()">
+                <p class="number">Nº 512</p>
                     <video muted autoplay loop class="gallery">
 
                         <source src="{{ $home->video }}" type="video/mp4">

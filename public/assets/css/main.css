@@ -228,7 +228,18 @@ h1 {
     overflow: visible;
     will-change: transform;
 }
-
+.number{
+    position: absolute;
+    height: 100px;
+    z-index: 999;
+    text-align: justify;
+    width: 100%;
+    color: white;
+    text-align: center;
+    transform: translate(-12%, 6%);
+    font-family: 'VanderKeur';
+    font-size: .9rem;
+}
 .slider .slick-slide {
     /*padding: 0 100px;*/
     width: 95vw;
@@ -1980,7 +1991,7 @@ a:hover {
     }
     .main-panel:nth-child(1) .panel {
         opacity: initial;
-        z-index: 999;
+        z-index: 1;
         transform: translateX(0);
         height: 0;
         overflow: hidden;
