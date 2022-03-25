@@ -50,7 +50,7 @@
 
                 <div class="custom-popup__content">
 
-                    <video autoplay loop controls class="test">
+                    <video autoplay loop controls muted class="test">
 
                         <source src="{{ $home->video_comercial }}" type="video/mp4">
                         <source src="{{ $home->video_comercial }}" type="video/ogg">
