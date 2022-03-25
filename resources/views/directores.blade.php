@@ -279,7 +279,7 @@
     }
 
     @media only screen and (max-width: 600px) {
-        .main-logo img {
+        .main-logo img,.menu li:nth-child(2), .menu li:nth-child(3), .menu li:nth-child(4), .menu li:nth-child(5), .menu li:nth-child(6), .menu li:nth-child(7), .menu li:nth-child(5), footer .copy, .main-logo img  {
             display: block;
         }
     }

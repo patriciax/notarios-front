@@ -9,8 +9,10 @@
             <!---------ITEM------->
             @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
             <div>
+                <div class="video-mask">
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" onclick="playPause()">
-                    <video muted autoplay loop  class="gallery">
+                <p class="number">Nº 512</p>
+                    <video muted autoplay loop class="gallery">
 
                         <source src="{{ $home->video }}" type="video/mp4">
                         <source src="{{ $home->video }}" type="video/ogg">
@@ -18,9 +20,11 @@
                     </video>
                     <svg class="svg">
                         <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-                            <path d="M1,0.128 H0.933 A0.015,0.023,0,0,1,0.918,0.105 V0.055 A0.015,0.023,0,0,0,0.902,0.032 H0.713 A0.015,0.023,0,0,0,0.697,0.055 V0.105 A0.015,0.023,0,0,1,0.682,0.128 H0.052 A0.015,0.023,0,0,0,0.036,0.152 V1 A0.015,0.023,0,0,0,0.052,1 H1 A0.015,0.023,0,0,0,1,1 V0.152 A0.015,0.023,0,0,0,1,0.128"></path>
+                            <path d="M0.985,0.097 H0.897 A0.015,0.023,0,0,1,0.88,0.073 V0.023 A0.015,0.023,0,0,0,0.866,0 H0.676 A0.015,0.023,0,0,0,0.66,0.023 V0.073 A0.016,0.024,0,0,1,0.646,0.097 H0.015 A0.015,0.023,0,0,0,0,0.12 V0.977 A0.015,0.023,0,0,0,0.015,1 H0.985 a0.015,0.023,0,0,0,0.015,-0.023 V0.12 A0.015,0.023,0,0,0,0.985,0.097"></path>
                         </clipPath>
                     </svg>
+
+                    <div class="clipped"></div>
                 </div>
 
 
@@ -29,6 +33,8 @@
                     <span>DIR. {{ strtoupper($home->director) }}
                     </span>
                 </div>
+                </div>
+
 
             </div>
             @endforeach
@@ -44,7 +50,7 @@
 
                 <div class="custom-popup__content">
 
-                     <video autoplay loop controls class="test">
+                    <video autoplay loop controls class="test">
 
                         <source src="{{ $home->video_comercial }}" type="video/mp4">
                         <source src="{{ $home->video_comercial }}" type="video/ogg">

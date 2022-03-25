@@ -154,7 +154,9 @@ h1 {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-.bg-light_folder {
+.bg-light_folder::after {
+    position: absolute;
+    content: "";
     background-image: url(../img/carpeta2.png);
     width: 100%;
     background-position: center;
@@ -226,7 +228,18 @@ h1 {
     overflow: visible;
     will-change: transform;
 }
-
+.number{
+    position: absolute;
+    height: 100px;
+    z-index: 999;
+    text-align: justify;
+    width: 100%;
+    color: white;
+    text-align: center;
+    transform: translate(-12%, 6%);
+    font-family: 'VanderKeur';
+    font-size: .9rem;
+}
 .slider .slick-slide {
     /*padding: 0 100px;*/
     width: 95vw;
@@ -255,7 +268,7 @@ h1 {
 }
 [type="button"] {
     position: fixed;
-    top: 50%;
+    top: 56%;
     z-index: 10;
     width: 70px;
     height: 70px;
@@ -1483,7 +1496,7 @@ figure img {
     background: transparent !important;
 }
 .slider-films {
-    max-width: 67rem;
+    max-width: 66rem;
     /* transform: translate(16rem, 3rem);*/
 }
 .slider-films_item {
@@ -1495,9 +1508,9 @@ figure img {
     transform: translateY(-10px);
 }
 .slider-films .slick-slide img {
-    height: 580px;
-    width: 430px;
-    object-fit: cover;
+    height: 490px;
+    width: 100%;
+    object-fit: contain;
 }
 .slider-films .slick-next {
     right: -16px;
@@ -1635,13 +1648,23 @@ a:hover {
     height: 0;
 }
 .main-mask {
-    width: 58%;
-    height: 450px;
+    width: 100%;
+    height: 430px;
 
     background-size: cover;
     -webkit-clip-path: url(#my-clip-path);
     clip-path: url(#my-clip-path);
     cursor: pointer;
+}
+.video-mask{
+    width: 50%;
+    height: 450px;
+    transition: .8s;
+    display: flex;
+    justify-content: center;
+}
+.video-mask:hover{
+
 }
 .custom-popup {
   position: fixed;
@@ -1762,6 +1785,11 @@ a:hover {
 }
 /*******mediasquery **********/
 @media only screen and (max-width: 600px) {
+    .video-mask {
+        width: 100%;
+        height: auto;
+        transition: .8s;
+    }
     .custom-popup__holder {
         width: 96%;
         height: auto;
@@ -1774,7 +1802,7 @@ a:hover {
     }
     .main-mask {
         width: 89%;
-        height: 214px;
+        height: 180px;
 
     }
     figure img {
@@ -1963,7 +1991,7 @@ a:hover {
     }
     .main-panel:nth-child(1) .panel {
         opacity: initial;
-        z-index: 999;
+        z-index: 1;
         transform: translateX(0);
         height: 0;
         overflow: hidden;
@@ -2147,8 +2175,13 @@ a:hover {
         height: 80vh;
 
     }
+    .main-video {
+
+        padding: 7rem 0;
+
+    }
     .home-main {
-        height: 80vh;
+        height: -webkit-fill-available;
     }
     .bg-light_folder {
         background-image: url(../img/bg_xs.png);
@@ -2254,6 +2287,11 @@ a:hover {
     }
 }*/
 @media (min-width: 992px) and (max-width: 1199px) {
+    .video-mask {
+        width: 100%;
+        height: 450px;
+        transition: .8s;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -2276,18 +2314,39 @@ a:hover {
     .txt-title {
         transform: translate(65.5%, 31rem) !important;
     }
-    .slider-films {
-        max-width: 61rem;
-    }
 
-    .slider .slick-slide {
-        padding: 0 100px;
-    }
+
 
     .tabs-gallery2 span {
         font-size: 1.2rem;
     }
 }
+@media only screen and (device-width: 1280px) and (device-height: 900px) {
+    .open {
+        transform: translateX(390px) !important;
+    }
+    .main-info .info {
+        max-width: 380px;
+        transform: translate(23rem, 0px);
+    }
+    .name-info {
+        transform: translateX(40.9%) translateY(-5.35vw) rotate(90deg);
+
+    }
+    .main-director-names {
+     /*   transform: translate(65.5%, 1900%) !important;*/
+    }
+    .txt-title {
+        transform: translate(65.5%, 31rem) !important;
+    }
+
+
+
+    .tabs-gallery2 span {
+        font-size: 1.2rem;
+    }
+}
+
 @media only screen and (device-width: 1280px) and (device-height: 700px) {
 
     .name-info {
