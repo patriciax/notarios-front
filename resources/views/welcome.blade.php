@@ -7,7 +7,7 @@
         {{-- <div class="bg-light_folder"></div>--}}
         <div class="slider gallery">
             <!---------ITEM------->
-            @foreach(App\Models\HomeProject::all() as $home)
+            @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
             <div>
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" onclick="playPause()">
                     <video muted autoplay loop  class="gallery">
@@ -38,7 +38,7 @@
 
         </div>
         {{---------------modals-----------------------}}
-        @foreach(App\Models\HomeProject::all() as $home)
+        @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
         <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$home->id}}">
             <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
