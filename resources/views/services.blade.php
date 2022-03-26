@@ -27,9 +27,9 @@
                     <div class="content ">
 
                         @foreach(App\Models\Photographer::where("type", "Location")->get() as $location)
-                        
-                        
-                            <div id="tab-{{ $location->id }}" class="tab-content @if($loop->index == 0) current @endif">
+
+
+                            <div id="tab-{{ $location->id }}" class="tab-content-general tab-content @if($loop->index == 0) current @endif">
 
 
                                 <div class="name-gallery">
@@ -68,7 +68,7 @@
                     </div>
                     <div class="content ">
                         @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
-                        <div id="tabname-{{ $location->id }}" class="tab-content2 @if($loop->index == 0) current2 @endif">
+                        <div id="tabname-{{ $location->id }}" class="tab-content-general tab-content2 @if($loop->index == 0) current2 @endif">
 
 
                             <div class="name-gallery">
