@@ -257,19 +257,27 @@ $(".galeria_img img").on("click", function () {
     });
 
     var seccion = $(".tab-content");
+    var seccion2 = $(".tab-content2");
+
     var cantidadSecciones = seccion.lenght;
+    var cantidadSecciones = seccion2.lenght;
+
     var doc = $("body");
 
     function hijos(sec) {
         var n = seccion.toArray().length;
+        var n2 = seccion2.toArray().length;
+
         var x = $(sec).find("figure").toArray().length;
         //var a = n.each.children("a");
 
-        console.log("hay " + n + " Secciones y " + x + " Enlaces ");
+        console.log("hay " + n + n2+" Secciones y " + x + " Enlaces ");
 
         $(sec)
             .find(".counter")
             .append("" + x + "");
+
+
     }
     $.each(seccion, function (i, sec) {
         hijos(sec);
