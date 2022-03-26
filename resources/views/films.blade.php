@@ -25,7 +25,7 @@
     </div>
  </div>
 
- @foreach(App\Models\Film::all() as $film)
+
 <section id="a"  class="section-films ">
     <div class="arrow">
         <a href="#top">top</a>
