@@ -280,12 +280,15 @@ $(".galeria_img img").on("click", function () {
     $(".slider-films_item").removeClass("active-film");
 $("#" + films).addClass('active-film')*/
 
-        $(".section-films").addClass("active-films");
+
         $(".menu").css("opacity", "0");
         $("html, body").css({
             overflow: "hidden",
             height: "100%",
         });
+        $(".section-films").addClass("active-films");
+        $(".section-no").addClass("active-films-slider");
+
     });
     /**********arrow******************** */
     $(".arrow").click(function () {
@@ -295,6 +298,9 @@ $("#" + films).addClass('active-film')*/
             height: "100%",
         });
         $(".menu").css("opacity", "1");
+        $(".section-no").removeClass("active-films-slider");
+
+
     });
     /**********btn more******************** */
     $(".hidden-film").hide();

@@ -1497,6 +1497,7 @@ figure img {
 }
 .slider-films {
     max-width: 66rem;
+
     /* transform: translate(16rem, 3rem);*/
 }
 .slider-films_item {
@@ -1523,14 +1524,17 @@ figure img {
 .section-films {
     opacity: 0;
     height: 0;
-    display: none;
+    transition: .6s;
 }
 .active-films {
     opacity: 1;
     height: 100vh;
     display: block;
 }
-
+.active-films-slider{
+    overflow: hidden;
+   height: 0;
+}
 /***************/
 .film-grid_item video{
     width: 100%;

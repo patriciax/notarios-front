@@ -2,8 +2,9 @@
 
 @section("content")
 
-<main class="bg-light end">
-    <div class="slider-films">
+<main class="bg-light ">
+ <div class="section-no end">
+ <div class="slider-films">
         @foreach(App\Models\Film::all() as $film)
             <a href="#a" class="slider-films_item" id="film_slider-{{ $film->id }}">
                 <img src="{{ $film->image }}" alt="">
@@ -22,13 +23,10 @@
             <img src="assets/img/films1.png" alt="">
         </div>-->
     </div>
+ </div>
 
-
-
-</main>
-
-@foreach(App\Models\Film::all() as $film)
-<section id="a"  class="section-films bg-light">
+ @foreach(App\Models\Film::all() as $film)
+<section id="a"  class="section-films ">
     <div class="arrow">
         <a href="#top">top</a>
     </div>
@@ -68,6 +66,10 @@
     </div>
 </section>
 @endforeach
+
+</main>
+
+
 <style>
     footer .copy {
 display: none;
