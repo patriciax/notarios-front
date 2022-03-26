@@ -1496,7 +1496,7 @@ figure img {
     background: transparent !important;
 }
 .slider-films {
-    max-width: 66rem;
+    max-width: 77%;
 
     /* transform: translate(16rem, 3rem);*/
 }
@@ -1504,6 +1504,7 @@ figure img {
     padding: 1rem;
     cursor: pointer;
     transition: 0.6s;
+    height: 550px;
 }
 .slider-films_item:hover {
     transform: translateY(-10px);
