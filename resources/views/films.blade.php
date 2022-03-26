@@ -9,7 +9,7 @@
             <a href="#a" class="slider-films_item" id="film_slider-{{ $film->id }}">
                 <img src="{{ $film->image }}" alt="">
             </a>
-
+        @endforeach
         <!--<div id="film_slider-2" class="slider-films_item">
             <img src="assets/img/films2.png" alt="">
         </div>
@@ -25,7 +25,7 @@
     </div>
  </div>
 
-
+ @foreach(App\Models\Film::all() as $film)
 <section id="a"  class="section-films ">
     <div class="arrow">
         <a href="#top">top</a>
