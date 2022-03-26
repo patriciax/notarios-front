@@ -1592,9 +1592,9 @@ figure img {
 }
 .film-grid_item p {
     font-family: "VanderKeur-light";
-    font-size: 10px;
-    line-height: 1.7;
-    letter-spacing: 0.5px;
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 600;
 }
 .end {
     display: flex;
