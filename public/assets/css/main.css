@@ -1503,7 +1503,7 @@ figure img {
     padding: 1rem;
     cursor: pointer;
     transition: 0.6s;
-    height: 550px;
+    height: 550px!important;
 }
 .slider-films_item:hover {
     transform: translateY(-10px);
