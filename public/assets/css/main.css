@@ -1534,6 +1534,10 @@ figure img {
 .active-films-slider{
     overflow: hidden;
    height: 0;
+   opacity: 0;
+}
+.section-no{
+    margin-top: 3rem;
 }
 /***************/
 .film-grid_item video{
