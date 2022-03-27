@@ -71,44 +71,20 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
-
-                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                <div id="gallery">
-                                    <div class="container">
-                                        <div id="image-gallery">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                                                    <div class="img-wrapper">
-                                                        <a href="https://unsplash.it/500"><img src="https://unsplash.it/500" class="img-responsive"></a>
-                                                        <div class="img-overlay">
-                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                                                    <div class="img-wrapper">
-                                                        <a href="https://unsplash.it/600"><img src="https://unsplash.it/600" class="img-responsive"></a>
-                                                        <div class="img-overlay">
-                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                                                    <div class="img-wrapper">
-                                                        <a href="https://unsplash.it/700"><img src="https://unsplash.it/700" class="img-responsive"></a>
-                                                        <div class="img-overlay">
-                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- End row -->
-                                        </div><!-- End image gallery -->
-                                    </div><!-- End container -->
+                                <div class="container">
+                                    <div class="interior">
+                                        <a class="btn" href="#open-modal">👋 Basic CSS-Only Modal</a>
+                                    </div>
                                 </div>
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                <div id="open-modal" class="modal-window">
+                                    <div>
+                                        <a href="#" title="Close" class="modal-close">Close</a>
+                                        <h1>Voilà!</h1>
+                                        <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+
+                                    </div>
+                                </div>
                                 <!--
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
