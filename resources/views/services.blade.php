@@ -72,44 +72,29 @@
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
 
-                                <div class="container">
 
-                                    <ul class="nav nav-pills nav-stacked">
-                                        <li><a href="#lightbox" data-toggle="modal">Open Lightbox</a></li>
-                                    </ul>
+                                <!-- Begin div .grid -->
+                                <div id="gallery__grid" class="container gallery__grid" data-element="gallery-item">
+                                    <!-- Begin div .row 1 -->
+                                    <div class="row">
+                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                        <div class="col-md-4 gallery__column">
+                                            <img class="gallery-item" src="https://source.unsplash.com/user/nasa/400x400" alt="gallery thumbnail">
+                                        </div>
 
-                                    <div class="modal fade and carousel slide" id="lightbox">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <ol class="carousel-indicators">
-                                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                                        <li data-target="#lightbox" data-slide-to="photographer_id" ></li>
+                                        <div class="col-md-4 gallery__column">
+                                            <img class="gallery-item" src="https://source.unsplash.com/user/erondu/400x400" alt="gallery thumbnail">
+                                        </div>
 
-                                                        @endforeach
-                                                    </ol>
+                                        <div class="col-md-4 gallery__column">
+                                            <img class="gallery-item" src="https://source.unsplash.com/category/people/400x400" alt="gallery thumbnail">
+                                        </div>
+                                        @endforeach
+                                    </div><!-- end div .row 1 -->
 
-                                                    <div class="carousel-inner">
 
-                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                                        <div class="item ">
-                                                            <img src="{{ $picture->image }}" alt="First slide">
-                                                        </div>
 
-                                                        @endforeach
-                                                    </div><!-- /.carousel-inner -->
-                                                    <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
-                                                        <span class="glyphicon glyphicon-chevron-left"></span>
-                                                    </a>
-                                                    <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
-                                                        <span class="glyphicon glyphicon-chevron-right"></span>
-                                                    </a>
-                                                </div><!-- /.modal-body -->
-                                            </div><!-- /.modal-content -->
-                                        </div><!-- /.modal-dialog -->
-                                    </div><!-- /.modal -->
-
-                                </div><!-- /.container -->
+                                </div><!-- end div .grid -->
                                 <!--
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
@@ -142,6 +127,3 @@
 
 
 @endsection
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
