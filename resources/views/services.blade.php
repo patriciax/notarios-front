@@ -86,7 +86,7 @@
                                                 <div class="slider-modals">
                                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                                     <div class="item">
-                                                        <img src="https://s3.tproger.ru/uploads/2020/07/field.jpg">
+                                                        <img src="{{ $picture->image }}">
                                                     </div>
                                                     @endforeach
                                                     <a class="previous" onclick="previousSlide()">&#10094;</a>
