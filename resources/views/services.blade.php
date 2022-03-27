@@ -35,7 +35,7 @@
                             <div id="gallery" class="gallery slider-servicess" >
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
-                                <figure itemprop="associatedMedia">
+                                <figure>
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                                     <a href="{{ $picture->image }}" data-width="1200" data-height="900" >
                                         <!-- Thumbnail -->
@@ -74,7 +74,7 @@
 
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
-                                <figure itemprop="associatedMedia">
+                                <figure>
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
                                         <!-- Thumbnail -->
