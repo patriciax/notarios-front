@@ -1400,7 +1400,7 @@ display: none;}
     font-size: 1.5rem;
     line-height: 1;
 }
-.tabs-gallery2 span:nth-child(1){
+.tabs-gallery2 span:nth-child(1),.tabs-gallery span:nth-child(1){
     margin-left: 0.5rem;
 }
 .tabs-gallery .current {
@@ -1458,7 +1458,7 @@ figure img {
     padding: 0 2rem;
     justify-items: center;
     align-items: center;
-    gap: 1.2rem;
+    gap:5rem;
 }
 .p-10 {
     padding-top: 10rem;
