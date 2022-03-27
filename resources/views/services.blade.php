@@ -93,17 +93,7 @@
                                         <a href="#" class="modal__close">&times;</a>
                                     </div>
                                 </div>
-                                <!--
-                                      @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                       holisç
-                                       @endforeach
-                                    <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
-                                        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
-
-                                        <div class="marco" alt=""></div>
-                                    </a>
-                                </figure>---}}---->
 
 
 
