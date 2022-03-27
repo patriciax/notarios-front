@@ -76,13 +76,11 @@
                                         <a class="btn" href="#open-modal">👋 Basic CSS-Only Modal</a>
                                     </div>
                                 </div>
-                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+
                                 <div id="open-modal" class="modal-window">
                                     <div>
-                                        <a href="#" title="Close" class="modal-close">Close</a>
-                                        <h1>Voilà!</h1>
-                                        <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
-
+                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                       holis
                                     </div>
                                 </div>
                                 <!--
@@ -94,7 +92,7 @@
                                     </a>
                                 </figure>---}}---->
 
-                                @endforeach
+
 
                             </div>
                             <div class="counter">1/</div>
