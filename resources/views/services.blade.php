@@ -82,16 +82,30 @@
                                         <div class="w3-content w3-display-container">
 
 
-
-                                                <div class="slider-modals">
-                                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                                    <div class="item">
-                                                        <img src="{{ $picture->image }}">
-                                                    </div>
-                                                    @endforeach
-                                                    <a class="previous" onclick="previousSlide()">&#10094;</a>
-                                                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                                            <div id="slideshow">
+                                                <div class="control">
+                                                    <button id="previous">&lt;</button>
+                                                    <button id="next">&gt;</button>
                                                 </div>
+                                                <ul id="slides">
+                                                    <li class="slideActive">1</li>
+                                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+
+                                                        <li id="first">1</li>
+
+                                                        @endforeach
+                                                </ul>
+                                                <div class="pager">
+                                                    <ul>
+                                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+
+                                                        <li id="first">1</li>
+
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+
+                                            </div>
 
 
 
