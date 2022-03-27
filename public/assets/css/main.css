@@ -1400,6 +1400,9 @@ display: none;}
     font-size: 1.5rem;
     line-height: 1;
 }
+.tabs-gallery2 span:nth-child(1){
+    margin-left: 0.5rem;
+}
 .tabs-gallery .current {
     background: transparent;
     color: #222;
