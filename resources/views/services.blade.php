@@ -80,21 +80,13 @@
                                 <div id="" class="modal demo-modal">
                                     <div class="modal__content">
                                         <div class="w3-content w3-display-container">
+                                            <div class="slider-modal">
+                                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
 
+                                                <img src="{{ $picture->image }}" alt="">
 
-                                            <div id="slider">
-                                                <a href="#" class="control_next">></a>
-                                                <a href="#" class="control_prev">
-                                                    </a>
-                                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                                        <ul>
-                                                            <li>SLIDE 1sd</li>
-
-                                                        </ul>
-                                                        @endforeach
+                                                @endforeach
                                             </div>
-
-
 
                                             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                                             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
