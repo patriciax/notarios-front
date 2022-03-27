@@ -324,7 +324,7 @@ $("#" + films).addClass('active-film')*/
 
 
     $(".main_demo-modal").click(function () {
-        $(".demo-modal").show();
+        $(".demo-modal").addClass('modal-active');
     });
 
 });
