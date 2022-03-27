@@ -2554,16 +2554,7 @@ a:hover {
     }
 }
 
-.wrapper a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 3px;
-    text-transform: uppercase;
-    color: #585858;
-    font-family: "Roboto", sans-serif;
-}
+
 
 .modal {
     visibility: hidden;
@@ -2573,9 +2564,7 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     background: rgba(77, 77, 77, 0.7);
     transition: all 0.4s;
     position: fixed;
