@@ -72,8 +72,6 @@
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
                             <label for="mpo-modal-controller" class="btn">open modal</label>
-                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-
 
 
                                 <div class="mpo-modal">
@@ -87,7 +85,7 @@
                                             <input type="radio" name="content-nav" id="modal-content-1" class="modal-radio" checked hidden />
                                             <input type="radio" name="content-nav" id="modal-content-2" class="modal-radio" hidden />
                                             <input type="radio" name="content-nav" id="modal-content-3" class="modal-radio" hidden />
-
+                                            @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                             <div class="mpo-modal-slide content-1">
                                                 <div class="mpo-modal-content">
                                                     <h2>Example Modal - Slide 1</h2>
@@ -101,7 +99,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            @endforeach
 
 
                                         </div>
@@ -119,7 +117,7 @@
                                     </a>
                                 </figure>---}}---->
 
-                                @endforeach
+
 
                             </div>
                             <div class="counter">1/</div>
