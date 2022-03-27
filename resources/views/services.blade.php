@@ -73,9 +73,9 @@
                             <div id="gallery" class=" slider-servicess">
 
 
-                            <div class="wrapper">
-    <a href="#demo-modal">Open Demo Modal</a>
-</div>
+                                <div class="wrapper">
+                                    <a href="#demo-modal">Open Demo Modal</a>
+                                </div>
 
 
                                 <div id="demo-modal" class="modal">
