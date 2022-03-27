@@ -71,28 +71,55 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
+                            <label for="mpo-modal-controller" class="btn">open modal</label>
+                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
 
 
-                                <div class="slider-modal">
 
-                                    <div class="close-icon modal-close"></div>
-                                    <h5 class="title">Slider Modal</h5>
-                                    <div class="slides">
+                                <div class="mpo-modal">
+                                    <input type="checkbox" id="mpo-modal-controller" class="mpo-modal-open" hidden>
+                                    <div class="mpo-modal-wrap">
+                                        <label for="mpo-modal-controller" class="mpo-modal-overlay"></label>
+                                        <div class="mpo-modal-body">
 
-                                        <div class="nav-arrow left"></div>
-                                        <div class="nav-arrow right"></div>
-                                        @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                    <!-- Use figure for a more semantic html -->
-                                        <div class="slide active" title="Lion" style="background-image: url('{{ $picture->image }}')"> </div>
-                                        @endforeach
+                                            <label for="mpo-modal-controller" class="mpo-modal-close">&times;</label>
+
+                                            <input type="radio" name="content-nav" id="modal-content-1" class="modal-radio" checked hidden />
+                                            <input type="radio" name="content-nav" id="modal-content-2" class="modal-radio" hidden />
+                                            <input type="radio" name="content-nav" id="modal-content-3" class="modal-radio" hidden />
+
+                                            <div class="mpo-modal-slide content-1">
+                                                <div class="mpo-modal-content">
+                                                    <h2>Example Modal - Slide 1</h2>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                    </p>
+
+                                                    <div class="mpo-modal-nav">
+                                                        <label for="modal-content-2" class="next-slide">&#8250;&#8250;</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
                                     </div>
-                                    <p class="slider-image-caption">sdfsdfsdf</p>
 
                                 </div>
-                                <div>
-                                    <button> <img src="{{ $picture->image }}" style="width: 300px; height: 300px;"></button>
-                                    <div class="marco" alt=""></div>
-                                </div>
+
+
+                                <!--
+                                    <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
+
+                                        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
+
+                                        <div class="marco" alt=""></div>
+                                    </a>
+                                </figure>---}}---->
+
+                                @endforeach
 
                             </div>
                             <div class="counter">1/</div>
