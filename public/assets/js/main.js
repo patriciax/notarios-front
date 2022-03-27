@@ -1,43 +1,34 @@
 window.setTimeout(function () {
     $(".elipse").fadeOut(100);
 }, 2000);
-/*var myVideo = document.querySelector(".test");
 
-function playPause() {
-    if (myVideo.paused)
-      myVideo.play();
-    else
-      myVideo.pause();
-  }*/
 
 function customPopup() {
+    let $btnShowPopup = $(".js-open-popup");
+    let $btnClosePopup = $(".js-close-popup");
+    let $popup = $(".js-custom-popup");
 
-    let $btnShowPopup = $('.js-open-popup');
-    let $btnClosePopup = $('.js-close-popup');
-    let $popup = $('.js-custom-popup');
-
-    $btnShowPopup.on('click', function () {
-
-        let targetPopup = $(this).attr('data-target');
-        $("[data-popup=" + targetPopup + "]").addClass('is-active');
-
-
+    $btnShowPopup.on("click", function () {
+        let targetPopup = $(this).attr("data-target");
+        $("[data-popup=" + targetPopup + "]").addClass("is-active");
     });
 
-    $btnClosePopup.on('click', function () {
-        $(this).parents('.is-active').removeClass('is-active');
-        playPause()
+    $btnClosePopup.on("click", function () {
+        $(this).parents(".is-active").removeClass("is-active");
+        playPause();
     });
 
-    $popup.on('click', function (event) {
-        if (!$(event.target).closest('.js-custom-popup-holder').length && !$(event.target).is('js-custom-popup')) {
-            if ($popup.hasClass('is-active')) {
-                $popup.removeClass('is-active');
+    $popup.on("click", function (event) {
+        if (
+            !$(event.target).closest(".js-custom-popup-holder").length &&
+            !$(event.target).is("js-custom-popup")
+        ) {
+            if ($popup.hasClass("is-active")) {
+                $popup.removeClass("is-active");
             }
-            playPause()
+            playPause();
         }
     });
-
 }
 customPopup();
 
@@ -216,6 +207,25 @@ $(document).ready(function () {
     $(".main-info").on("click", function () {
         $(this).toggleClass("open");
     });
+
+
+    $('.main-info').removeClass("active-xs");
+
+    $(".main-info").on("click", function () {
+        $('.main-galeria').toggleClass("active-xs");
+    });
+    /*var myVideo = document.querySelector(".test");
+
+function playPause() {
+    if (myVideo.paused)
+      myVideo.play();
+    else
+      myVideo.pause();
+  }*/
+
+    $('.closed').on("click", function(){
+
+    })
     /*
 $(".main-info").on("click", function () {
     $(".main-director-names").toggleClass("opacity");
@@ -223,10 +233,17 @@ $(".main-info").on("click", function () {
 
     $(".main-panel .main-director-names").click(function () {
         $(this).toggleClass("active");
-        $(".main-panel .main-director-names").parent().find(".panel").removeClass("panel-active");
-        $(".main-panel .main-director-names").parent().find(".panel").addClass("panel-none");
+        $(".main-panel .main-director-names")
+            .parent()
+            .find(".panel")
+            .removeClass("panel-active");
+        $(".main-panel .main-director-names")
+            .parent()
+            .find(".panel")
+            .addClass("panel-none");
 
         $(this).parent().find(".panel").toggleClass("panel-active");
+
         /*  $(this).parent().find(".main-galeria").toggleClass("scroll");*/
     });
     /*
@@ -281,7 +298,6 @@ $(".galeria_img img").on("click", function () {
     $(".slider-films_item").removeClass("active-film");
 $("#" + films).addClass('active-film')*/
 
-
         $(".menu").css("opacity", "0");
         $("html, body").css({
             overflow: "hidden",
@@ -289,7 +305,6 @@ $("#" + films).addClass('active-film')*/
         });
         $(".section-films").addClass("active-films");
         $(".section-no").addClass("active-films-slider");
-
     });
     /**********arrow******************** */
     $(".arrow").click(function () {
@@ -300,12 +315,91 @@ $("#" + films).addClass('active-film')*/
         });
         $(".menu").css("opacity", "1");
         $(".section-no").removeClass("active-films-slider");
-
-
     });
     /**********btn more******************** */
     $(".hidden-film").hide();
     $(".btn_more").click(function () {
         $(".hidden-film").show();
     });
+
+
+
+
+
+
+
+    function ModalSlider() {
+        this.changeSlide = function(back, idx) {
+          var $active = $(".slides .active");
+          $(".slide")
+            .not(".active")
+            .css("z-index", 1);
+          var $next =
+            $active.next(".slide").length > 0
+              ? $active.next(".slide")
+              : $(".slides .slide:first");
+          var $last =
+            $active.prev(".slide").length > 0
+              ? $active.prev(".slide")
+              : $(".slides .slide:last");
+          $next = back === true ? $last : $next;
+          $next.css("z-index", 2);
+          $active.fadeOut(400, function() {
+            $active
+              .css("z-index", 1)
+              .show()
+              .removeClass("active");
+            $next.css("z-index", 3).addClass("active");
+          });
+          var $caption = $(".slider-image-caption");
+          var captionText = $next.attr("title");
+          $caption.html(captionText);
+          if (idx === -1) {
+            $('.slide[data-index="0"]')
+              .addClass("active")
+              .css("z-index", 3);
+          }
+        };
+        this.nextSlide = function() {
+          this.changeSlide();
+        };
+        this.lastSlide = function() {
+          this.changeSlide(true);
+        };
+        this.init = function() {
+          $(".slider-image-caption").html($(".slide.active").attr("title"));
+        };
+        this.setSlide = function(slideIndex) {
+          var slideIdx = parseInt(slideIndex);
+          if (typeof slideIdx === "number") {
+            var idx = slideIndex - 1;
+            var lastSlide = $(".slide").length;
+            $(".slide").removeClass("active");
+            $('.slide[data-index="' + idx + '"]').addClass("active");
+            this.changeSlide(false, idx);
+          }
+        };
+      }
+      var Slider = new ModalSlider();
+      Slider.init();
+      $(".nav-arrow.right").on("click", function() {
+        Slider.nextSlide();
+      });
+      $(".nav-arrow.left").on("click", function() {
+        Slider.lastSlide();
+      });
+      $(".modal-close").on("click", function() {
+        $(this)
+          .parent()
+          .addClass("modal-close")
+          .delay(200)
+          .promise()
+          .done(function() {
+            $(this).removeClass("modal-active modal-close");
+          });
+      });
+      $("button").on("click", function() {
+        $(".slider-modal").addClass("modal-active");
+      });
+
 });
