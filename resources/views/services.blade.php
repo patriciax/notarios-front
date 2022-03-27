@@ -72,12 +72,12 @@
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
 
-
+                            @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Begin div .grid -->
                                 <div id="gallery__grid" class="container gallery__grid" data-element="gallery-item">
                                     <!-- Begin div .row 1 -->
                                     <div class="row">
-                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+
                                         <div class="col-md-4 gallery__column">
                                             <img class="gallery-item" src="https://source.unsplash.com/user/nasa/400x400" alt="gallery thumbnail">
                                         </div>
@@ -89,12 +89,13 @@
                                         <div class="col-md-4 gallery__column">
                                             <img class="gallery-item" src="https://source.unsplash.com/category/people/400x400" alt="gallery thumbnail">
                                         </div>
-                                        @endforeach
+
                                     </div><!-- end div .row 1 -->
 
 
 
                                 </div><!-- end div .grid -->
+                                @endforeach
                                 <!--
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
