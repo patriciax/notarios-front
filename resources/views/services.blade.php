@@ -32,14 +32,14 @@
                                 <p> {{ strtoupper($location->name) }}</p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
-                            <div id="gallery" class="gallery slider-servicess" >
+                            <div id="gallery" class="gallery slider-servicess">
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
                                 <figure>
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                    <a href="{{ $picture->image }}" data-width="1200" data-height="900" >
+                                    <a href="{{ $picture->image }}" data-width="1200" data-height="900">
                                         <!-- Thumbnail -->
-                                        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
+                                        <img src="{{ $picture->image }}" style="width: 300px; height: 300px;">
 
                                         <div class="marco" alt=""></div>
                                     </a>
@@ -74,15 +74,42 @@
 
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
-                                <figure>
-                                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                    <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
-                                        <!-- Thumbnail -->
-                                        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
-                                        <div class="marco" alt=""></div>
-                                    </a>
-                                </figure>
+                                <div class="slider-modal">
+                                    <div class="close-icon modal-close"></div>
+
+                                    <h5 class="title">Slider Modal</h5>
+                                    <div class="slides">
+                                        <div class="nav-arrow left"></div>
+                                        <div class="nav-arrow right"></div>
+                                        <div class="slide active" title="Lion" style="background-image: url('https://unsplash.it/601/502')"> </div>
+                                        <div class="slide" title="Man in a church" style="background-image: url('https://unsplash.it/600/502')"> </div>
+                                        <div class="slide" title="Beach Sunset" style="background-image: url('https://unsplash.it/601/504')"> </div>
+                                        <div class="slide" title="Foggy forest" style="background-image: url('https://unsplash.it/601/503')"> </div>
+                                        <div class="slide" title="Girl reading in the woods" style="background-image: url('https://unsplash.it/601/506')"> </div>
+                                    </div>
+                                    <p class="slider-image-caption">sdfsdfsdf</p>
+                                </div>
+
+                                <div>
+                                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+
+                                    <!-- Thumbnail -->
+                                    <button> <img src="{{ $picture->image }}" style="width: 300px; height: 300px;"></button>
+
+                                    <div class="marco" alt=""></div>
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
                                 @endforeach
 
                             </div>
