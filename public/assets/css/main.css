@@ -2564,7 +2564,9 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(77, 77, 77, 0.7);
     transition: all 0.4s;
     position: fixed;
@@ -2598,34 +2600,6 @@ a:hover {
 .mySlides {
     display: none;
 }
-
-#slider {
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto 0 auto;
-    border-radius: 4px;
-  }
-
-  #slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-  }
-
-  #slider ul li {
-    position: relative;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 500px;
-    height: 300px;
-    background: #ccc;
-    text-align: center;
-    line-height: 300px;
-  }
 
   a.control_prev, a.control_next {
     position: absolute;
@@ -2664,3 +2638,51 @@ a:hover {
     width: 160px;
     font-size: 18px;
   }
+  .slider-modals{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+}
+/* Картинка масштабируется по отношению к родительскому элементу */
+.slider-modals .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+/* Кнопки вперед и назад */
+.slider-modals .previous, .slider-modals .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider-modals .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider-modals .previous:hover,
+.slider-modals .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* Анимация слайдов */
+.slider-modals .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}

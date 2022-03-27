@@ -81,11 +81,19 @@
                                     <div class="modal__content">
                                         <div class="w3-content w3-display-container">
                                             <div class="slider-modal">
+
+
+                                                <div class="slider-modals">
                                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                                    <div class="item">
+                                                        <img src="https://s3.tproger.ru/uploads/2020/07/field.jpg">
+                                                    </div>
+                                                    @endforeach
+                                                    <a class="previous" onclick="previousSlide()">&#10094;</a>
+                                                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                                                </div>
 
-                                                <img src="{{ $picture->image }}" alt="">
 
-                                                @endforeach
                                             </div>
 
                                             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
