@@ -1,5 +1,5 @@
 @extends("layouts.main")
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+
 @section("content")
 <!----<main class="bg-light" data-barba="container" data-barba-namespace="servicies-section">--->
 <main class="bg-light no_height">
@@ -71,31 +71,43 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
-<p>test</p>
-                            @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                <!-- Begin div .grid -->
-                                <div id="gallery__grid" class="container gallery__grid" data-element="gallery-item">
-                                    <!-- Begin div .row 1 -->
-                                    <div class="row">
 
-                                        <div class="col-md-4 gallery__column">
-                                            <img class="gallery-item" src="https://source.unsplash.com/user/nasa/400x400" alt="gallery thumbnail">
-                                        </div>
-
-                                        <div class="col-md-4 gallery__column">
-                                            <img class="gallery-item" src="https://source.unsplash.com/user/erondu/400x400" alt="gallery thumbnail">
-                                        </div>
-
-                                        <div class="col-md-4 gallery__column">
-                                            <img class="gallery-item" src="https://source.unsplash.com/category/people/400x400" alt="gallery thumbnail">
-                                        </div>
-
-                                    </div><!-- end div .row 1 -->
-
-
-
-                                </div><!-- end div .grid -->
-                                @endforeach
+                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                <div id="gallery">
+                                    <div class="container">
+                                        <div id="image-gallery">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                                                    <div class="img-wrapper">
+                                                        <a href="https://unsplash.it/500"><img src="https://unsplash.it/500" class="img-responsive"></a>
+                                                        <div class="img-overlay">
+                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                                                    <div class="img-wrapper">
+                                                        <a href="https://unsplash.it/600"><img src="https://unsplash.it/600" class="img-responsive"></a>
+                                                        <div class="img-overlay">
+                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                                                    <div class="img-wrapper">
+                                                        <a href="https://unsplash.it/700"><img src="https://unsplash.it/700" class="img-responsive"></a>
+                                                        <div class="img-overlay">
+                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End row -->
+                                        </div><!-- End image gallery -->
+                                    </div><!-- End container -->
+                                </div>
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
                                 <!--
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
@@ -105,7 +117,7 @@
                                     </a>
                                 </figure>---}}---->
 
-
+                                @endforeach
 
                             </div>
                             <div class="counter">1/</div>
