@@ -71,43 +71,45 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
-                            <label for="mpo-modal-controller" class="btn">open modal</label>
 
+                                <div class="container">
 
-                                <div class="mpo-modal">
-                                    <input type="checkbox" id="mpo-modal-controller" class="mpo-modal-open" hidden>
-                                    <div class="mpo-modal-wrap">
-                                        <label for="mpo-modal-controller" class="mpo-modal-overlay"></label>
-                                        <div class="mpo-modal-body">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li><a href="#lightbox" data-toggle="modal">Open Lightbox</a></li>
+                                    </ul>
 
-                                            <label for="mpo-modal-controller" class="mpo-modal-close">&times;</label>
+                                    <div class="modal fade and carousel slide" id="lightbox">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <ol class="carousel-indicators">
+                                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                                        <li data-target="#lightbox" data-slide-to="photographer_id" ></li>
 
-                                            <input type="radio" name="content-nav" id="modal-content-1" class="modal-radio" checked hidden />
-                                            <input type="radio" name="content-nav" id="modal-content-2" class="modal-radio" hidden />
-                                            <input type="radio" name="content-nav" id="modal-content-3" class="modal-radio" hidden />
-                                            @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                            <div class="mpo-modal-slide content-1">
-                                                <div class="mpo-modal-content">
-                                                    <h2>Example Modal - Slide 1</h2>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                                                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                    </p>
+                                                        @endforeach
+                                                    </ol>
 
-                                                    <div class="mpo-modal-nav">
-                                                        <label for="modal-content-2" class="next-slide">&#8250;&#8250;</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            @endforeach
+                                                    <div class="carousel-inner">
 
+                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                                        <div class="item ">
+                                                            <img src="{{ $picture->image }}" alt="First slide">
+                                                        </div>
 
-                                        </div>
-                                    </div>
+                                                        @endforeach
+                                                    </div><!-- /.carousel-inner -->
+                                                    <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                                    </a>
+                                                </div><!-- /.modal-body -->
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
 
-                                </div>
-
-
+                                </div><!-- /.container -->
                                 <!--
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
@@ -130,6 +132,8 @@
 
 
 </main>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></script>
 
 @push("scripts")
 
