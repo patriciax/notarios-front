@@ -1362,7 +1362,7 @@ display: none;}
     background-repeat: no-repeat;
     top: -1%;
     margin-left: -13rem;
-    z-index: 9;
+    z-index: 0;
     box-shadow: 2px 14px 9px #00000075;
     border-radius: 3px;
 }
@@ -2593,6 +2593,10 @@ a:hover {
     visibility: visible;
     opacity: 1;
   }
+  .modal-active{
+    visibility: visible;
+    opacity: 1;
+  }
 
   .modal__content {
     border-radius: 4px;
@@ -2603,15 +2607,7 @@ a:hover {
     padding: 1em 2em;
   }
 
-  .modal__footer {
-    text-align: right;
-    a {
-      color: #585858;
-    }
-    i {
-      color: #d02d2c;
-    }
-  }
+
   .modal__close {
     position: absolute;
     top: 10px;
