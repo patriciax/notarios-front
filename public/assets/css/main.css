@@ -2560,16 +2560,7 @@ a:hover {
 
 
 
-.wrapper {
-    height: 100vh;
-    /* This part is important for centering the content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* End center */
-    background: -webkit-linear-gradient(to right, #834d9b, #d04ed6);
-    background: linear-gradient(to right, #834d9b, #d04ed6);
-  }
+
 
   .wrapper a {
     display: inline-block;
@@ -2595,6 +2586,7 @@ a:hover {
     justify-content: center;
     background: rgba(77, 77, 77, .7);
     transition: all .4s;
+    position: fixed;
   }
 
   .modal:target {

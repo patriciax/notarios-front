@@ -71,12 +71,11 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
-
-
                                 <div class="wrapper">
-                                    <a href="#demo-modal">Open Demo Modal</a>
-                                </div>
+                                    <a href="#demo-modal"><img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
+<div class="marco" alt=""></div></a>
+                                </div>
 
                                 <div id="demo-modal" class="modal">
                                     <div class="modal__content">
