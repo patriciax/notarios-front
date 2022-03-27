@@ -32,7 +32,7 @@
                                 <p> {{ strtoupper($location->name) }}</p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
-                            <div id="gallery" class="gallery slider-servicess">
+                            <div id="gallery" class="gallery slider-servicess" >
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
                                 <figure>

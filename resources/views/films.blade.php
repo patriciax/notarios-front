@@ -7,7 +7,7 @@
     <div class="section-no end">
         <div class="slider-films">
             @foreach(App\Models\Film::all() as $film)
-            <a href="#a" class="slider-films_item" id="film_slider-{{ $film->id }}">
+            <a href="#a{{ $film->id }}" class="slider-films_item" id="film_slider-{{ $film->id }}">
                 <img src="{{ $film->image }}" alt="">
             </a>
             @endforeach
@@ -30,7 +30,7 @@
 
 </main>
 @foreach(App\Models\Film::all() as $film)
-<section id="a" class="section-films ">
+<section id="a{{ $film->id }}" class="section-films ">
     <div class="arrow">
         <a href="#top">top</a>
     </div>
