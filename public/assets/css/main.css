@@ -1400,7 +1400,8 @@ display: none;}
     font-size: 1.5rem;
     line-height: 1;
 }
-.tabs-gallery2 span:nth-child(1),.tabs-gallery span:nth-child(1){
+.tabs-gallery2 span:nth-child(1),
+.tabs-gallery span:nth-child(1) {
     margin-left: 0.5rem;
 }
 .tabs-gallery .current {
@@ -1458,7 +1459,7 @@ figure img {
     padding: 0 2rem;
     justify-items: center;
     align-items: center;
-    gap:5rem;
+    gap: 5rem;
 }
 .p-10 {
     padding-top: 10rem;
@@ -1798,24 +1799,19 @@ a:hover {
 /*******mediasquery **********/
 @media only screen and (max-width: 600px) {
     .card-flip {
-
         height: 500px;
-
     }
     .card-flip__flipper {
         transform: rotateY(180deg);
     }
     .main-director {
-        margin-top: 6rem!important;
+        margin-top: 6rem !important;
     }
     .active-films-slider {
-
-        display: none!important;
+        display: none !important;
     }
     .name-info h3 {
-
         font-size: 17px;
-
     }
     .main-info .info {
         max-width: 100%;
@@ -1823,10 +1819,9 @@ a:hover {
         padding-right: 0;
         padding: 1rem;
         padding-top: 0;
-
     }
-    .active-xs{
-        transform: translate(0px, 273px)!important;
+    .active-xs {
+        transform: translate(0px, 273px) !important;
     }
     .video-mask {
         width: 100%;
@@ -2018,7 +2013,7 @@ a:hover {
         flex-direction: column-reverse;
     }
     .main-info {
-        transform: translateX(0)!important;
+        transform: translateX(0) !important;
         padding: 0px;
     }
     .name-info {
@@ -2161,7 +2156,6 @@ a:hover {
         align-items: center;
     }
     .card-flip__content--back p {
-
         margin-top: 6rem;
         overflow: scroll;
     }
@@ -2174,8 +2168,10 @@ a:hover {
     .card-flip__content--back:hover .team-item:nth-child(1) {
         transform: none;
     }
-    .team-item:nth-child(3),.team-item:nth-child(2),.team-item:nth-child(4) {
-        transform: none!important;
+    .team-item:nth-child(3),
+    .team-item:nth-child(2),
+    .team-item:nth-child(4) {
+        transform: none !important;
     }
     .card-flip__content--back {
         background-size: 85% !important;
@@ -2188,7 +2184,7 @@ a:hover {
         padding: 16px;
         height: 517px;
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
     }
     .contacto-item {
         width: 100%;
@@ -2558,11 +2554,7 @@ a:hover {
     }
 }
 
-
-
-
-
-  .wrapper a {
+.wrapper a {
     display: inline-block;
     text-decoration: none;
     padding: 15px;
@@ -2570,10 +2562,10 @@ a:hover {
     border-radius: 3px;
     text-transform: uppercase;
     color: #585858;
-    font-family: 'Roboto', sans-serif;
-  }
+    font-family: "Roboto", sans-serif;
+}
 
-  .modal {
+.modal {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -2584,34 +2576,36 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
     position: fixed;
-  }
+}
 
-  .modal:target {
+.modal:target {
     visibility: visible;
     opacity: 1;
-  }
-  .modal-active{
+}
+.modal-active {
     visibility: visible;
     opacity: 1;
-  }
+}
 
-  .modal__content {
+.modal__content {
     border-radius: 4px;
     position: relative;
     width: 500px;
     max-width: 90%;
     background: #fff;
     padding: 1em 2em;
-  }
+}
 
-
-  .modal__close {
+.modal__close {
     position: absolute;
     top: 10px;
     right: 10px;
     color: #585858;
     text-decoration: none;
-  }
+}
+.mySlides {
+    display: none;
+}

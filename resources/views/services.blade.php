@@ -79,16 +79,15 @@
 
                                 <div id="" class="modal demo-modal">
                                     <div class="modal__content">
-                                        <h1>CSS Only Modal</h1>
+                                        <div class="w3-content w3-display-container">
+                                            <img class="mySlides" src="img_snowtops.jpg" style="width:100%">
+                                            <img class="mySlides" src="img_lights.jpg" style="width:100%">
+                                            <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+                                            <img class="mySlides" src="img_forest.jpg" style="width:100%">
 
-                                        <p>
-                                            You can use the :target pseudo-class to create a modals with Zero JavaScript. Enjoy!
-                                        </p>
-
-                                        <div class="modal__footer">
-                                            Made with <i class="fa fa-heart"></i>, by <a href="https://twitter.com/denicmarko" target="_blank">@denicmarko</a>
+                                            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                                         </div>
-
                                         <a href="#" class="modal__close">&times;</a>
                                     </div>
                                 </div>
@@ -114,6 +113,30 @@
                 </div>
         </div>
     </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
 
 
 </main>
