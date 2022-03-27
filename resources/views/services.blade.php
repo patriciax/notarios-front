@@ -79,7 +79,7 @@
 
                                 <div id="" class="modal demo-modal">
                                     <div class="modal__content">
-                                        <div class="w3-content w3-display-container">
+
                                             <div class="modal-slide">
                                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
 
@@ -88,9 +88,8 @@
                                                 @endforeach
                                             </div>
 
-                                            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-                                        </div>
+
+
                                         <a href="#" class="modal__close">&times;</a>
                                     </div>
                                 </div>
