@@ -30,7 +30,7 @@
 
 </main>
 @foreach(App\Models\Film::all() as $film)
-<section id="a{{ $film->id }}" class="section-films" style="display:none;">
+<section id="a{{ $film->id }}" class="section-films" style="visibility:hidden;">
     <div class="arrow">
         <a href="#top">top</a>
     </div>
@@ -85,11 +85,11 @@
 @push("scripts")
 
     <script>
-        
+
         function showSection(id){
 
-            $(".section-films").css("display", "none")
-            $("#a"+id).css("display", "block")
+            $(".section-films").css("visibility", "hidden")
+            $("#a"+id).css("visibility", "visible")
 
         }
 
