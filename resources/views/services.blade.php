@@ -93,8 +93,8 @@
                                         <a href="#" class="modal__close">&times;</a>
                                     </div>
                                 </div>
-
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
                             </div>
