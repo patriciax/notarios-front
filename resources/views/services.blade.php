@@ -71,20 +71,32 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
-                                <div class="container">
-                                    <div class="interior">
-                                        <a class="btn" href="#open-modal">👋 Basic CSS-Only Modal</a>
-                                    </div>
-                                </div>
 
-                                <div id="open-modal" class="modal-window">
-                                    <div>
-                                    @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                       holisç
-                                       @endforeach
+
+                            <div class="wrapper">
+    <a href="#demo-modal">Open Demo Modal</a>
+</div>
+
+
+                                <div id="demo-modal" class="modal">
+                                    <div class="modal__content">
+                                        <h1>CSS Only Modal</h1>
+
+                                        <p>
+                                            You can use the :target pseudo-class to create a modals with Zero JavaScript. Enjoy!
+                                        </p>
+
+                                        <div class="modal__footer">
+                                            Made with <i class="fa fa-heart"></i>, by <a href="https://twitter.com/denicmarko" target="_blank">@denicmarko</a>
+                                        </div>
+
+                                        <a href="#" class="modal__close">&times;</a>
                                     </div>
                                 </div>
                                 <!--
+                                      @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                       holisç
+                                       @endforeach
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
 
                                         <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
