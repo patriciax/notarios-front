@@ -80,7 +80,8 @@
                                 <div id="open-modal" class="modal-window">
                                     <div>
                                     @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                       holis
+                                       holisç
+                                       @endforeach
                                     </div>
                                 </div>
                                 <!--
