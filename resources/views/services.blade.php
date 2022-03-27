@@ -1,5 +1,5 @@
 @extends("layouts.main")
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
 @section("content")
 <!----<main class="bg-light" data-barba="container" data-barba-namespace="servicies-section">--->
 <main class="bg-light no_height">
@@ -71,7 +71,7 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div id="gallery" class=" slider-servicess">
-
+<p>test</p>
                             @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Begin div .grid -->
                                 <div id="gallery__grid" class="container gallery__grid" data-element="gallery-item">
