@@ -327,5 +327,9 @@ $("#" + films).addClass('active-film')*/
         $('.demo-modal').toggleClass("modal-active");
     });
 
+    $(".modal__close").on("click", function () {
+        $('.demo-modal').removeClass("modal-active");
+    });
+
 
 });

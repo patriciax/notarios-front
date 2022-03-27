@@ -73,7 +73,6 @@
                             <div id="gallery" class=" slider-servicess">
                                 <div class="wrapper">
                                     <div class="main_demo-modal"><img src="{{ $picture->image }}" style="width: 300px; height: 300px;">
-
                                         <div class="marco" alt=""></div>
                                     </div>
                                 </div>
