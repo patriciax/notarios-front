@@ -331,13 +331,5 @@ $("#" + films).addClass('active-film')*/
         $('.demo-modal').removeClass("modal-active");
     });
 
-    $(".slider-modal").slick({
-        arrows: true,
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
 
-
-    });
 });
