@@ -80,11 +80,11 @@
                                 <div id="" class="modal demo-modal">
                                     <div class="modal__content">
                                         <div class="w3-content w3-display-container">
-                                            <img class="mySlides" src="img_snowtops.jpg" style="width:100%">
-                                            <img class="mySlides" src="img_lights.jpg" style="width:100%">
-                                            <img class="mySlides" src="img_mountains.jpg" style="width:100%">
-                                            <img class="mySlides" src="img_forest.jpg" style="width:100%">
+                                        @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
 
+                                            <img class="mySlides" src="{{ $picture->image }}" style="width:100%">
+
+                                            @endforeach
                                             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                                             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                                         </div>
