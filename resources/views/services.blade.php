@@ -32,14 +32,14 @@
                                 <p> {{ strtoupper($location->name) }}</p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
-                            <div id="gallery" class="gallery slider-servicess">
+                            <div id="gallery" class="gallery slider-servicess" >
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
                                 <figure>
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                    <a href="{{ $picture->image }}" data-width="1200" data-height="900">
+                                    <a href="{{ $picture->image }}" data-width="1200" data-height="900" >
                                         <!-- Thumbnail -->
-                                        <img src="{{ $picture->image }}" style="width: 300px; height: 300px;">
+                                        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
                                         <div class="marco" alt=""></div>
                                     </a>
@@ -70,42 +70,21 @@
                                 </p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
-                            <div id="gallery" class=" slider-servicess">
-                                <div class="wrapper">
-                                    <div class="main_demo-modal"><img src="{{ $picture->image }}" style="width: 300px; height: 300px;">
-                                        <div class="marco" alt=""></div>
-                                    </div>
-                                </div>
+                            <div id="gallery" class="gallery slider-servicess">
 
-                                <div id="" class="modal demo-modal">
-                                    <div class="modal__content">
-
-                                            <div class="modal-slide">
-                                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-
-                                                <img src="{{ $picture->image }}" alt="">
-
-                                                @endforeach
-                                            </div>
-
-
-
-                                        <a href="#" class="modal__close">&times;</a>
-                                    </div>
-                                </div>
-                                <!--
-                                      @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-                                       holisç
-                                       @endforeach
+                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                <!-- Use figure for a more semantic html -->
+                                <figure>
+                                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                                     <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
-
+                                        <!-- Thumbnail -->
                                         <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
                                         <div class="marco" alt=""></div>
                                     </a>
-                                </figure>---}}---->
+                                </figure>
 
-
+                                @endforeach
 
                             </div>
                             <div class="counter">1/</div>
@@ -115,7 +94,6 @@
                 </div>
         </div>
     </div>
-
 
 
 </main>
@@ -129,3 +107,4 @@
 
 
 @endsection
+
