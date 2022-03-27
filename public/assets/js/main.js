@@ -2,7 +2,6 @@ window.setTimeout(function () {
     $(".elipse").fadeOut(100);
 }, 2000);
 
-
 function customPopup() {
     let $btnShowPopup = $(".js-open-popup");
     let $btnClosePopup = $(".js-close-popup");
@@ -141,7 +140,6 @@ $(document).ready(function () {
         cssEase: "linear",
     });
 
-
     $(".slider").slick({
         arrows: true,
         dots: false,
@@ -220,11 +218,10 @@ $(document).ready(function () {
         $(this).toggleClass("open");
     });
 
-
-    $('.main-info').removeClass("active-xs");
+    $(".main-info").removeClass("active-xs");
 
     $(".main-info").on("click", function () {
-        $('.main-galeria').toggleClass("active-xs");
+        $(".main-galeria").toggleClass("active-xs");
     });
     /*var myVideo = document.querySelector(".test");
 
@@ -235,9 +232,7 @@ function playPause() {
       myVideo.pause();
   }*/
 
-    $('.closed').on("click", function(){
-
-    })
+    $(".closed").on("click", function () {});
     /*
 $(".main-info").on("click", function () {
     $(".main-director-names").toggleClass("opacity");
@@ -334,31 +329,11 @@ $("#" + films).addClass('active-film')*/
         $(".hidden-film").show();
     });
 
-
     $(".main_demo-modal").on("click", function () {
-        $('.demo-modal').toggleClass("modal-active");
+        $(".demo-modal").toggleClass("modal-active");
     });
 
     $(".modal__close").on("click", function () {
-        $('.demo-modal').removeClass("modal-active");
+        $(".demo-modal").removeClass("modal-active");
     });
-
-
 });
-/* full page carousel */
-$(document).ready(function () {
-    $('.carousel').carousel({
-        pause: "false"
-    });
-    $('.carousel').css({ 'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight() });
-    //$('.carousel-inner').css({'z-index': 0});
-    $('.carousel .item').css({ 'position': 'fixed', 'width': '100%', 'height': '100%' });
-    $('.carousel-inner div.itemimg').each(function () {
-        varimgSrc = $(this).attr('src');
-        $(this).parent().css({ 'background': 'url(' + imgSrc + ') center center no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover' });
-        $(this).remove();
-    });
-    $(window).on('resize', function () {
-        $('.carousel').css({ 'width': $(window).outerWidth(), 'height': $(window).outerHeight() });
-    });
-    });
