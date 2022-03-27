@@ -70,12 +70,13 @@
                                 </p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
-                            <div id="gallery" class="gallery slider-servicess">
+                            <div id="gallery" class=" slider-servicess">
 
+
+                                <div class="slider-modal">
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
 
-                                <div class="slider-modal">
                                     <div class="close-icon modal-close"></div>
 
                                     <h5 class="title">Slider Modal</h5>
@@ -89,6 +90,7 @@
                                         <div class="slide" title="Girl reading in the woods" style="background-image: url('https://unsplash.it/601/506')"> </div>
                                     </div>
                                     <p class="slider-image-caption">sdfsdfsdf</p>
+                                    @endforeach
                                 </div>
 
                                 <div>
@@ -110,7 +112,7 @@
 
 
 
-                                @endforeach
+
 
                             </div>
                             <div class="counter">1/</div>
