@@ -26,6 +26,7 @@ function customPopup() {
                 $popup.removeClass("is-active");
             }
             playPause();
+            $(".panel").css("width", "100%");
         }
     });
 }

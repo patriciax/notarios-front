@@ -19,7 +19,8 @@
                                 @if($content->type == 'image')
                                     <img src="{{ $content->image }}" alt="">
                                 @else
-                                    <video class="w-100" controls>
+                                    <video class="w-100" controls style="width: 100%;
+    height: 100%;">
                                         <source src="{{ $content->image }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
