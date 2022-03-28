@@ -17,7 +17,7 @@
                         @foreach($directorContents as $content)
                             
                             @if(($loop->index + 1) % 2 != 0)
-                            {{ dd($loop->index + 1) }}
+                           
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <div data-target="custom-popup{{$content['id']}}" class="js-open-popup">
                                 <!-- Thumbnail -->
@@ -34,6 +34,7 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
+                                        @if(isset($directorContents[$loop->index + 1]))
                                         {{ $directorContents[$loop->index + 1]['image'] }}
                                      
                                         
@@ -43,6 +44,7 @@
                                             <source src="{{ $contentToShow->image }}" type="video/ogg">
                                             Your browser does not support HTML video.
                                         </video>--}}
+                                        @endif
                   
 
                                     </div>
