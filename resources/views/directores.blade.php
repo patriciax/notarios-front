@@ -35,15 +35,13 @@
 
                                     <div class="custom-popup__content">
                                         @if(isset($directorContents[$loop->index + 1]))
-                                        {{ $directorContents[$loop->index + 1]['image'] }}
-                                     
                                         
-                                        {{--<video controls class="test w-100">
+                                        <video controls class="test w-100">
 
-                                            <source src="{{ $contentToShow->image }}" type="video/mp4">
-                                            <source src="{{ $contentToShow->image }}" type="video/ogg">
+                                            <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/mp4">
+                                            <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/ogg">
                                             Your browser does not support HTML video.
-                                        </video>--}}
+                                        </video>
                                         @endif
                   
 
