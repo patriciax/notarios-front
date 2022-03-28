@@ -36,7 +36,7 @@
                                         @php
                                             $contentToShow = App\Models\DirectorContent::where("director_id", $director->id)->offset($loop->index + 1)->first()
                                         @endphp
-                                        @if(isset($content[$loop->index + 1]))
+                                     
                                         
                                         <video autoplay loop autoplay muted class="test w-100">
 
@@ -44,7 +44,7 @@
                                             <source src="{{ $contentToShow->image }}" type="video/ogg">
                                             Your browser does not support HTML video.
                                         </video>
-                                        @endif
+                  
 
                                     </div>
 
