@@ -33,11 +33,11 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
-                                        @if(isset($content[$loop->index + 2]))
+                                        @if(isset($content[$loop->index + 1]))
                                         <video autoplay loop autoplay muted class="test w-100">
 
-                                            <source src="{{ $content[$loop->index + 2]['image'] }}" type="video/mp4">
-                                            <source src="{{ $content[$loop->index + 2]['image'] }}" type="video/ogg">
+                                            <source src="{{ $content[$loop->index + 1]['image'] }}" type="video/mp4">
+                                            <source src="{{ $content[$loop->index + 1]['image'] }}" type="video/ogg">
                                             Your browser does not support HTML video.
                                         </video>
                                         @endif
