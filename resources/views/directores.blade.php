@@ -18,7 +18,7 @@
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <div data-target="custom-popup{{$content->id}}" class="js-open-popup">
                                 <!-- Thumbnail -->
-                                <h1>{{ $loop->index+1 }}</h1>
+                   
                                 @if($content->type == 'image')
                                     <img src="{{ $content->image }}" alt="">
                                 @else
@@ -33,6 +33,7 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
+                                        {{ $content[$loop->index + 1]['image'] }}
                                         @if(isset($content[$loop->index + 1]))
                                         <video autoplay loop autoplay muted class="test w-100">
 
