@@ -34,10 +34,10 @@
 
                                     <div class="custom-popup__content">
                                         @php
-                                            $contentToShow = App\Models\DirectorContent::where("director_id", $director->id)->offset($loop->index + 1)->first()
+                                            $contentToShow = App\Models\DirectorContent::where("director_id", $director->id)->offset($loop->index + 1)->first();
                                         @endphp
                                      
-                                        {{ $contentToShow["image"] }}
+                                        {{ $contentToShow }}
                                         {{--<video controls class="test w-100">
 
                                             <source src="{{ $contentToShow->image }}" type="video/mp4">
