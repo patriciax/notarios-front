@@ -13,10 +13,12 @@
                     <div class="main-galeria scroll gallery">
                         @foreach(App\Models\DirectorContent::where("director_id", $director->id)->get() as $content)
 
-                            @if($loop->index + 1 % 2 != 0)
+                            @if(($loop->index + 1) % 2 != 0)
+              
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <div data-target="custom-popup{{$content->id}}">
                                 <!-- Thumbnail -->
+                                <h1>{{ $loop->index+1 }}</h1>
                                 @if($content->type == 'image')
                                     <img src="{{ $content->image }}" alt="">
                                 @else
