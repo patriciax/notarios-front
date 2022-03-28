@@ -18,7 +18,7 @@ function customPopup() {
     $btnClosePopup.on("click", function () {
         $(this).parents(".is-active").removeClass("is-active");
         $(".panel").css("width", "calc(65% - 4.05vw)");
-       pause();
+        $(this).pause();
 
     });
 

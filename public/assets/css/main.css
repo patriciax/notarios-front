@@ -1766,6 +1766,8 @@ a:hover {
 .custom-popup__content video,
 .custom-popup__content img {
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 @media screen and (max-width: 980px) {
     .custom-popup__holder {
