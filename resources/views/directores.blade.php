@@ -33,10 +33,7 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
-                                        @php
-                                            $contentToShow = App\Models\DirectorContent::where("director_id", $director->id)->offset($loop->index + 1)->first();
-                                            echo $contentToShow->image;
-                                        @endphp
+                                        {{ $loop->index }}
                                      
                                         
                                         {{--<video controls class="test w-100">
