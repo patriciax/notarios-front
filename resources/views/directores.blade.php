@@ -34,7 +34,7 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
-                                        {{ $directorContents[$loop->index + 1] }}
+                                        {{ $directorContents[$loop->index + 1]['image'] }}
                                      
                                         
                                         {{--<video controls class="test w-100">
