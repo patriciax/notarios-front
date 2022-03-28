@@ -32,7 +32,7 @@
 
                                     <div class="custom-popup__content">
                                         @if(isset($content[$loop->index + 2]))
-                                        <video autoplay loop controls muted class="test">
+                                        <video autoplay loop controls muted class="test w-100">
 
                                             <source src="{{ $content[$loop->index + 2]['image'] }}" type="video/mp4">
                                             <source src="{{ $content[$loop->index + 2]['image'] }}" type="video/ogg">
