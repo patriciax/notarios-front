@@ -12,37 +12,40 @@
                 <div class="panel">
                     <div class="main-galeria scroll gallery">
                         @foreach(App\Models\DirectorContent::where("director_id", $director->id)->get() as $content)
-                        <figure class="galeria_img">
+
+                            @if($loop->index + 1 % 2 != 0)
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <a href="{{ $content->image }}" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
+                            <div data-target="custom-popup{{$content->id}}">
                                 <!-- Thumbnail -->
                                 @if($content->type == 'image')
                                     <img src="{{ $content->image }}" alt="">
                                 @else
-                                    <video class="w-100" controls>
+                                    <video class="w-100" controls muted autoplay>
                                         <source src="{{ $content->image }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 @endif
-                            </a>
-                        </figure>
+                            </div>
+
+                            <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content->id}}">
+                                <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
+
+                                    <div class="custom-popup__content">
+
+                                        <video autoplay loop controls muted class="test">
+
+                                            <source src="{{ $content[$loop->index + 2]->image }}" type="video/mp4">
+                                            <source src="{{ $content[$loop->index + 2]->image }}" type="video/ogg">
+                                            Your browser does not support HTML video.
+                                        </video>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            @endif
+                       
                         @endforeach
-
-                        {{--<figure class="galeria_img">
-                            <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <a href="assets/img/portafolio2.jpg" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
-                                <!-- Thumbnail -->
-                                <img src="assets/img/portafolio2.jpg" alt="">
-                            </a>
-                        </figure>
-
-                        <figure class="galeria_img">
-                            <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <a href="assets/img/portafolio2.jpg" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
-                                <!-- Thumbnail -->
-                                <img src="assets/img/portafolio1.jpg" alt="">
-                            </a>
-                        </figure>--}}
 
                     </div>
                     <div class="main-info  ">
