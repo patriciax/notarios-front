@@ -33,8 +33,9 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
-                                        {{ $content[$loop->index + 1]['image'] }}
+                                        
                                         @if(isset($content[$loop->index + 1]))
+                                        {{ $content[$loop->index + 1]['image'] }}
                                         <video autoplay loop autoplay muted class="test w-100">
 
                                             <source src="{{ $content[$loop->index + 1]['image'] }}" type="video/mp4">
