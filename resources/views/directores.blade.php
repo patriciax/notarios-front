@@ -33,7 +33,7 @@
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
-                                        {{ $content }}
+                                        {{ $content[$loop->index + 1] }}
                                         @if(isset($content[$loop->index + 1]))
                                         
                                         <video autoplay loop autoplay muted class="test w-100">
