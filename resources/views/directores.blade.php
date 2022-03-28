@@ -19,24 +19,22 @@
                             @if(($loop->index + 1) % 2 != 0)
               
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <div data-target="custom-popup{{$content->id}}" class="js-open-popup">
+                            <div data-target="custom-popup{{$content['id']}}" class="js-open-popup">
                                 <!-- Thumbnail -->
                    
-                                @if($content->type == 'image')
-                                    <img src="{{ $content->image }}" alt="">
-                                @else
-                                    <video class="w-100" controls muted autoplay>
-                                        <source src="{{ $content->image }}" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                @endif
+
+                                <video class="w-100" controls muted autoplay>
+                                    <source src="{{ $content['image'] }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                          
                             </div>
 
-                            <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content->id}}">
+                            <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content['id']}}">
                                 <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
-                                        {{ $loop->index }}
+                                        {{ $directorContents[loop->index + 1] }}
                                      
                                         
                                         {{--<video controls class="test w-100">
