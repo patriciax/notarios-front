@@ -35,7 +35,7 @@
                                     <div class="custom-popup__content">
                                         @php
                                             $contentToShow = App\Models\DirectorContent::where("director_id", $director->id)->offset($loop->index + 1)->first();
-                                            dd($contentToShow);
+                                            dd($contentToShow->image);
                                         @endphp
                                      
                                         
