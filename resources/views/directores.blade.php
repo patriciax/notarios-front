@@ -15,9 +15,9 @@
                             $directorContents = App\Models\DirectorContent::where("director_id", $director->id)->get()->toArray();
                         @endphp
                         @foreach($directorContents as $content)
-                            {{ dd($directorContents) }}
+                            
                             @if(($loop->index + 1) % 2 != 0)
-              
+                            {{ dd($loop->index + 1) }}
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <div data-target="custom-popup{{$content['id']}}" class="js-open-popup">
                                 <!-- Thumbnail -->
