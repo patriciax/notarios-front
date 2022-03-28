@@ -3,6 +3,7 @@ window.setTimeout(function () {
 }, 2000);
 
 function customPopup() {
+
     let $btnShowPopup = $(".js-open-popup");
     let $btnClosePopup = $(".js-close-popup");
     let $popup = $(".js-custom-popup");
@@ -10,23 +11,29 @@ function customPopup() {
     $btnShowPopup.on("click", function () {
         let targetPopup = $(this).attr("data-target");
         $("[data-popup=" + targetPopup + "]").addClass("is-active");
+
+        $(".panel").css("width", "100%");
     });
 
     $btnClosePopup.on("click", function () {
         $(this).parents(".is-active").removeClass("is-active");
-        playPause();
+        $(".panel").css("width", "calc(65% - 4.05vw)");
+       pause();
+
     });
 
     $popup.on("click", function (event) {
+
         if (
             !$(event.target).closest(".js-custom-popup-holder").length &&
             !$(event.target).is("js-custom-popup")
         ) {
             if ($popup.hasClass("is-active")) {
                 $popup.removeClass("is-active");
+
             }
             playPause();
-            $(".panel").css("width", "100%");
+
         }
     });
 }
