@@ -11,8 +11,11 @@
             <div class="main-panel">
                 <div class="panel">
                     <div class="main-galeria scroll gallery">
-                        @foreach(App\Models\DirectorContent::where("director_id", $director->id)->get()->toArray() as $content)
-                            {{ dd($content) }}
+                        @php
+                            $directorContents = App\Models\DirectorContent::where("director_id", $director->id)->get()->toArray();
+                        @endphp
+                        @foreach($directorContents as $content)
+                       
                             @if(($loop->index + 1) % 2 != 0)
               
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
