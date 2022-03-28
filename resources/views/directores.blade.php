@@ -24,7 +24,7 @@
 
 
                                 <video class="w-100" controls muted autoplay style="width: 100%;
-    height: 100%;">
+    ">
                                     <source src="{{ $content['image'] }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -38,7 +38,7 @@
                                         @if(isset($directorContents[$loop->index + 1]))
 
                                         <video controls class="test w-100" style="width: 100%;
-    height: 100%;">
+   ">
 
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/mp4">
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/ogg">
