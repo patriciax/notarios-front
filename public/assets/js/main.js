@@ -3,7 +3,7 @@ window.setTimeout(function () {
 }, 2000);
 
 function customPopup() {
-
+    var myVideo = document.querySelector(".test");
     let $btnShowPopup = $(".js-open-popup");
     let $btnClosePopup = $(".js-close-popup");
     let $popup = $(".js-custom-popup");
@@ -13,12 +13,15 @@ function customPopup() {
         $("[data-popup=" + targetPopup + "]").addClass("is-active");
 
         $(".panel").css("width", "100%");
+        $(".scroll").css("overflow", "hidden");
+
     });
 
     $btnClosePopup.on("click", function () {
         $(this).parents(".is-active").removeClass("is-active");
         $(".panel").css("width", "calc(65% - 4.05vw)");
-        $(this).pause();
+        $(".scroll").css("overflow-y", "auto");
+        $("video").pause();
 
     });
 
