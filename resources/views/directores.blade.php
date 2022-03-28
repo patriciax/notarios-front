@@ -34,8 +34,8 @@
 
                                         <video autoplay loop controls muted class="test">
 
-                                            <source src="{{ $content[$loop->index + 2]->image }}" type="video/mp4">
-                                            <source src="{{ $content[$loop->index + 2]->image }}" type="video/ogg">
+                                            <source src="{{ $content[$loop->index + 2]['image'] }}" type="video/mp4">
+                                            <source src="{{ $content[$loop->index + 2]['image'] }}" type="video/ogg">
                                             Your browser does not support HTML video.
                                         </video>
 
