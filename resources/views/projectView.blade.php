@@ -47,7 +47,7 @@
                 </figure>
 
             </div>
-            @elseif($content->type == 'image')
+            @elseif($content->type == 'video')
 
             <video class="w-100" controls>
                 <source src="{{ $content->image }}">
