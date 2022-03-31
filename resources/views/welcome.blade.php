@@ -77,7 +77,13 @@
 
 
 </main>
+<style>
+    .menu li:nth-child(1) {
 
+   border-bottom: 1px solid #121212!important;
+ 
+}
+</style>
 @push("scripts")
 
 @endpush
@@ -87,3 +93,4 @@
 
 
 @endsection
+
