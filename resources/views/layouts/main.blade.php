@@ -28,7 +28,7 @@
     <div class="main-home no_height">
         <header>
             <div class="main-logo" data-aos="fade" data-aos-duration="3000">
-                <a href="/"> <img src="assets/img/logo.png" alt="" /></a>
+                <a href="/"> <img src="{{ url('assets/img/logo.png')}}" alt="" /></a>
             </div>
 
 
