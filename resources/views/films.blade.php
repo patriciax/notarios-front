@@ -81,6 +81,11 @@
         position: fixed;
         right: 0;
     }
+    .menu li:nth-child(4) {
+
+border-bottom: 1px solid #121212!important;
+
+}
 </style>
 @push("scripts")
 
@@ -92,7 +97,7 @@
             $("#a"+id).css("visibility", "visible")
 
         }
-
+      
     </script>
 
 @endpush

@@ -58,13 +58,16 @@
                     </div>
                     <div class="main-info  ">
 
-                        <div class="info scroll">
+                       <div>
+
+                       </div>
+                       <div class="info scroll">
                             <div class="name-info">
                                 <h3>{{ strtoupper($director->name) }}</h3>
                             </div>
                             {!! $director->description !!}
                             <div class="logo-info">
-                           <a href=""><img class="vimeo" src="http://imgfz.com/i/6nAzYHJ.png" alt=""></a>
+                           <a href="" target="__blank"><img class="vimeo" src="http://imgfz.com/i/6nAzYHJ.png" alt=""></a>
 
                                 <img src="assets/img/logo.png" alt="">
                             </div>
@@ -302,6 +305,15 @@
     .main-director {
         margin-top: 0rem;
     }
+    .menu li:nth-child(2) {
+
+border-bottom: 1px solid #121212!important;
+
+}
+header {
+ 
+    z-index: 0;
+}
 </style>
 @push("scripts")
 

@@ -71,6 +71,11 @@ display: block;
 
 }
     }
+    .menu li:nth-child(6) {
+
+border-bottom: 1px solid #121212!important;
+
+}
 
 </style>
 

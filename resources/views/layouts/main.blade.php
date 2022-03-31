@@ -63,8 +63,7 @@
     <footer>
         <div>
             <p class="copy">
-                NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ,
-                COLOMBIA
+            NOTARIOS VISUAL KNOWMADS/FILM PRODUCTION COMPANY/BASED IN BOGOTÁ, COLOMBIA / POWERED BY LA*LIBERTY
             </p>
         </div>
 

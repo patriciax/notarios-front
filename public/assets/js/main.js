@@ -12,31 +12,29 @@ function customPopup() {
         let targetPopup = $(this).attr("data-target");
         $("[data-popup=" + targetPopup + "]").addClass("is-active");
 
-        $(".panel").css("width", "100%");
-        $(".scroll").css("overflow", "hidden");
+        $(".panel").css("width", "101%");
+        $(".main-director-names").css("z-index", "-1");
 
+        $(".scroll").css("overflow", "hidden");
+     
     });
 
     $btnClosePopup.on("click", function () {
         $(this).parents(".is-active").removeClass("is-active");
-        $(".panel").css("width", "calc(65% - 4.05vw)");
+        $(".panel").css("width", "71%");
         $(".scroll").css("overflow-y", "auto");
-        $("video").pause();
-
+        
     });
 
     $popup.on("click", function (event) {
-
         if (
             !$(event.target).closest(".js-custom-popup-holder").length &&
             !$(event.target).is("js-custom-popup")
         ) {
             if ($popup.hasClass("is-active")) {
                 $popup.removeClass("is-active");
-
             }
             playPause();
-
         }
     });
 }
@@ -225,6 +223,9 @@ $(document).ready(function () {
         ],
     });
 
+
+  
+
     /******************************* */
     $(".main-info").on("click", function () {
         $(this).toggleClass("open");
@@ -235,6 +236,7 @@ $(document).ready(function () {
     $(".main-info").on("click", function () {
         $(".main-galeria").toggleClass("active-xs");
     });
+
     /*var myVideo = document.querySelector(".test");
 
 function playPause() {
@@ -243,8 +245,13 @@ function playPause() {
     else
       myVideo.pause();
   }*/
+   
+    $(".closed").click(function () {
+      
+        if ($('.test-video').paused)   $('.test-video').play();
+        else $('.test-video').pause();
+    });
 
-    $(".closed").on("click", function () {});
     /*
 $(".main-info").on("click", function () {
     $(".main-director-names").toggleClass("opacity");
@@ -343,6 +350,7 @@ $("#" + films).addClass('active-film')*/
 
     $(".main_demo-modal").on("click", function () {
         $(".demo-modal").toggleClass("modal-active");
+        $('.test-video').play();
     });
 
     $(".modal__close").on("click", function () {

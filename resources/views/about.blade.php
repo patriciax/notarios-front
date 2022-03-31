@@ -68,6 +68,11 @@ display: none;
     main {
     padding-top: 6rem;
 }
+.menu li:nth-child(5) {
+
+border-bottom: 1px solid #121212!important;
+
+}
 </style>
 
 </main>
