@@ -15,19 +15,20 @@
                             $directorContents = App\Models\DirectorContent::where("director_id", $director->id)->get()->toArray();
                         @endphp
                         @foreach($directorContents as $content)
-                            
+
                             @if(($loop->index + 1) % 2 != 0)
-                           
+
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                             <div data-target="custom-popup{{$content['id']}}" class="js-open-popup">
                                 <!-- Thumbnail -->
-                   
 
-                                <video class="w-100" controls muted autoplay>
+
+                                <video class="w-100" controls muted autoplay style="width: 100%;
+    ">
                                     <source src="{{ $content['image'] }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                          
+
                             </div>
 
                             <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content['id']}}">
@@ -35,22 +36,23 @@
 
                                     <div class="custom-popup__content">
                                         @if(isset($directorContents[$loop->index + 1]))
-                                        
-                                        <video controls class="test w-100">
+
+                                        <video controls class="test w-100" style="width: 100%;
+   ">
 
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/mp4">
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/ogg">
                                             Your browser does not support HTML video.
                                         </video>
                                         @endif
-                  
+
 
                                     </div>
 
                                 </div>
                             </div>
                             @endif
-                       
+
                         @endforeach
 
                     </div>
