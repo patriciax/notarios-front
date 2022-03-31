@@ -156,8 +156,9 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         speed: 500,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
-
+        autoplay: true,
         fade: true,
         cssEase: "linear",
     });
