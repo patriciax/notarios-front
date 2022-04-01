@@ -1115,6 +1115,9 @@ display: none;}
     position: absolute;
     right: 24%;
 }
+.tabs-gallery2:nth-child(1) p{
+    margin-left: 0.5rem;
+}
 .tabs ul li {
     box-sizing: border-box;
     margin-bottom: 0;

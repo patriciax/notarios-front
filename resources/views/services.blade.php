@@ -59,7 +59,9 @@
                 <div class="container-gallery" style="gap: 2rem;">
                     <div class="tabs-gallery2">
                         @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
-                        <span class="tab-link" data-tab="tabname-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> <span>{{ strtoupper($location->name) }}</span> </span>
+                        <span class="tab-link" data-tab="tabname-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> <span>
+                            <p>{{ strtoupper($location->name) }}</p>
+                        </span> </span>
                         @endforeach
                     </div>
                     <div class="content ">
