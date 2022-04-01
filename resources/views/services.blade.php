@@ -21,7 +21,7 @@
 
                     <div class="tabs-gallery">
                         @foreach(App\Models\Photographer::where("type", "Location")->get() as $location)
-                        <span class="tab-link @if($loop->index == 0) current @endif" data-tab="tab-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> {{ strtoupper($location->name) }} </span>
+                        <span class="tab-link @if($loop->index == 0) current @endif" data-tab="tab-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> <p>{{ strtoupper($location->name) }}</p> </span>
                         @endforeach
                     </div>
                     <div class="content ">

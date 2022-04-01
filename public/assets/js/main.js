@@ -23,6 +23,8 @@ function customPopup() {
         $(this).parents(".is-active").removeClass("is-active");
         $(".panel").css("width", "71%");
         $(".scroll").css("overflow-y", "auto");
+        $(".main-director-names").css("z-index", "2");
+
         
     });
 
@@ -227,8 +229,10 @@ $(document).ready(function () {
   
 
     /******************************* */
+ 
     $(".main-info").on("click", function () {
         $(this).toggleClass("open");
+        $(".main-director-names").toggleClass("open-z");
     });
 
     $(".main-info").removeClass("active-xs");
