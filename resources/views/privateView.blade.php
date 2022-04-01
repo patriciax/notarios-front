@@ -40,6 +40,14 @@
         position: fixed;
         right: 0;
     }
+    .bg-dark--private {
+
+    height: -webkit-fill-available;
+}
+.private-main {
+
+    gap: 0.5rem;
+}
 </style>
 
 @push("scripts")
