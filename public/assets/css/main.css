@@ -1428,8 +1428,8 @@ display: none;}
     height: 343px;
     width: 350px;
     background-repeat: no-repeat;
-    top: -1%;
-    margin-left: -13rem;
+    top: 2%;
+    margin-left: -11rem;
     z-index: 0;
     box-shadow: 2px 14px 9px #00000075;
     border-radius: 3px;
@@ -1445,7 +1445,9 @@ display: none;}
     display: flex;
     flex-direction: column;
 }
-
+p, ul.text-list {
+    color: #000;
+}
 .tabs-gallery span {
     background: none;
     color: #000;
@@ -1456,6 +1458,7 @@ display: none;}
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 1;
+    display: flex;
 }
 .tabs-gallery2 span {
     background: none;
@@ -1524,7 +1527,7 @@ figure img {
     padding: 0 2rem;
     justify-items: center;
     align-items: center;
-    gap: 5rem;
+    gap: 12rem;
 }
 .p-10 {
     padding-top: 10rem;
@@ -1532,11 +1535,13 @@ figure img {
 .counter {
     z-index: 9;
     position: relative;
-    transform: translateX(8rem);
+    transform: translate(32%, -50px);
     font-family: "VanderKeur";
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
-
+.tab-link p{
+    margin-bottom: 5px;
+}
 .name-gallery {
     top: 1.8rem;
     margin-left: 1.5rem;
