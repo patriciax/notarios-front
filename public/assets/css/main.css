@@ -1445,8 +1445,14 @@ display: none;}
     display: flex;
     flex-direction: column;
 }
-p, ul.text-list {
-    color: #000;
+.tab-link p{
+    color: #000!important;
+}
+.tab-link:nth-child(1) p {
+    margin-left: 0.4rem;
+}
+.tab-link:nth-child(7) p{
+    margin-left: 0.3rem;
 }
 .tabs-gallery span {
     background: none;
@@ -1468,7 +1474,7 @@ p, ul.text-list {
     cursor: pointer;
     font-family: "DrukText";
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1;
 }
 
