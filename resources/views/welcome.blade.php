@@ -46,7 +46,7 @@
         {{---------------modals-----------------------}}
         @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
         <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$home->id}}">
-            <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid()"  class="custom-popup__close js-close-popup"></span>
+            <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid('{{ $home->id }}')"  class="custom-popup__close js-close-popup"></span>
 
                 <div class="custom-popup__content">
 
@@ -86,14 +86,15 @@
 </style>
 
 <script>
-      var vid = document.querySelector("test-video"); 
-function playVid(id) {
-    console.log(id) 
-    $('.test-video')[0].play();
+      
+function playVid(id) { 
+    vid = document.getElementById("video-"+id); 
+    $('#video-'+id)[0].play();
 } 
 
-function pauseVid() { 
-  vid.pause(); 
+function pauseVid(id) {
+    vid = document.getElementById("video-"+id); 
+    vid.pause(); 
 } 
 
 
