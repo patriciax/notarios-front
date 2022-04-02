@@ -76,15 +76,15 @@
 
                                 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
                                 <!-- Use figure for a more semantic html -->
-                               
+                                <figure>
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                  
-                                    <!-- Thumbnail -->
-                                    <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
+                                    <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
+                                        <!-- Thumbnail -->
+                                        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
-                                    <div class="marco" alt=""></div>
-                            
-                  
+                                        <div class="marco" alt=""></div>
+                                    </a>
+                                </figure>
 
                                 @endforeach
 

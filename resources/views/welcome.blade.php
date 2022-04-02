@@ -12,7 +12,7 @@
                 <div class="video-mask" >
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" >
                 <p class="number">Nº 512</p>
-                    <video muted autoplay loop class="gallery" onclick="playVid()">
+                    <video muted autoplay loop class="gallery" onclick="playVid('{{ $home->id }}')">
 
                         <source src="{{ $home->video }}" type="video/mp4">
                         <source src="{{ $home->video }}" type="video/ogg">
@@ -50,7 +50,7 @@
 
                 <div class="custom-popup__content">
 
-                    <video  controls  class="test-video">
+                    <video  controls  id="video-{{ $home->id }}">
 
                         <source src="{{ $home->video_comercial }}" type="video/mp4">
                         <source src="{{ $home->video_comercial }}" type="video/ogg">
@@ -87,7 +87,8 @@
 
 <script>
       var vid = document.querySelector("test-video"); 
-function playVid() { 
+function playVid(id) {
+    console.log(id) 
     $('.test-video')[0].play();
 } 
 
