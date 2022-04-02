@@ -119,9 +119,8 @@ $(document).ready(function () {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        fade: true,
-        cssEase: "linear",
-        autoplay: false,
+   
+        autoplay: true,
         autoplaySpeed: 2000,
         draggable: false,
         dots: true,
@@ -224,6 +223,7 @@ $(document).ready(function () {
             // instead of a settings object
         ],
     });
+ 
 
 
   

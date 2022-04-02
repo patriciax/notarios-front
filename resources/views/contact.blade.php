@@ -1,7 +1,7 @@
 @extends("layouts.main")
 
 @section("content")
-<main class="bg-light no_height" data-barba="container" data-barba-namespace="contact-section">
+<main class="bg-light no_height about-bg" data-barba="container" data-barba-namespace="contact-section">
 
     <div class="contacto">
         <div class="contacto-item">
