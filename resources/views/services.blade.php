@@ -33,7 +33,10 @@
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div  class=" slider-servicess " >
-                                @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
+                                @if(App\Models\PhotographerPicture::where("photographer_id", $location->id)->first())
+                                @php
+                                    $picture = App\Models\PhotographerPicture::where("photographer_id", $location->id)->first();
+                                @endphp
                                 <!-- Use figure for a more semantic html -->
                               
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
@@ -44,7 +47,7 @@
                                         <div class="marco" alt=""></div>
                                     </a>
                             
-                                @endforeach
+                                @endif
 
                             </div>
                             <div class="counter">1/</div>
@@ -65,8 +68,11 @@
                         @endforeach
                     </div>
                     <div class="content ">
-                        @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
-                        <div id="tabname-{{ $location->id }}" class="tab-content-general tab-content2 @if($loop->index == 0) current2 @endif">
+                        @if(App\Models\Photographer::where("type", "Photography")->first())
+                        @php
+                            $picture = App\Models\PhotographerPicture::where("photographer_id", $location->id)->first();
+                        @endphp
+                        <div id="tabname-{{ $location->id }}" class="tab-content-general tab-content2>
                             <div class="name-gallery">
                                 <p> {{ $location->name }}
                                 </p>
@@ -83,7 +89,7 @@
                             </div>
                             <div class="counter">1/</div>
                         </div>
-                        @endforeach
+                        @endif
                     </div>
                 </div>
         </div>
