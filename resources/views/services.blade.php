@@ -99,7 +99,7 @@
   
 
 </main>
-<section id="galerias" class="sec-galeria" >
+<section id="galerias" class="sec-galeria bg-light " >
 <div class="arrow">
         <a href="#top">top</a>
     </div>
@@ -134,37 +134,41 @@ border-bottom: 1px solid #121212!important;
     height: 0;
     transition: 0.6s;
     display: none;
+    padding-top: 9rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .sec-galeria-act{
     opacity: 1;
     height: 100vh;
     display: block;
 }
+.arrow {
+
+    margin-left: -3rem;
+}
 </style>
 @push("scripts")
 
 <script>
    $(".sect-fil").click(function () {
-
-       
         $("html, body").css({
             overflow: "hidden",
             height: "100%",
         });
         $(".sec-galeria").addClass("sec-galeria-act");
         $(".nones").addClass("sec-galeria ");
-
       
     });
-    /**********arrow******************** */
-    $(".arrow").click(function () {
-        $(".sec-galeria").removeClass("sec-galeria-act"");
+   /**********arrow******************** */
+   $(".arrow").click(function () {
+        $(".sec-galeria").removeClass("sec-galeria-act");
         $("html, body").css({
             overflow: "auto",
             height: "100%",
         });
- 
-      
+    
+        $(".nones").removeClass("sec-galeria");
     });
 </script>
 
