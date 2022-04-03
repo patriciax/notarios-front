@@ -94,6 +94,9 @@
 
 </main>
 <section id="galerias" class="sec-galeria" >
+<div class="arrow">
+        <a href="#top">top</a>
+    </div>
 <div id="gallery" class="gallery slider-servicess">
 
 @foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
@@ -124,6 +127,7 @@ border-bottom: 1px solid #121212!important;
     opacity: 0;
     height: 0;
     transition: 0.6s;
+    display: none;
 }
 .sec-galeria-act{
     opacity: 1;
@@ -147,7 +151,15 @@ border-bottom: 1px solid #121212!important;
       
     });
     /**********arrow******************** */
-
+    $(".arrow").click(function () {
+        $(".sec-galeria").removeClass("sec-galeria-act"");
+        $("html, body").css({
+            overflow: "auto",
+            height: "100%",
+        });
+ 
+      
+    });
 </script>
 
 @endpush
