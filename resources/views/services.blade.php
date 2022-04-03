@@ -156,13 +156,14 @@ border-bottom: 1px solid #121212!important;
     height: 0;
     transition: 0.6s;
     display: none;
-    padding-top: 9rem;
+    padding-top: 15rem;
     padding-left: 5rem;
     padding-right: 5rem;
+    padding-bottom: 5rem;
 }
 .sec-galeria-act{
     opacity: 1;
-    height: 100vh;
+    height: -webkit-fill-available;
     display: block;
     overflow-y: scroll;
 }
