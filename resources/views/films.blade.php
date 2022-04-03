@@ -101,6 +101,13 @@ border-bottom: 1px solid #121212!important;
   
     margin-top: 7rem;
 }
+.slider-films .slick-next {
+    right: 6%;
+}
+.slider-films [type="button"] {
+ 
+    position: fixed!important;
+}
 }
 </style>
 @push("scripts")

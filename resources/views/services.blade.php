@@ -202,13 +202,7 @@ border-bottom: 1px solid #121212!important;
     object-fit: contain;
 
 }
-.slider-films .slick-next {
-    right: 6%;
-}
-.slider-films [type="button"] {
- 
-    position: fixed;
-}
+
 }
 </style>
 @push("scripts")
