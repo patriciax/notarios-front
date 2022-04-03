@@ -32,7 +32,7 @@
                                 <p> {{ strtoupper($location->name) }}</p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
-                            <div  class=" slider-servicess " >
+                            <div  class=" slider-servicess "  >
                                 @if(App\Models\PhotographerPicture::where("photographer_id", $location->id)->first())
                                 @php
                                     $picture = App\Models\PhotographerPicture::where("photographer_id", $location->id)->first();
@@ -40,7 +40,7 @@
                                 <!-- Use figure for a more semantic html -->
                               
                                     <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                                    <a href="#galerias" class="sect-fil" data-width="1200" data-height="900" >
+                                    <a href="#galerias" class="sect-fil" data-width="1200" data-height="900"   onclick="showSection('{{ $location->id }}')">
                                         <!-- Thumbnail -->
                                         <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
@@ -100,30 +100,34 @@
 
 </main>
 <section id="galerias" class="sec-galeria bg-light " >
-<div class="arrow">
-        <a href="#top">top</a>
+    <div class="arrow">
+            <a href="#top">top</a>
+        </div>
+    <div id="gallery" class="gallery">
+
+        @foreach(App\Models\PhotographerPicture::get() as $picture)
+        <!-- Use figure for a more semantic html -->
+            <figure class="sec-services  services-{{$picture->photographer_id}}" >
+                <p>asdfghjk {{$picture->photographer_id}}</p>
+                <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
+                <!-- Thumbnail -->
+                <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
+                </a>
+            </figure>
+
+        @endforeach
+
     </div>
-<div id="gallery" class="gallery slider-servicess">
-
-@foreach(App\Models\PhotographerPicture::where("photographer_id", $location->id)->get() as $picture)
-<!-- Use figure for a more semantic html -->
-<figure>
-    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-    <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
-        <!-- Thumbnail -->
-        <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
-
-   
-    </a>
-</figure>
-
-@endforeach
-
-</div>
-    </section>
+</section>
 <style>
-
-
+#gallery figure{
+    display: block;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 .menu li:nth-child(3) {
 
 border-bottom: 1px solid #121212!important;
@@ -151,6 +155,18 @@ border-bottom: 1px solid #121212!important;
 @push("scripts")
 
 <script>
+
+function showSection(id){
+alert(id)
+
+    $(".sec-services").css("display", "none")
+
+    $(".services-"+id).css("display", "block")
+
+}
+
+
+
    $(".sect-fil").click(function () {
         $("html, body").css({
             overflow: "hidden",
