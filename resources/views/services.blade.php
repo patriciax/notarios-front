@@ -176,6 +176,32 @@ border-bottom: 1px solid #121212!important;
     grid-template-columns: 1fr;
  
 }
+.container-gallery {
+
+    gap: 0rem;
+}
+.marco::after {
+    margin-left: auto;
+    width: 293px;
+    top: 6%;
+    left: 0;
+    height: 279px;
+}
+.counter {
+
+    display: none;
+}
+.sec-galeria {
+   
+    padding-top: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+.pswp--zoom-allowed .pswp__img {
+    object-fit: contain;
+
+}
 }
 </style>
 @push("scripts")
@@ -199,7 +225,9 @@ function showSection(id){
         });
         $(".sec-galeria").addClass("sec-galeria-act");
         $(".nones").addClass("sec-galeria ");
-      
+
+        $(".main-home").css("height", "auto");
+
     });
    /**********arrow******************** */
    $(".arrow").click(function () {

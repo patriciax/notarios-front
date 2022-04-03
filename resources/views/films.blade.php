@@ -86,6 +86,13 @@
 border-bottom: 1px solid #121212!important;
 
 }
+@media only screen and (max-width: 600px){
+.bg-light {
+ 
+    flex-direction: column;
+    height: auto;
+}
+}
 </style>
 @push("scripts")
 
