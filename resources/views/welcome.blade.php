@@ -12,7 +12,7 @@
                 <div class="video-mask" >
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" >
                 <p class="number">Nº 512</p>
-                    <video muted autoplay loop class="gallery" onclick="playVid()">
+                    <video muted autoplay loop class="gallery" onclick="playVid('{{ $home->id }}')">
 
                         <source src="{{ $home->video }}" type="video/mp4">
                         <source src="{{ $home->video }}" type="video/ogg">
@@ -46,11 +46,11 @@
         {{---------------modals-----------------------}}
         @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
         <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$home->id}}">
-            <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid()"  class="custom-popup__close js-close-popup"></span>
+            <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid('{{ $home->id }}')"  class="custom-popup__close js-close-popup"></span>
 
                 <div class="custom-popup__content">
 
-                    <video  controls  class="test-video">
+                    <video  controls  id="video-{{ $home->id }}">
 
                         <source src="{{ $home->video_comercial }}" type="video/mp4">
                         <source src="{{ $home->video_comercial }}" type="video/ogg">
@@ -86,13 +86,15 @@
 </style>
 
 <script>
-      var vid = document.querySelector("test-video"); 
-function playVid() { 
-    $('.test-video')[0].play();
+      
+function playVid(id) { 
+    vid = document.getElementById("video-"+id); 
+    $('#video-'+id)[0].play();
 } 
 
-function pauseVid() { 
-  vid.pause(); 
+function pauseVid(id) {
+    vid = document.getElementById("video-"+id); 
+    vid.pause(); 
 } 
 
 
