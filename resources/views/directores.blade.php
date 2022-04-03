@@ -19,7 +19,7 @@
                             @if(($loop->index + 1) % 2 != 0)
 
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <div data-target="custom-popup{{$content['id']}}" class="js-open-popup" onclick="playVid('{{ $content->id }}')">
+                            <div data-target="custom-popup{{$content['id']}}" class="js-open-popup" onclick="playVid(`{{ $content['id'] }}`)">
                                 <!-- Thumbnail -->
 
 
@@ -36,7 +36,7 @@
                                     <div class="custom-popup__content">
                                         @if(isset($directorContents[$loop->index + 1]))
 
-                                        <video controls class="test w-100" style="width: 100%;" id="video-{{ $home->id }}">
+                                        <video controls class="test w-100" style="width: 100%;" id="video-{{ $content['id'] }}">
 
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/mp4">
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/ogg">
