@@ -36,7 +36,7 @@
                                     <div class="custom-popup__content">
                                         @if(isset($directorContents[$loop->index + 1]))
 
-                                        <video controls class="test w-100" style="width: 100%;" id="video-{{ $home->id }}">
+                                        <video controls class="test w-100" style="width: 100%;" id="video-{{ $content['id'] }}">
 
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/mp4">
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/ogg">
