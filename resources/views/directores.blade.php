@@ -19,7 +19,7 @@
                             @if(($loop->index + 1) % 2 != 0)
 
                             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                            <div data-target="custom-popup{{$content['id']}}" class="js-open-popup" onclick="playVid(`{{ $content[id] }}`)">
+                            <div data-target="custom-popup{{$content['id']}}" class="js-open-popup" onclick="playVid(`{{ $content['id'] }}`)">
                                 <!-- Thumbnail -->
 
 
