@@ -1432,6 +1432,9 @@ display: none;}
     box-shadow: 2px 14px 9px #00000075;
     border-radius: 3px;
 }
+.slider-servicess img{
+    object-fit: contain;
+} 
 
 /**********************************/
 

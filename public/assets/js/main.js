@@ -115,14 +115,15 @@ $(function () {
 $(document).ready(function () {
     $(".slider-services").slick({
         arrows: false,
-
-        infinite: true,
+     
         speed: 500,
         slidesToShow: 1,
-   
         autoplay: true,
         autoplaySpeed: 2000,
-        draggable: false,
+        fade: true,
+        cssEase: "linear",
+       
+        centerMode: true,
         dots: true,
         dotsClass: "custom-paging",
         customPaging: function (slider, i) {
@@ -161,6 +162,7 @@ $(document).ready(function () {
         fade: true,
         cssEase: "linear",
     });
+
 
     $(".slider")
         .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
