@@ -164,6 +164,7 @@ border-bottom: 1px solid #121212!important;
     opacity: 1;
     height: 100vh;
     display: block;
+    overflow-y: scroll;
 }
 .arrow {
 
