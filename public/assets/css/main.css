@@ -1449,7 +1449,7 @@ display: none;}
 .tab-link p {
     color: #000 !important;
 }
-.tab-link:nth-child(1) p {
+.tab-link:nth-child(1) span {
     margin-left: 0.4rem;
 }
 .tab-link:nth-child(7) p {
