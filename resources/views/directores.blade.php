@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content['id']}}">
-                                <div class="custom-popup__holder js-custom-popup-holder"><span class="custom-popup__close js-close-popup"></span>
+                                <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid(`{{$content['id']}`)" class="custom-popup__close js-close-popup"></span>
 
                                     <div class="custom-popup__content">
                                         @if(isset($directorContents[$loop->index + 1]))
