@@ -92,6 +92,15 @@ border-bottom: 1px solid #121212!important;
     flex-direction: column;
     height: auto;
 }
+.film-grid_item .title-film {
+    font-family: "DrukText";
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.film-grid {
+  
+    margin-top: 7rem;
+}
 }
 </style>
 @push("scripts")

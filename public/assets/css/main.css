@@ -2234,8 +2234,7 @@ a:hover {
         /* transform: translate(16rem, 3rem); */
     }
     .slider-films .slick-slide img {
-        height: 450px;
-        padding: 2rem;
+        padding: 4rem;
         width: 100%;
     }
     .end {
