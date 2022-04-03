@@ -65,14 +65,10 @@
                         @endforeach
                     </div>
                     <div class="content ">
-                        @if(App\Models\Photographer::where("type", "Photography")->first())
-                        @php
-                            $picture = App\Models\PhotographerPicture::where("photographer_id", $location->id)->first();
-                        @endphp
-                        <div id="tabname-{{ $location->id }}" class="tab-content-general tab-content2">
+                        @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
+                        <div id="tabname-{{ $location->id }}" class="tab-content-general tab-content2 @if($loop->index == 0) current2 @endif">
                             <div class="name-gallery">
-                                <p> {{ $location->name }}
-                                </p>
+                                <p> {{ strtoupper($location->name) }}</p>
                             </div>
                             <!-- Galley wrapper that contains all items -->
                             <div  class=" slider-servicess "  >
@@ -80,18 +76,23 @@
                                 @php
                                     $picture = App\Models\PhotographerPicture::where("photographer_id", $location->id)->first();
                                 @endphp
+                                <!-- Use figure for a more semantic html -->
+                              
+                                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                                     <a href="#galerias" class="sect-fil" data-width="1200" data-height="900"   onclick="showSection('{{ $location->id }}')">
                                         <!-- Thumbnail -->
                                         <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
 
                                         <div class="marco" alt=""></div>
-                                    </a> 
+                                    </a>
+                            
                                 @endif
 
                             </div>
                             <div class="counter">1/</div>
                         </div>
-                        @endif
+
+                        @endforeach
                     </div>
                 </div>
         </div>
