@@ -108,11 +108,11 @@
         @foreach(App\Models\PhotographerPicture::get() as $picture)
         <!-- Use figure for a more semantic html -->
             <figure class="sec-services  services-{{$picture->photographer_id}}" >
-                <p>asdfghjk {{$picture->photographer_id}}</p>
+               
                 <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                 <a href="{{ $picture->image }}"  data-width="1200" data-height="900">
                 <!-- Thumbnail -->
-                <img src="{{ $picture->image }}"  style="width: 300px; height: 300px;">
+                <img src="{{ $picture->image }}"  >
                 </a>
             </figure>
 
@@ -121,12 +121,26 @@
     </div>
 </section>
 <style>
+    .pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
+ opacity: 0;
+    display: none;
+}
 #gallery figure{
     display: block;
+}
+figure img {
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 7px;
 }
 .gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 .menu li:nth-child(3) {
 
@@ -157,7 +171,6 @@ border-bottom: 1px solid #121212!important;
 <script>
 
 function showSection(id){
-alert(id)
 
     $(".sec-services").css("display", "none")
 
