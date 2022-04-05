@@ -20,9 +20,12 @@
                 <div class="container-gallery">
 
                     <div class="tabs-gallery">
+                        <div class="ab-tab">
                         @foreach(App\Models\Photographer::where("type", "Location")->get() as $location)
                         <span class="tab-link @if($loop->index == 0) current @endif" data-tab="tab-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> <p>{{ strtoupper($location->name) }}</p> </span>
                         @endforeach
+                        </div>
+                     
                     </div>
                     <div class="content ">
                         @foreach(App\Models\Photographer::where("type", "Location")->get() as $location)
@@ -58,11 +61,14 @@
             <section>
                 <div class="container-gallery" >
                     <div class="tabs-gallery2">
-                        @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
+                    <div class="ab-tab">
+                    @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
                         <span class="tab-link" data-tab="tabname-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> <span>
                             <p>{{ strtoupper($location->name) }}</p>
                         </span> </span>
                         @endforeach
+                    </div>
+                      
                     </div>
                     <div class="content ">
                         @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
@@ -124,6 +130,11 @@
     </div>
 </section>
 <style>
+    .ab-tab{
+        position: absolute;
+    top: 32%;
+    left: 20%;
+    }
     .pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
  opacity: 0;
     display: none;
@@ -172,6 +183,11 @@ border-bottom: 1px solid #121212!important;
     margin-left: -3rem;
 }
 @media only screen and (max-width: 600px) {
+    .ab-tab{
+        position: relative;
+    top: auto;
+    left: auto;
+    }
     .gallery{
     grid-template-columns: 1fr;
  
