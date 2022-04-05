@@ -134,6 +134,9 @@
         position: absolute;
     top: 32%;
     left: 20%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
     }
     .pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
  opacity: 0;
