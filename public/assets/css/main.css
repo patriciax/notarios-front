@@ -1720,17 +1720,23 @@ a:hover {
     color: #4f4f4f !important;
 }
 .contacto {
-    display: flex;
-    flex-wrap: wrap;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 3rem;
-    margin-top: 3rem;
+       /* display: flex; */
+       flex-wrap: wrap;
+       height: 80vh;
+       /* display: flex; */
+       /* justify-content: center; */
+       /* align-items: center; */
+       /* padding: 0 3rem; */
+       margin-top: 3rem;
+       /* justify-content: center; */
+       align-items: center;
+       /* align-content: center; */
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       column-gap: 13rem;
 }
 .contacto-item {
-    width: 50%;
+   
 }
 .contacto p,
 .contacto a {
@@ -2327,6 +2333,9 @@ a:hover {
         height: 517px;
         display: flex;
         flex-direction: column;
+    }
+    .contacto{
+        grid-template-columns: 1fr;
     }
     .contacto-item {
         width: 100%;

@@ -14,8 +14,8 @@
             <p> ADRIANA DOLMEN</p>
             <p>EXECUTIVE PRODUCER</p>
             <p><a href="tel:+57 320 4575157">+57 320 4575157</a></p>
-            <p><a href="mailto:ADRIANA@LOSNOTARIOS.TVV">
-ADRIANA@LOSNOTARIOS.TVV</a></p>
+            <p><a href="mailto:ADRIANA@LOSNOTARIOS.TV">
+ADRIANA@LOSNOTARIOS.TV</a></p>
         </div>
         <div class="contacto-item">
             <p> ADELAIDA CANO</p>
@@ -76,7 +76,13 @@ display: block;
 border-bottom: 1px solid #121212!important;
 
 }
-
+.bg-light {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 </style>
 
 @push("scripts")
