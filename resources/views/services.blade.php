@@ -8,8 +8,8 @@
         <input type="radio" id="tab1" name="tab-control" checked>
         <input type="radio" id="tab2" name="tab-control">
         <ul>
-            <li title="Features"><label for="tab1" role="button"><span>LOCATIONS </span></label></li>
-            <li title="Delivery Contents"><label for="tab2" role="button"><span>PHOTOGRAPHY</span></label></li>
+            <li title="Features"><label class="logo-old" for="tab1" role="button"><span>LOCATIONS </span></label></li>
+            <li title="Delivery Contents "><label class="logo-new" for="tab2" role="button"><span>PHOTOGRAPHY</span></label></li>
         </ul>
 
         <div class="sliders">
@@ -138,10 +138,10 @@
     flex-direction: column;
     align-items: start;
     }
-    .pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
+    /*.pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
  opacity: 0;
     display: none;
-}
+}*/
 #gallery figure{
     display: block;
 }
@@ -246,7 +246,7 @@ function showSection(id){
         $(".sec-galeria").addClass("sec-galeria-act");
         $(".nones").addClass("sec-galeria ");
 
-        $(".main-home").css("height", "auto");
+        //$(".main-home").css("height", "auto");
 
     });
    /**********arrow******************** */
@@ -258,6 +258,16 @@ function showSection(id){
         });
     
         $(".nones").removeClass("sec-galeria");
+    });
+
+    $(".logo-new").click(function () {
+      $(".main-logo-img").attr("src","http://imgfz.com/i/JqfXFGS.png");
+  
+
+    });
+    $(".logo-old").click(function () {
+      $(".main-logo-img").attr("src","http://imgfz.com/i/DWBfqR1.png");
+ 
     });
 </script>
 

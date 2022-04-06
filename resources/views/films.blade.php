@@ -48,8 +48,9 @@
                 <br> <br>SINOPSIS<br><br>
 
                 {!! $film->description !!}
+           
             </p>
-
+            <p class="see">/ SEE MORE</p>
             <!--<span class="btn_more">/ SEE MORE</span>
             <br>
             <p class="hidden-film">
@@ -109,6 +110,11 @@ border-bottom: 1px solid #121212!important;
     position: fixed!important;
 }
 }
+.see{
+    cursor: pointer;
+    position: fixed;
+    top: 77%;
+}
 </style>
 @push("scripts")
 
@@ -120,6 +126,14 @@ border-bottom: 1px solid #121212!important;
             $("#a"+id).css("visibility", "visible")
 
         }
+
+        $(".see").click(function () {
+            $(this).css("opacity", "0");
+
+            $(".film-grid_item:nth-child(1)").css("height", "auto");
+            
+ 
+    });
       
     </script>
 

@@ -362,4 +362,10 @@ $("#" + films).addClass('active-film')*/
     $(".modal__close").on("click", function () {
         $(".demo-modal").removeClass("modal-active");
     });
+
+
+
+
+
+
 });

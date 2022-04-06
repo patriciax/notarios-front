@@ -234,7 +234,7 @@ h1 {
     /* transform: translate(-12%, 6%); */
     font-family: "VanderKeur";
     font-size: 0.9rem;
-    left: 72.5%;
+    left: 71.9%;
     top: 15px;
 }
 .slider .slick-slide {
@@ -265,7 +265,7 @@ h1 {
 }
 [type="button"] {
     position: fixed;
-    top: 56%;
+    top: 50%;
     z-index: 10;
     width: 70px;
     height: 70px;
@@ -282,7 +282,7 @@ h1 {
 }
 .slick-next {
     right: 0;
-    margin-right: 27%;
+    margin-right: 30%;
     width: 15px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOC4wNiAzNi4xMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmM2ViZTE7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJDYXBhXzIiIGRhdGEtbmFtZT0iQ2FwYSAyIj48ZyBpZD0iQ2FwYV8xLTIiIGRhdGEtbmFtZT0iQ2FwYSAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMCAwIDAgMS4wNiAxNyAxOC4wNiAwIDM1LjA2IDAgMzYuMTIgMTguMDYgMTguMDYgMCAwIi8+PC9nPjwvZz48L3N2Zz4=);
 }
@@ -292,7 +292,7 @@ video::-webkit-media-controls-fullscreen-button {
 
 .slick-prev {
     left: 0;
-    margin-left: 27%;
+    margin-left: 30%;
     width: 15px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOC4wNiAzNi4xMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmM2ViZTE7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJDYXBhXzIiIGRhdGEtbmFtZT0iQ2FwYSAyIj48ZyBpZD0iQ2FwYV8xLTIiIGRhdGEtbmFtZT0iQ2FwYSAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTguMDYgMzYuMTIgMTguMDYgMzUuMDYgMS4wNiAxOC4wNiAxOC4wNiAxLjA2IDE4LjA2IDAgMCAxOC4wNiAxOC4wNiAzNi4xMiIvPjwvZz48L2c+PC9zdmc+);
 }
@@ -1109,7 +1109,7 @@ display: none;}
     flex-direction: column;
     margin-bottom: 10px;
     position: absolute;
-    right: 24%;
+    right: 21%;
 }
 .tabs-gallery2:nth-child(1) p {
     margin-left: 0.5rem !important;
@@ -1644,6 +1644,7 @@ figure img {
     width: 40%;
     overflow-y: scroll;
     padding-right: 1.2rem;
+    height: 332px;
 }
 .film-grid_item:nth-child(2) {
     width: 60%;
@@ -1753,12 +1754,15 @@ a:hover {
     cursor: pointer;
 }
 .video-mask {
-    width: 45%;
-    height: 24rem;
+    width: 46%;
+    height: 26rem;
     transition: 0.8s;
     display: flex;
     justify-content: center;
     position: relative;
+    filter: drop-shadow(11px 3px 8px rgb(0 0 0 / 20%));
+    padding: 0.5rem;
+    padding-bottom: 1.2rem;
 }
 .video-mask:hover {
 }

@@ -23,7 +23,7 @@
     <div class="main-home">
         <header >
           <div class="main-logo">
-            <img src="assets/img/logo.png" alt="" />
+            <img class="main-logo-img" src="assets/img/logo.png" alt="" />
           </div>
 
 
