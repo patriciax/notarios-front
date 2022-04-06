@@ -1629,6 +1629,12 @@ figure img {
     width: 100%;
     cursor: pointer;
 }
+.film-grid_item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
 .film-grid {
     display: flex;
     flex-wrap: wrap;
