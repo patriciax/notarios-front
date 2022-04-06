@@ -122,8 +122,8 @@ border-bottom: 1px solid #121212!important;
 
         function showSection(id){
 
-            $(".section-films").css("visibility", "hidden")
-            $("#a"+id).css("visibility", "visible")
+            $(".section-films").css("display", "none")
+            $("#a"+id).css("display", "block")
 
         }
 
