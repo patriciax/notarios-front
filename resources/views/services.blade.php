@@ -170,7 +170,7 @@ border-bottom: 1px solid #121212!important;
     height: 0;
     transition: 0.6s;
     display: none;
-    padding-top: 15rem;
+    padding-top: 12rem;
     padding-left: 5rem;
     padding-right: 5rem;
     padding-bottom: 5rem;
@@ -240,7 +240,7 @@ function showSection(id){
 
    $(".sect-fil").click(function () {
         $("html, body").css({
-            overflow: "hidden",
+            overflow: "auto",
             height: "100%",
         });
         $(".sec-galeria").addClass("sec-galeria-act");
