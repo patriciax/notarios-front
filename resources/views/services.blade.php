@@ -131,9 +131,9 @@
 </section>
 <style>
     .ab-tab{
-        position: absolute;
+       /* position: absolute;
     top: 32%;
-    left: 20%;
+    left: 20%;*/
     display: inline-flex;
     flex-direction: column;
     align-items: start;
@@ -223,6 +223,13 @@ border-bottom: 1px solid #121212!important;
 }
 
 }
+.arrow {
+   
+    top: 3rem;
+}
+.tabs-gallery2 p{
+    font-size: 1rem; 
+}
 </style>
 @push("scripts")
 
@@ -260,13 +267,17 @@ function showSection(id){
         $(".nones").removeClass("sec-galeria");
     });
 
+  
+
     $(".logo-new").click(function () {
       $(".main-logo-img").attr("src","http://imgfz.com/i/JqfXFGS.png");
+      $(".main-logo-img").css("width","217px");
   
 
     });
     $(".logo-old").click(function () {
       $(".main-logo-img").attr("src","http://imgfz.com/i/DWBfqR1.png");
+      $(".main-logo-img").css("width","130px");
  
     });
 </script>

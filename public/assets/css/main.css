@@ -1108,7 +1108,7 @@ display: none;}
     flex-direction: column;
     margin-bottom: 10px;
     position: absolute;
-    right: 21%;
+    right: 260px;
 }
 .tabs-gallery2:nth-child(1) p {
     margin-left: 0.5rem !important;

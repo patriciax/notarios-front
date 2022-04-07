@@ -312,7 +312,7 @@ $(".galeria_img img").on("click", function () {
 
     function hijos(sec) {
         var n = seccion.toArray().length;
-        var x = $(sec).find("figure").toArray().length;
+        var x = $(sec).find("img").toArray().length;
         //var a = n.each.children("a");
 
         console.log("hay " + n + " Secciones y " + x + " Enlaces ");
