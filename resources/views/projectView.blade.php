@@ -68,10 +68,6 @@
 
 </main>
 <style>
-    footer .copy
-   {
-        display: none;
-    }
 
     footer {
       position: relative;
