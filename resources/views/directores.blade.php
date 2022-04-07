@@ -70,7 +70,7 @@
                                 <img src="assets/img/logo.png" alt="">
                             </div>
                             <div class="footer-info">
-                                <p>2021© NOTARIOS.TV ALL RIGHTS RESERVED </p>
+                                <p>2022© NOTARIOS.TV ALL RIGHTS RESERVED </p>
                             </div>
                         </div>
                     </div>

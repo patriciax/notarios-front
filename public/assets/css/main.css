@@ -119,8 +119,7 @@ h1 {
 
 .menu-link {
     color: #1d1e1c;
-    font-size: 10px;
-
+    font-size: 9px;
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
     text-decoration: none;
@@ -390,7 +389,7 @@ footer a:nth-child(1) {
     bottom: 0;
 }
 .footer-info p {
-    font-size: 9px !important;
+    font-size: 7.5px !important;
 }
 .main-home {
     min-height: 100%;
