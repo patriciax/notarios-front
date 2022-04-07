@@ -305,14 +305,14 @@ $(".galeria_img img").on("click", function () {
         $("#" + tab_id).addClass("current2");
     });
 
-    var seccion = $(".tab-content-general");
+    var seccion = $(".slider-servicess");
 
     var cantidadSecciones = seccion.lenght;
     var doc = $("body");
 
     function hijos(sec) {
         var n = seccion.toArray().length;
-        var x = $(sec).find("img").toArray().length;
+        var x = $(sec).find("a").toArray().length;
         //var a = n.each.children("a");
 
         console.log("hay " + n + " Secciones y " + x + " Enlaces ");

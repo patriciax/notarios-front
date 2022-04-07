@@ -93,9 +93,9 @@
                                     </a>
                             
                                 @endif
-
+                                <div class="counter">1/</div>
                             </div>
-                            <div class="counter">1/</div>
+                            
                         </div>
 
                         @endforeach
@@ -280,6 +280,9 @@ function showSection(id){
       $(".main-logo-img").css("width","130px");
  
     });
+
+
+
 </script>
 
 @endpush

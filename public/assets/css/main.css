@@ -183,7 +183,7 @@ h1 {
     padding-bottom: 5rem;
 }
 .item-private {
-    width: 50%;
+    width: 76%;
 }
 .item-private video {
     width: 100%;
@@ -1059,7 +1059,7 @@ display: none;}
     font-family: "VanderKeur-light";
     color: #f2eadf;
     left: 79%;
-    top: -27%;
+    top: -66px;
     font-size: 14px;
 }
 .pswp--zoom-allowed .pswp__img {

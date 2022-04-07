@@ -32,13 +32,13 @@
     </div>
 </main>
 <style>
-    footer .copy {
-        display: none;
-    }
+ .main-home {
+ 
+    height: auto;
+}
 
     footer {
-        position: fixed;
-        right: 0;
+        position: relative;
     }
     .bg-dark--private {
 
@@ -47,6 +47,9 @@
 .private-main {
 
     gap: 0.5rem;
+}
+.gallery{
+    width: 100%;
 }
 </style>
 
