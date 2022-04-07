@@ -74,10 +74,11 @@
     }
 
     footer {
-        position: fixed;
-        right: 0;
+      position: relative;
     }
-
+    .gallery{
+    width: 100%;
+}
     .private-a {
 
         font-size: 2rem;
