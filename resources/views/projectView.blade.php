@@ -68,7 +68,10 @@
 
 </main>
 <style>
-
+ .main-home {
+ 
+ height: auto;
+}
     footer {
       position: relative;
     }
