@@ -3,17 +3,18 @@
 @section("content")
 <!---<main class="bg-light" data-barba="container" data-barba-namespace="home-section">-->
 <main class="bg-light  bg-center home-main">
-    <div class="main-video  ">
-        {{-- <div class="bg-light_folder"></div>--}}
+    <div class="main-video">
         <div class="slider gallery">
             <!---------ITEM------->
-            @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
+            @php
+            $videos = App\Models\HomeProject::orderBy("order")->get();
+            @endphp
+            @foreach($videos as $key => $home)
             <div>
                 <div class="video-mask" >
                 <div data-target="custom-popup{{$home->id}}" class="main-mask js-open-popup" >
                 <p class="number">Nº 512</p>
-                    <video muted autoplay loop class="gallery" onclick="playVid('{{ $home->id }}')">
-
+                    <video muted autoplay loop class="gallery">
                         <source src="{{ $home->video }}" type="video/mp4">
                         <source src="{{ $home->video }}" type="video/ogg">
                         Your browser does not support HTML video.
@@ -44,13 +45,17 @@
 
         </div>
         {{---------------modals-----------------------}}
-        @foreach(App\Models\HomeProject::orderBy("order")->get() as $home)
+        @foreach($videos as $key => $home)
         <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$home->id}}">
             <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid('{{ $home->id }}')"  class="custom-popup__close js-close-popup"></span>
 
                 <div class="custom-popup__content">
 
-                    <video  controls  id="video-{{ $home->id }}">
+                    @if(isset($videos[$key + 1]))
+                        <video controls id="video-{{ $home->id }}"  onended="playNext({{ $home->id }}, {{ $videos[$key + 1]->id }})">
+                    @else
+                        <video controls id="video-{{ $home->id }}"  onended="playNext({{ $home->id }}, {{ $videos[0]->id }})">
+                    @endif 
 
                         <source src="{{ $home->video_comercial }}" type="video/mp4">
                         <source src="{{ $home->video_comercial }}" type="video/ogg">
@@ -64,18 +69,6 @@
         @endforeach
 
     </div>
-
-
-    <!--- <div class="header">
-        <h1 class="title animate-this">home page</h1>
-        <div class="animate-this button">
-          <a href="about.php">go to about</a>
-        </div>
-      </div>-->
-
-
-
-
 </main>
 <style>
     .menu li:nth-child(1) {
@@ -85,27 +78,22 @@
 }
 </style>
 
+@push("scripts")
 <script>
-      
-function playVid(id) { 
-    vid = document.getElementById("video-"+id); 
-    $('#video-'+id)[0].play();
-} 
-
 function pauseVid(id) {
     vid = document.getElementById("video-"+id); 
     vid.pause(); 
-} 
+}
 
-
+function playNext(current, next) {
+    currentModal = document.querySelector(`[data-popup=custom-popup${current}] span.js-close-popup`)
+    nextModal = document.querySelector(`[data-target=custom-popup${next}]`)
+    nextVideo = document.querySelector(`#video-${next}`)
+    currentModal.click()
+    nextModal.click()
+    nextVideo.play()
+}
 </script>
-@push("scripts")
-
 @endpush
-
-
-
-
-
 @endsection
 

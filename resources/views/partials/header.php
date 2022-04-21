@@ -39,8 +39,6 @@
               <li><a class="menu-link" href="index.php">Home</a></li>
               <li><a class="menu-link" href="directores.php">DIRECTORES</a></li>
               <li><a class="menu-link" href="about.php">ABOUT US</a></li>
-             <!-- <li><a class="menu-link" href="#">SERVICES</a></li>
-              <li><a class="menu-link" href="#">FILMS</a></li>-->
               <li><a class="menu-link" href="contact.php">CONTACT</a></li>
               <li><a class="menu-link" href="private.php">Private </a></li>
             </ul>

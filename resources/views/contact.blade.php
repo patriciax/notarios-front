@@ -42,7 +42,7 @@ ADRIANA@LOSNOTARIOS.TV</a></p>
             <p><a href="mailto:JOHN@LOSNOTARIOS.TV">JOHN@LOSNOTARIOS.TV</a></p>
         </div>
         <div class="contacto-item">
-            <p> FRANCI MELOL</p>
+            <p> FRANCI MELO</p>
             <p>ADMINISTRATIVE</p>
             <p><a href="tel:+57 320 2732455">+57 320 2732455
 </a></p>

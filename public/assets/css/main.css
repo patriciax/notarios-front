@@ -458,7 +458,7 @@ footer a:nth-child(1) {
 }
 .txt-title {
     font-family: "VanderKeur-light";
-    font-size: 11px;
+    font-size: 9px;
     letter-spacing: 2px;
     color: #000;
     width: 100%;
@@ -1646,13 +1646,13 @@ figure img {
     height: 100vh;
 }
 .film-grid_item:nth-child(1) {
-    width: 40%;
-    overflow-y: scroll;
+    width: 60%;
     padding-right: 1.2rem;
-    height: 332px;
 }
 .film-grid_item:nth-child(2) {
-    width: 60%;
+    width: 40%;
+    overflow-y: scroll;
+    height: 332px;
     padding-left: 0.8rem;
 }
 ::-webkit-scrollbar {

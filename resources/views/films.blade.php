@@ -11,18 +11,6 @@
                 <img src="{{ $film->image }}" alt="">
             </a>
             @endforeach
-            <!--<div id="film_slider-2" class="slider-films_item">
-            <img src="assets/img/films2.png" alt="">
-        </div>
-        <div class="slider-films_item">
-            <img src="assets/img/films3.png" alt="">
-        </div>
-        <div id="film_slider-3" class="slider-films_item">
-            <img src="assets/img/films1.png" alt="">
-        </div>
-        <div id="film_slider-4" class="slider-films_item">
-            <img src="assets/img/films1.png" alt="">
-        </div>-->
         </div>
     </div>
 
@@ -35,6 +23,17 @@
         <a href="#top">top</a>
     </div>
     <div class="film-grid">
+        <div class="film-grid_item">
+            @if($film->secondary_image_file_type == 'image')
+            <img src="{{ $film->secondary_image }}" alt="">
+            @else
+
+            <video class="w-100 test" controls autoplay muted onclick="playPause()">
+                <source src="{{ $film->secondary_image }}">
+            </video>
+
+            @endif
+        </div>
         <div class="film-grid_item">
             <h3 class="title-film">{{ $film->name }}</h3>
 
@@ -51,22 +50,6 @@
            
             </p>
             <p class="see">/ SEE MORE</p>
-            <!--<span class="btn_more">/ SEE MORE</span>
-            <br>
-            <p class="hidden-film">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi debitis accusantium consectetur totam quam, necessitatibus perspiciatis libero molestias cumque fugit fuga, cupiditate quisquam magnam esse fugiat ipsa tempora tempore ipsam?
-            </p>-->
-        </div>
-        <div class="film-grid_item">
-            @if($film->secondary_image_file_type == 'image')
-            <img src="{{ $film->secondary_image }}" alt="">
-            @else
-
-            <video class="w-100 test" controls autoplay muted onclick="playPause()">
-                <source src="{{ $film->secondary_image }}">
-            </video>
-
-            @endif
         </div>
     </div>
 </section>
