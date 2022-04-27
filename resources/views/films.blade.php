@@ -146,7 +146,8 @@
     $(".see").click(function() {
         $(this).css("opacity", "0");
 
-        $(".film-grid_item:nth-child(1)").css("height", "auto");
+        $(".film-grid_item:nth-child(2)").css("height", "400");
+        $(".film-grid_item:nth-child(2)").css("overflow-y", "scroll");
 
 
     });

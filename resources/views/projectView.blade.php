@@ -53,7 +53,6 @@
             </div>
             @elseif($content->type == 'video')
 
-            @if($index === 0)
             <video
                 data-target="custom-popup{{$content->id}}" class="w-100 js-open-popup"
                 loop
@@ -61,15 +60,6 @@
                 autoplay>
                 <source src="{{ $content->image }}">
             </video>
-            @else
-                
-            <video
-                data-target="custom-popup{{$content->id}}" class="w-100 js-open-popup"
-                controls>
-                <source src="{{ $content->image }}">
-            </video>
-            @endif
-
 
             {{---------------modals-----------------------}}
             <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content->id}}">
