@@ -19,38 +19,31 @@
                         @if(($loop->index + 1) % 2 != 0)
 
                         <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-                        <div data-target="custom-popup{{$content['id']}}" class="js-open-popup">
-                            <!-- Thumbnail -->
-                            <video class="w-100" controls muted autoplay style="width: 100%;">
-                                <source src="{{ $content['image'] }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                        <!-- Thumbnail -->
+                        <video data-target="custom-popup-directors{{ $content['id'] }}" class="js-open-popup w-100" muted loop autoplay style="width: 100%;">
+                            <source src="{{ $content['image'] }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
 
-                        </div>
-
-                        <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content['id']}}">
+                        <div class="custom-popup js-custom-popup" id="custom-popup-directors{{$content['id']}}" data-popup="custom-popup{{$content['id']}}">
                             <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid(`{{$content['id']}}`)" class="custom-popup__close js-close-popup"></span>
 
                                 <div class="custom-popup__content">
                                     @if(isset($directorContents[$loop->index + 1]))
-                                    @if(isset($directorContents[$loop->index + 2]))
-                                    <video controls class="w-100" style="width: 100%;" id="video-{{ $content['id'] }}" onended="playNext({{ $content['id'] }}, {{ $directorContents[$loop->index + 2]['id']}})">
+                                        @if(isset($directorContents[$loop->index + 2]))
+                                            <video controls  style="width: 100%;" id="video-{{ $content['id'] }}" onended="playNext({{ $content['id'] }}, {{ $directorContents[$loop->index + 2]['id']}})">
                                         @else
-                                        <video controls class="w-100" style="width: 100%;" id="video-{{ $content['id'] }}" onended="playNext({{ $content['id'] }}, {{ $directorContents[0]['id']}})">
-                                            @endif
+                                            <video controls  style="width: 100%;" id="video-{{ $content['id'] }}" onended="playNext({{ $content['id'] }}, {{ $directorContents[0]['id']}})">
+                                        @endif
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/mp4">
                                             <source src="{{ $directorContents[$loop->index + 1]['image'] }}" type="video/ogg">
                                             Your browser does not support HTML video.
                                         </video>
-                                        @endif
-
-
+                                    @endif
                                 </div>
-
                             </div>
                         </div>
                         @endif
-
                         @endforeach
 
                     </div>
