@@ -27,13 +27,17 @@
 
         @elseif($project->image_type == 'pdf')
 
-            <a href="{{ $project->image }}" target="_blank">
-                PDF
-            </a>
+        <a href="{{ $project->image }}" target="_blank">
+            PDF
+        </a>
 
         @endif
 
-        @foreach(App\Models\ProjectSecondaryContent::where("project_id", $project->id)->get() as $content)
+        @php
+        $media = App\Models\ProjectSecondaryContent::where("project_id", $project->id)->get()
+        @endphp
+
+        @foreach($media as $index => $content)
         <div class="item-private">
             @if($content->type == 'image')
             <div class="gallery">
@@ -49,9 +53,45 @@
             </div>
             @elseif($content->type == 'video')
 
-            <video class="w-100" controls>
+            @if($index === 0)
+            <video
+                data-target="custom-popup{{$content->id}}" class="w-100 js-open-popup"
+                loop
+                muted
+                autoplay>
                 <source src="{{ $content->image }}">
             </video>
+            @else
+                
+            <video
+                data-target="custom-popup{{$content->id}}" class="w-100 js-open-popup"
+                controls>
+                <source src="{{ $content->image }}">
+            </video>
+            @endif
+
+
+            {{---------------modals-----------------------}}
+            <div class="custom-popup js-custom-popup" id="custom-popup" data-popup="custom-popup{{$content->id}}">
+                <div class="custom-popup__holder js-custom-popup-holder"><span onclick="pauseVid('{{ $content->id }}')" class="custom-popup__close js-close-popup"></span>
+
+                    <div class="custom-popup__content">
+
+                        @if(isset($media[$index + 1]))
+                        <video controls id="video-{{ $content->id }}" onended="playNext({{ $content->id }}, {{ $media[$index + 1]->id }})">
+                            @else
+                            <video controls id="video-{{ $content->id }}" onended="playNext({{ $content->id }}, {{ $media[0]->id }})">
+                                @endif
+
+                                <source src="{{ $content->image }}" type="video/mp4">
+                                <source src="{{ $content->image }}" type="video/ogg">
+                                Your browser does not support HTML video.
+                            </video>
+
+                    </div>
+
+                </div>
+            </div>
 
             @elseif($content->type == 'pdf')
 
@@ -59,7 +99,7 @@
                 <img src="http://imgfz.com/i/jhamRXb.jpeg" alt="">
             </a>
 
-        @endif
+            @endif
 
         </div>
         @endforeach
@@ -68,16 +108,19 @@
 
 </main>
 <style>
- .main-home {
- 
- height: auto;
-}
-    footer {
-      position: relative;
+    .main-home {
+
+        height: auto;
     }
-    .gallery{
-    width: 100%;
-}
+
+    footer {
+        position: relative;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
     .private-a {
 
         font-size: 2rem;
@@ -91,21 +134,32 @@
     }
 
     .item-private {
-        width: 49%;
+        width: 100%;
+        height: fit-content;
     }
+
     figure img {
         width: 100%;
-    max-width: 100%;
-}
-
+        max-width: 100%;
+    }
 </style>
 
 @push("scripts")
+<script>
+function pauseVid(id) {
+    vid = document.getElementById("video-"+id); 
+    vid.pause(); 
+}
 
+function playNext(current, next) {
+    currentModal = document.querySelector(`[data-popup=custom-popup${current}] span.js-close-popup`)
+    nextModal = document.querySelector(`[data-target=custom-popup${next}]`)
+    nextVideo = document.querySelector(`#video-${next}`)
+    currentModal.click()
+    nextModal.click()
+    nextVideo.play()
+}
+</script>
 @endpush
-
-
-
-
 
 @endsection

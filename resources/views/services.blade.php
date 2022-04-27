@@ -21,7 +21,8 @@
                     <div class="tabs-gallery">
                         <div class="ab-tab">
                             @foreach(App\Models\Photographer::where("type", "Location")->get() as $location)
-                            <span class="tab-link @if($loop->index == 0) current @endif" data-tab="tab-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span>
+                            <span class="tab-link @if($loop->index == 0) current @endif" data-tab="tab-{{ $location->id }}">
+                                <span>{{ $loop->index + 1 }}.</span>
                                 <p>{{ strtoupper($location->name) }}</p>
                             </span>
                             @endforeach
@@ -50,7 +51,7 @@
                                 @endif
 
                             </div>
-                            <div class="counter">1/</div>
+                            <div class="counter">1/{{ App\Models\PhotographerPicture::where("photographer_id", $location->id)->count() }}</div>
                         </div>
                         @endforeach
                     </div>
@@ -61,9 +62,10 @@
                     <div class="tabs-gallery2">
                         <div class="ab-tab">
                             @foreach(App\Models\Photographer::where("type", "Photography")->get() as $location)
-                            <span class="tab-link" data-tab="tabname-{{ $location->id }}"> <span>{{ $loop->index + 1 }}.</span> <span>
-                                    <p>{{ strtoupper($location->name) }}</p>
-                                </span> </span>
+                            <span class="tab-link" data-tab="tabname-{{ $location->id }}">
+                                <span>{{ $loop->index + 1 }}.</span>
+                                <p>{{ strtoupper($location->name) }}</p>
+                            </span>
                             @endforeach
                         </div>
                     </div>
@@ -77,7 +79,6 @@
                             <div class=" slider-servicess ">
                                 @if( $picture = App\Models\PhotographerPicture::where("photographer_id", $location->id)->first())
                                 <!-- Use figure for a more semantic html -->
-
                                 <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
                                 <a href="#galerias" class="sect-fil" data-width="1200" data-height="900" onclick="showSection('{{ $location->id }}')">
                                     <!-- Thumbnail -->
@@ -85,16 +86,14 @@
 
                                     <div class="marco" alt=""></div>
                                 </a>
-
                                 @endif
-                                <div class="counter">1/</div>
                             </div>
-
+                            <div class="counter">1/{{ App\Models\PhotographerPicture::where("photographer_id", $location->id)->count() }}</div>
                         </div>
-
                         @endforeach
                     </div>
                 </div>
+            </section>
         </div>
     </div>
 
@@ -131,12 +130,14 @@
         display: inline-flex;
         flex-direction: column;
         align-items: start;
+        width: 300px;
     }
 
-    /*.pswp--has_mouse .pswp__button--arrow--left, .pswp--has_mouse .pswp__button--arrow--right {
- opacity: 0;
-    display: none;
-}*/
+    .ab-tab span span,
+    .ab-tab span p {
+        display: inline-block;
+        white-space: nowrap;
+    }
     #gallery figure {
         display: block;
     }
@@ -186,11 +187,16 @@
         margin-left: -3rem;
     }
 
+    .tabs-gallery2:nth-child(1) p {
+        margin-left: 0rem !important;
+    }
+
     @media only screen and (max-width: 600px) {
         .ab-tab {
             position: relative;
             top: auto;
             left: auto;
+
         }
 
         .gallery {

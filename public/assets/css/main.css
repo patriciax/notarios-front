@@ -1076,17 +1076,7 @@ display: none;}
 /**************TABS**************/
 
 .tabs {
-    /*  left: 50%;
-    transform: translateX(-50%);*/
     position: relative;
-    /* background: white;
-    padding: 50px;
-    padding-bottom: 80px;
-    width: 70%;
-    height: 250px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border-radius: 5px;
-    min-width: 240px;*/
     margin-top: 1rem;
 }
 .tabs input[name="tab-control"] {
@@ -1450,7 +1440,7 @@ display: none;}
     color: #000 !important;
 }
 .tab-link:nth-child(1) span {
-    margin-left: 0.4rem;
+    margin-left: 0.3rem;
 }
 .tab-link:nth-child(7) p {
     margin-left: 0.3rem;
@@ -1459,7 +1449,7 @@ display: none;}
     background: none;
     color: #000;
     display: inline-block;
-    padding: 0px 27px;
+    padding: 0px 10px;
     cursor: pointer;
     font-family: "DrukText";
     font-weight: bold;
@@ -1471,12 +1461,13 @@ display: none;}
     background: none;
     color: #000;
     display: inline-block;
-    padding: 0px 27px;
+    padding: 0px 10px;
     cursor: pointer;
     font-family: "DrukText";
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 1;
+    display: flex;
 }
 
 .tabs-gallery .current {
@@ -1532,9 +1523,9 @@ figure img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
-    justify-items: center;
+    justify-items: start;
     align-items: center;
-    gap: 12rem;
+    gap: 8rem;
 }
 .p-10 {
     padding-top: 10rem;

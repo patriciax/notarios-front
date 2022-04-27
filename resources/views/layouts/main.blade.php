@@ -42,13 +42,13 @@
             <aside class="sidebar">
                 <ul class="menu">
                     <li><a class="menu-link" href="/">Home</a></li>
-                    <li><a class="menu-link" href="directores">DIRECTORS</a></li>
+                    <li><a class="menu-link" href="/directores">DIRECTORS</a></li>
 
-                    <li><a class="menu-link" href="services">SERVICES</a></li>
-                    <li><a class="menu-link" href="films">FILMS</a></li>
-                    <li><a class="menu-link" href="about">ABOUT US</a></li>
-                    <li><a class="menu-link" href="contact">CONTACT</a></li>
-                    <li><a class="menu-link" href="private">Private </a></li>
+                    <li><a class="menu-link" href="/services">SERVICES</a></li>
+                    <li><a class="menu-link" href="/films">FILMS</a></li>
+                    <li><a class="menu-link" href="/about">ABOUT US</a></li>
+                    <li><a class="menu-link" href="/contact">CONTACT</a></li>
+                    <li><a class="menu-link" href="/private">Private </a></li>
                 </ul>
             </aside>
         </header>
